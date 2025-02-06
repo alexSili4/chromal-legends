@@ -3,19 +3,29 @@ declare module '@emotion/react' {
 }
 
 interface ITheme {
+  colors: {
+    white: string;
+  };
   padding: {
     container: number;
   };
-  containerWidth: {
+  container: {
     desktop: number;
     mobile: number;
   };
+  fontFamily: {
+    proximaNova: string;
+  };
+  breakpoints: { desktop: number };
   transitionDurationAndFunc: string;
-  spacing: (value?: number) => string;
+  spacing: (value?: number) => number;
 }
 
 const theme: ITheme = {
-  // colors: {  },
+  colors: {
+    white: '#ffffff',
+  },
+  fontFamily: { proximaNova: 'Proxima Nova' },
   // fontFamily: {  },
   // fontWeight: {  },
   // fontSize: {  },
@@ -23,13 +33,14 @@ const theme: ITheme = {
     container: 16,
   },
   // borderRadius: {  },
-  containerWidth: {
+  container: {
+    mobile: 315,
     desktop: 1376,
-    mobile: 375,
   },
+  breakpoints: { desktop: 1300 },
   // shadows: {  },
-  transitionDurationAndFunc: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
-  spacing: (value = 1) => `${value * 4}px`,
+  transitionDurationAndFunc: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
+  spacing: (value = 1) => value * 4,
 };
 
 export default theme;

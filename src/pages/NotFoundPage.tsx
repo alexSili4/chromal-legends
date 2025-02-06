@@ -1,14 +1,9 @@
-import Container from '@/components/Container';
-import NotFound from '@/components/NotFound';
-import Section from '@/components/Section';
+import { PagePaths } from '@/constants';
 import { FC } from 'react';
+import { Navigate } from 'react-router-dom';
 
-const NotFoundPage: FC = () => (
-  <Section>
-    <Container>
-      <NotFound />
-    </Container>
-  </Section>
-);
+const NotFoundPage: FC = () => {
+  return <Navigate to={PagePaths.root} />;
+};
 
 export default NotFoundPage;
