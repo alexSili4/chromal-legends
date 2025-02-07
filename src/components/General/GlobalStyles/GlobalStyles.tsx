@@ -5,6 +5,10 @@ import 'modern-normalize';
 const GlobalStyles: FC = () => (
   <Global
     styles={css`
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         background-color: #a38ac5;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',

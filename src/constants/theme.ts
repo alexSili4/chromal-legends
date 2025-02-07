@@ -15,8 +15,9 @@ interface ITheme {
   };
   fontFamily: {
     proximaNova: string;
+    luckiestGuyRUSBELUKR: string;
   };
-  breakpoints: { desktop: number };
+  breakpoints: { tablet: number; desktop: number };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => number;
 }
@@ -25,7 +26,10 @@ const theme: ITheme = {
   colors: {
     white: '#ffffff',
   },
-  fontFamily: { proximaNova: 'Proxima Nova' },
+  fontFamily: {
+    proximaNova: 'Proxima Nova',
+    luckiestGuyRUSBELUKR: 'Luckiest Guy RUS-BEL-UKR',
+  },
   // fontFamily: {  },
   // fontWeight: {  },
   // fontSize: {  },
@@ -35,9 +39,9 @@ const theme: ITheme = {
   // borderRadius: {  },
   container: {
     mobile: 315,
-    desktop: 1376,
+    desktop: 1260,
   },
-  breakpoints: { desktop: 1300 },
+  breakpoints: { tablet: 768, desktop: 1330 },
   // shadows: {  },
   transitionDurationAndFunc: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => value * 4,
