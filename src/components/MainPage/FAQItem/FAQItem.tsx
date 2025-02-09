@@ -10,7 +10,7 @@ import {
 } from './FAQItem.styled';
 import QuestionBtnIcon from '@/icons/faq/question-btn.svg?react';
 
-const FAQItem: FC<IProps> = ({ question, answer, elementItemRef }) => {
+const FAQItem: FC<IProps> = ({ question, answer }) => {
   const {
     elementRef,
     elementScrollHeight,
@@ -23,7 +23,7 @@ const FAQItem: FC<IProps> = ({ question, answer, elementItemRef }) => {
   };
 
   return (
-    <Container ref={elementItemRef}>
+    <Container>
       <Button type='button' onClick={onQuestionBtnClick}>
         <BtnTitle>{question}</BtnTitle>
         <QuestionBtnIcon />

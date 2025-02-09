@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { IStyledListProps } from './AnimatedFAQList.types';
 
-export const List = styled(motion.ul)<IStyledListProps>`
+export const List = styled(motion.ul)`
   display: flex;
   flex-direction: column;
-  gap: ${({ listGap }) => listGap}px;
+  gap: ${({ theme }) => theme.spacing(5)}px;
 `;
 
-export const ListItem = styled(motion.li)``;
+export const ListItem = styled(motion.li)`
+
+`;

@@ -4,19 +4,17 @@ import { useInView } from 'framer-motion';
 import { List, ListItem } from './AnimatedFAQList.styled';
 import FAQItem from '@MainPageComponents/FAQItem';
 
-const AnimatedFAQList: FC<IProps> = ({ faq, listGap, elementItemRef }) => {
+const AnimatedFAQList: FC<IProps> = ({ faq, maxItems, isShowFullFist }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
-    margin: '-200px',
+    margin: '-100px',
   });
   const animate = inView ? 'visible' : 'hidden';
 
   const containerVariants = {
     hidden: {},
     visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -26,31 +24,28 @@ const AnimatedFAQList: FC<IProps> = ({ faq, listGap, elementItemRef }) => {
   };
 
   const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition,
-    },
+    hidden: { opacity: 0, scale: 0, transition },
+    visible: { opacity: 1, scale: 1, transition },
   };
 
   return (
     <List
+      ref={listRef}
       variants={containerVariants}
       initial='hidden'
       animate={animate}
-      ref={listRef}
-      listGap={listGap}
     >
-      {faq.map(({ answer, question }, index) => (
-        <ListItem variants={elementVariants} key={index}>
-          <FAQItem
-            question={question}
-            answer={answer}
-            elementItemRef={elementItemRef}
-          />
-        </ListItem>
-      ))}
+      {faq.map(({ answer, question }, index) => {
+        const elementNumber = index + 1;
+        const shouldHideElement = elementNumber > maxItems;
+        const isHiddenElement = shouldHideElement && !isShowFullFist;
+
+        return isHiddenElement ? null : (
+          <ListItem key={index} variants={elementVariants}>
+            <FAQItem question={question} answer={answer} />
+          </ListItem>
+        );
+      })}
     </List>
   );
 };

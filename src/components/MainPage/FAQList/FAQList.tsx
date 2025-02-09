@@ -1,64 +1,32 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useState } from 'react';
 import { IProps } from './FAQList.types';
 import AnimatedFAQList from '@AnimationBlocks/AnimatedFAQList';
 import { Button, Container, ListWrap } from './FAQList.styled';
-import { useAccordionElement } from '@/hooks';
 import { makeBlur } from '@/utils';
-import { BtnClickEvent, NumberOrNull } from '@/types/types';
-import { theme } from '@/constants';
+import { BtnClickEvent } from '@/types/types';
 
 const FAQList: FC<IProps> = ({ faq, maxItems }) => {
-  const [elementItemScrollHeight, setElementItemScrollHeight] =
-    useState<NumberOrNull>(null);
-  const [partialListScrollHeight, setPartialListScrollHeight] =
-    useState<NumberOrNull>(null);
-  const {
-    elementRef,
-    elementScrollHeight,
-    isShowElement,
-    toggleIsShowElement,
-  } = useAccordionElement();
-  const elementItemRef = useRef<HTMLDivElement>(null);
+  const [isShowFullFist, setIsShowFullFist] = useState<boolean>(false);
   const isPartialList = faq.length > maxItems;
-  const listGap = theme.spacing(5);
-  const btnTitle = isShowElement ? 'Сховати' : 'Всі питання';
-  const elementHeight = isShowElement
-    ? elementScrollHeight
-    : partialListScrollHeight;
-  const targetElementHeight = isPartialList
-    ? elementHeight
-    : elementScrollHeight;
+  const btnTitle = isShowFullFist ? 'Сховати' : 'Всі питання';
 
-  useEffect(() => {
-    if (elementScrollHeight && elementItemScrollHeight) {
-      const partialElementHeight =
-        elementItemScrollHeight * maxItems + listGap * maxItems - 1;
-
-      setPartialListScrollHeight(partialElementHeight);
-    }
-  }, [elementItemScrollHeight, elementScrollHeight, listGap, maxItems]);
-
-  useEffect(() => {
-    const scrollHeight = elementItemRef.current?.scrollHeight;
-
-    if (scrollHeight) {
-      setElementItemScrollHeight(scrollHeight);
-    }
-  }, []);
+  const togglesIsShowFullFist = () => {
+    setIsShowFullFist((prevState) => !prevState);
+  };
 
   const onShowMoreBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
-    toggleIsShowElement();
+    togglesIsShowFullFist();
   };
 
   return (
     <Container>
-      <ListWrap ref={elementRef} height={targetElementHeight}>
+      <ListWrap>
         <AnimatedFAQList
           faq={faq}
-          listGap={listGap}
-          elementItemRef={elementItemRef}
+          maxItems={maxItems}
+          isShowFullFist={isShowFullFist}
         />
       </ListWrap>
       {isPartialList && (
