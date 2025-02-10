@@ -4,7 +4,12 @@ import { useInView } from 'framer-motion';
 import { List, ListItem } from './AnimatedFAQList.styled';
 import FAQItem from '@MainPageComponents/FAQItem';
 
-const AnimatedFAQList: FC<IProps> = ({ faq, maxItems, isShowFullFist }) => {
+const AnimatedFAQList: FC<IProps> = ({
+  faq,
+  maxItems,
+  isShowFullFist,
+  isDesk,
+}) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
     margin: '-100px',
@@ -37,10 +42,11 @@ const AnimatedFAQList: FC<IProps> = ({ faq, maxItems, isShowFullFist }) => {
     >
       {faq.map(({ answer, question }, index) => {
         const elementNumber = index + 1;
-        const shouldHideElement = elementNumber > maxItems;
-        const isHiddenElement = shouldHideElement && !isShowFullFist;
+        const shouldHideOtherElements = elementNumber > maxItems;
+        const isHiddenElement = shouldHideOtherElements && !isShowFullFist;
+        const shouldHideElement = isHiddenElement && !isDesk;
 
-        return isHiddenElement ? null : (
+        return shouldHideElement ? null : (
           <ListItem key={index} variants={elementVariants}>
             <FAQItem question={question} answer={answer} />
           </ListItem>

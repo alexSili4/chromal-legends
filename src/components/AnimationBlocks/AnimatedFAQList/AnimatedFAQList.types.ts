@@ -4,4 +4,5 @@ export interface IProps {
   faq: FAQ;
   maxItems: number;
   isShowFullFist: boolean;
+  isDesk: boolean;
 }

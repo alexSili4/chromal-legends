@@ -1,1 +1,3 @@
 export { default as useAccordionElement } from './useAccordionElement';
+export { default as useIsDesk } from './useIsDesk';
+export { default as useMediaQuery } from './useMediaQuery';
