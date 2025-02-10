@@ -14,6 +14,11 @@ export const Container = styled.span`
 export const Image = styled.img`
   width: 50px;
   height: 50px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const Title = styled.span`
@@ -22,6 +27,10 @@ export const Title = styled.span`
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 20px;
+  }
 `;
 
 export const Accent = styled.strong`

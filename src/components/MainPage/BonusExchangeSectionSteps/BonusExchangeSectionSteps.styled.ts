@@ -1,9 +1,21 @@
+import { theme } from '@/constants';
+import { getFlexItemWidth } from '@/utils';
 import styled from '@emotion/styled';
+
+const listGap = theme.spacing(26);
+const stepWrapWidth = getFlexItemWidth({ listGap, listLength: 2 });
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   gap: ${({ theme }) => theme.spacing(8)}px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${listGap}px;
+  }
 `;
 
 export const FirstStepWrap = styled.div`
@@ -14,6 +26,14 @@ export const FirstStepWrap = styled.div`
   padding-bottom: ${({ theme }) => theme.spacing(2)}px;
   border-radius: 19px;
   background-color: rgba(5, 45, 68, 0.25);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(4)}px;
+    width: calc(${stepWrapWidth});
+    padding-top: ${({ theme }) => theme.spacing(5)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(3)}px;
+    border-radius: 29px;
+  }
 `;
 
 export const Title = styled.p`
@@ -23,21 +43,26 @@ export const Title = styled.p`
   font-weight: 400;
   line-height: 1;
   text-align: center;
-  stroke: #021f2f;
-  stroke-width: 2px;
-  paint-order: stroke;
-  filter: drop-shadow(0px 2px 0px #052d44);
+  text-shadow: -2px -2px 0 #021f2f, 2px -2px 0 #021f2f, -2px 2px 0 #021f2f,
+    2px 2px 0 #021f2f, 0px 4px 0 #052d44, -2px 4px 0 #052d44, 2px 4px 0 #052d44;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 24px;
+  }
 `;
 
 export const FirstStepContentWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(7)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(22)}px;
+  }
 `;
 
 export const DescriptionWrap = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing(5)}px;
   justify-content: center;
 `;
 
@@ -58,6 +83,20 @@ export const DescriptionTextWrap = styled.div`
     width: 53px;
     height: 51px;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 158px;
+    height: 120px;
+    border-radius: 29px;
+
+    & > svg {
+      position: absolute;
+      top: 87px;
+      left: -28px;
+      width: 118px;
+      height: 110px;
+    }
+  }
 `;
 
 export const DescriptionTextNumber = styled.p`
@@ -65,19 +104,31 @@ export const DescriptionTextNumber = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.luckiestGuyRUSBELUKR};
   font-size: 30px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.6;
   text-align: center;
+  text-shadow: 0 1px 0 #062d44;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 56px;
+    text-shadow: 0 2px 0 #062d44;
+  }
 `;
 
 export const Text = styled.p`
   margin-top: ${({ theme }) => theme.spacing(12)}px;
+  margin-left: ${({ theme }) => theme.spacing(5)}px;
+  margin-right: ${({ theme }) => theme.spacing(12)}px;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.luckiestGuyRUSBELUKR};
   font-size: 64px;
   font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0px;
-  text-align: left;
+  line-height: 1;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    margin-top: ${({ theme }) => theme.spacing(21)}px;
+    margin-left: ${({ theme }) => theme.spacing(9)}px;
+    margin-right: ${({ theme }) => theme.spacing(22)}px;
+  }
 `;
 
 export const DescriptionTextPart = styled.span`
@@ -86,6 +137,10 @@ export const DescriptionTextPart = styled.span`
   font-size: 10px;
   font-weight: 400;
   line-height: 1.2;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 18px;
+  }
 `;
 
 export const Image = styled.img`
@@ -95,6 +150,14 @@ export const Image = styled.img`
   width: 93px;
   max-width: 93px;
   height: 97px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: 31px;
+    left: -112px;
+    width: 212px;
+    max-width: 212px;
+    height: 212px;
+  }
 `;
 
 export const Description = styled.p`
@@ -104,14 +167,28 @@ export const Description = styled.p`
   font-weight: 700;
   line-height: 1.25;
   text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
 `;
 
 export const SecondStepWrap = styled.div`
   position: relative;
   padding-top: ${({ theme }) => theme.spacing(4)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(38)}px;
   border-radius: 29px;
   background-color: rgba(5, 45, 68, 0.25);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    padding-bottom: ${({ theme }) => theme.spacing(38)}px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: calc(${stepWrapWidth});
+    padding-top: ${({ theme }) => theme.spacing(5)}px;
+  }
 `;
 
 export const HeroLeftImg = styled.img`
@@ -120,6 +197,13 @@ export const HeroLeftImg = styled.img`
   left: 0;
   width: 125px;
   height: 158px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: 134px;
+    left: -41px;
+    width: 288px;
+    height: 315px;
+  }
 `;
 
 export const HeroCenterImg = styled.img`
@@ -128,6 +212,13 @@ export const HeroCenterImg = styled.img`
   left: 99px;
   width: 110px;
   height: 172px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: 76px;
+    left: 139px;
+    width: 253px;
+    height: 344px;
+  }
 `;
 
 export const HeroRightImg = styled.img`
@@ -136,4 +227,11 @@ export const HeroRightImg = styled.img`
   right: 6px;
   width: 112px;
   height: 184px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: 64px;
+    right: -20px;
+    width: 259px;
+    height: 368px;
+  }
 `;

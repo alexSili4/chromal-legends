@@ -48,8 +48,8 @@ const BonusExchangeSectionSteps: FC = () => {
             </DescriptionTextWrap>
           </DescriptionWrap>
           <Description>
-            Більше балобонусів до обміну = більше Кристалів у грі «Chroma
-            Legends»
+            Більше балобонусів до обміну = більше Кристалів
+            <br />у грі «Chroma Legends»
           </Description>
         </FirstStepContentWrap>
       </FirstStepWrap>

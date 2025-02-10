@@ -1,10 +1,53 @@
 import { FC } from 'react';
 import { Global, css } from '@emotion/react';
 import 'modern-normalize';
+import { theme } from '@/constants';
+import {
+  luckiestGuyRUSBELUKRRegular,
+  proximaNovaBold,
+  proximaNovaExtraBold,
+  proximaNovaRegular,
+  proximaNovaSemiBold,
+} from '@/fonts';
 
 const GlobalStyles: FC = () => (
   <Global
     styles={css`
+      @font-face {
+        font-family: ${theme.fontFamily.proximaNova};
+        src: local(${theme.fontFamily.proximaNova}),
+          url(${proximaNovaExtraBold}) format('truetype');
+        font-weight: 800;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.proximaNova};
+        src: local(${theme.fontFamily.proximaNova}),
+          url(${proximaNovaBold}) format('truetype');
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.proximaNova};
+        src: local(${theme.fontFamily.proximaNova}),
+          url(${proximaNovaSemiBold}) format('truetype');
+        font-weight: 600;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.proximaNova};
+        src: local(${theme.fontFamily.proximaNova}),
+          url(${proximaNovaRegular}) format('truetype');
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.luckiestGuyRUSBELUKR};
+        src: local(${theme.fontFamily.luckiestGuyRUSBELUKR}),
+          url(${luckiestGuyRUSBELUKRRegular}) format('truetype');
+        font-weight: 400;
+      }
+
       html {
         scroll-behavior: smooth;
       }
