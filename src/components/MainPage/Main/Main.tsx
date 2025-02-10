@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import FAQSection from '@MainPageComponents/FAQSection';
+import BonusExchangeSection from '@MainPageComponents/BonusExchangeSection';
 
 const Main: FC = () => {
   return (
@@ -9,7 +10,7 @@ const Main: FC = () => {
       <div>Як долучитись до турніру?</div>
       <div>Як отримати картки?</div>
       <div>Колекційні набори</div>
-      <div>Ексклюзивні нагороди</div>
+      <BonusExchangeSection />
       <FAQSection />
     </>
   );

@@ -8,6 +8,7 @@ export const Title = styled.h2<IStyledProps>`
   font-weight: 400;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     font-size: 48px;
