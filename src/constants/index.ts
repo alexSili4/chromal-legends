@@ -5,3 +5,4 @@ export { default as navLinks } from './navLinks';
 export { default as faq } from './faq';
 export { default as Links } from './links';
 export { default as prizes } from './prizes';
+export { default as collectibleSets } from './collectibleSets';
