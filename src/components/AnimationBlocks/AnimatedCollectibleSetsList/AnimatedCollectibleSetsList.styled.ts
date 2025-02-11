@@ -7,6 +7,8 @@ import { IStyledListItemProps } from './AnimatedCollectibleSetsList.types';
 const listGapDesk = theme.spacing(25);
 
 export const Container = styled.div`
+  width: 100%;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-left: ${({ theme }) => theme.spacing(5)}px;
     padding-right: ${({ theme }) => theme.spacing(8)}px;
@@ -19,6 +21,7 @@ export const List = styled(motion.ul)`
   gap: ${({ theme }) => theme.spacing(8)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    flex-direction: row;
     gap: ${listGapDesk}px;
   }
 `;
