@@ -11,9 +11,10 @@ import { useInView } from 'framer-motion';
 const AnimatedCollectibleSetsList: FC<IProps> = ({ collectibleSets }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
-    margin: '-200px',
+    margin: '-100px 0px -200px 0px',
   });
   const animate = inView ? 'visible' : 'hidden';
+  const listLength = collectibleSets.length;
 
   const containerVariants = {
     hidden: {},
@@ -46,9 +47,18 @@ const AnimatedCollectibleSetsList: FC<IProps> = ({ collectibleSets }) => {
         animate={animate}
         ref={listRef}
       >
-        {collectibleSets.map(({}, index) => (
-          <ListItem key={index} variants={elementVariants}>
-            <CollectibleSetsListItem />
+        {collectibleSets.map(({ desc, img, name, price }, index) => (
+          <ListItem
+            key={index}
+            variants={elementVariants}
+            listLength={listLength}
+          >
+            <CollectibleSetsListItem
+              name={name}
+              desc={desc}
+              price={price}
+              img={img}
+            />
           </ListItem>
         ))}
       </List>

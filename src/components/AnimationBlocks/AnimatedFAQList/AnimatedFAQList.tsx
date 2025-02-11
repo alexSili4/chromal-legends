@@ -12,7 +12,7 @@ const AnimatedFAQList: FC<IProps> = ({
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
-    margin: '-100px',
+    margin: '-100px 0px -200px 0px',
   });
   const animate = inView ? 'visible' : 'hidden';
 

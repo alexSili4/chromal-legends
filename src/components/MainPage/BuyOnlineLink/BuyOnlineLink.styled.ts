@@ -6,6 +6,10 @@ export const Container = styled.div`
   background-color: #052d44;
   padding: ${({ theme }) => theme.spacing()}px;
   padding-bottom: ${({ theme }) => theme.spacing(3)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 360px;
+  }
 `;
 
 export const Link = styled.a`
@@ -27,6 +31,10 @@ export const Content = styled.span`
     width: 20px;
     height: 20px;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding: ${({ theme }) => theme.spacing(8)}px;
+  }
 `;
 
 export const LinkTitle = styled.span`
@@ -38,4 +46,8 @@ export const LinkTitle = styled.span`
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 32px;
+  }
 `;

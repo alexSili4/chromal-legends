@@ -7,7 +7,7 @@ import PrizesSectionPrizeDetails from '@MainPageComponents/PrizesSectionPrizeDet
 const AnimatedPrizesList: FC<IProps> = ({ prizes }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
-    margin: '-200px',
+    margin: '-50px 0px -200px 0px',
   });
   const animate = inView ? 'visible' : 'hidden';
   const listLength = prizes.length;
