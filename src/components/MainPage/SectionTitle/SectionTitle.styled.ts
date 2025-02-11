@@ -11,6 +11,9 @@ export const Title = styled.h2<IStyledProps>`
   text-transform: uppercase;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    max-width: 969px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 48px;
   }
 `;
