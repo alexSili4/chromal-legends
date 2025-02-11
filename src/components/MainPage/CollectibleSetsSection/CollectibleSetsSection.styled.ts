@@ -1,18 +1,25 @@
 import styled from '@emotion/styled';
+import sectionBottomBg from '@/images/collectible-sets/section-bottom-bg.png';
+import sectionTopBg from '@/images/collectible-sets/section-top-bg.png';
 
 export const Section = styled.section`
   width: calc(100% + 16px + 16px);
   border: 16px solid #001d2c;
   border-bottom-width: 0;
   border-radius: 24px 24px 0px 0px;
-  background-color: #80b5e2;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
   padding-bottom: ${({ theme }) => theme.spacing(8)}px;
+  background-color: #80b5e2;
+  background-image: url(${sectionBottomBg}), url(${sectionTopBg});
+  background-position: bottom 0 left 0;
+  background-size: 1920px 242px, 1920px 629px;
+  background-repeat: no-repeat;
   transform: translateX(-16px);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-top: ${({ theme }) => theme.spacing(17)}px;
     padding-bottom: ${({ theme }) => theme.spacing(6)}px;
+    background-size: contain;
   }
 `;
 
