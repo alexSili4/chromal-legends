@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { IStyledListItemProps } from './AnimatedExclusiveAwardsList.types';
+import { IStyledListItemProps } from './AnimatedPrizesList.types';
 import { getFlexItemWidth } from '@/utils';
 import { theme } from '@/constants';
 

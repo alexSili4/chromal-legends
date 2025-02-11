@@ -14,7 +14,7 @@ export interface IPartner {
   position: IPosition;
 }
 
-export interface IAward {
+export interface IPrizeData {
   img: string;
   widthMob: number;
   heightMob: number;
@@ -23,12 +23,12 @@ export interface IAward {
   position: IPosition;
 }
 
-export interface IExclusiveAward {
+export interface IPrize {
   name: string;
   desc: string;
   partner: IPartner;
-  award: IAward;
+  prize: IPrizeData;
   conditions: { text: string; maxWidthMob: number; maxWidthDesk: number };
 }
 
-export type ExclusiveAwards = IExclusiveAward[];
+export type Prizes = IPrize[];

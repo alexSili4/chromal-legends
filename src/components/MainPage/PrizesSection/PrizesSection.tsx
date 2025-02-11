@@ -2,18 +2,18 @@ import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { FC } from 'react';
 import SectionTitle from '@MainPageComponents/SectionTitle';
 import AppLink from '@GeneralComponents/AppLink';
-import { Container, Content, Section } from './ExclusiveAwardsSection.styled';
-import { exclusiveAwards } from '@/constants';
-import AnimatedExclusiveAwardsList from '@AnimationBlocks/AnimatedExclusiveAwardsList';
+import { Container, Content, Section } from './PrizesSection.styled';
+import { prizes, SectionsIds } from '@/constants';
+import AnimatedPrizesList from '@AnimationBlocks/AnimatedPrizesList';
 
-const ExclusiveAwardsSection: FC = () => {
+const PrizesSection: FC = () => {
   return (
-    <Section>
+    <Section id={SectionsIds.prizes}>
       <GeneralContainer>
         <Container>
           <SectionTitle text='Ексклюзивні нагороди для користувачів застосунку Сільпо' />
           <Content>
-            <AnimatedExclusiveAwardsList exclusiveAwards={exclusiveAwards} />
+            <AnimatedPrizesList prizes={prizes} />
             <AppLink />
           </Content>
         </Container>
@@ -22,4 +22,4 @@ const ExclusiveAwardsSection: FC = () => {
   );
 };
 
-export default ExclusiveAwardsSection;
+export default PrizesSection;

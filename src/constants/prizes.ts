@@ -1,10 +1,10 @@
-import { ExclusiveAwards, IPartner } from '@/types/exclusiveAwards.types';
-import silpo from '@/images/exclusive-awards/silpo.png';
-import masterCard from '@/images/exclusive-awards/master-card.png';
-import metalMoon from '@/images/exclusive-awards/metal-moon.png';
-import masterRoxy from '@/images/exclusive-awards/master-roxy.png';
-import mysticChest from '@/images/exclusive-awards/mystic-chest.png';
-import epicChest from '@/images/exclusive-awards/epic-chest.png';
+import { Prizes, IPartner } from '@/types/prizes.types';
+import silpo from '@/images/prizes/silpo.png';
+import masterCard from '@/images/prizes/master-card.png';
+import metalMoon from '@/images/prizes/metal-moon.png';
+import masterRoxy from '@/images/prizes/master-roxy.png';
+import mysticChest from '@/images/prizes/mystic-chest.png';
+import epicChest from '@/images/prizes/epic-chest.png';
 
 const silpoData: IPartner = {
   img: silpo,
@@ -24,12 +24,12 @@ const masterCardData: IPartner = {
   position: { xMob: -14, yMob: -20, xDesk: -19, yDesk: -20 },
 };
 
-const exclusiveAwards: ExclusiveAwards = [
+const prizes: Prizes = [
   {
     name: 'Металевий Мун',
     desc: 'Епічний костюм',
     partner: silpoData,
-    award: {
+    prize: {
       img: metalMoon,
       widthMob: 167,
       widthDesk: 217,
@@ -52,7 +52,7 @@ const exclusiveAwards: ExclusiveAwards = [
     name: 'Майстер Роксі',
     desc: 'епічний костюм',
     partner: masterCardData,
-    award: {
+    prize: {
       img: masterRoxy,
       widthMob: 165,
       widthDesk: 213,
@@ -70,7 +70,7 @@ const exclusiveAwards: ExclusiveAwards = [
     name: 'МІСТИЧНА СКРИНЯ',
     desc: 'Костюми, сфери та картки настрою',
     partner: silpoData,
-    award: {
+    prize: {
       img: mysticChest,
       widthMob: 172,
       widthDesk: 222,
@@ -88,7 +88,7 @@ const exclusiveAwards: ExclusiveAwards = [
     name: 'Епічна скриня',
     desc: 'х2 нагорода. Епічні або легендарні сфери у кожні скрині',
     partner: masterCardData,
-    award: {
+    prize: {
       img: epicChest,
       widthMob: 168,
       widthDesk: 211,
@@ -104,4 +104,4 @@ const exclusiveAwards: ExclusiveAwards = [
   },
 ];
 
-export default exclusiveAwards;
+export default prizes;

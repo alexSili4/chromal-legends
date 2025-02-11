@@ -1,20 +1,16 @@
 import { useInView } from 'framer-motion';
 import { FC, useRef } from 'react';
-import { IProps } from './AnimatedExclusiveAwardsList.types';
-import {
-  Container,
-  List,
-  ListItem,
-} from './AnimatedExclusiveAwardsList.styled';
-import ExclusiveAwardsSectionExclusiveAward from '@MainPageComponents/ExclusiveAwardsSectionExclusiveAward';
+import { IProps } from './AnimatedPrizesList.types';
+import { Container, List, ListItem } from './AnimatedPrizesList.styled';
+import PrizesSectionPrizeDetails from '@MainPageComponents/PrizesSectionPrizeDetails';
 
-const AnimatedExclusiveAwardsList: FC<IProps> = ({ exclusiveAwards }) => {
+const AnimatedPrizesList: FC<IProps> = ({ prizes }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
     margin: '-200px',
   });
   const animate = inView ? 'visible' : 'hidden';
-  const listLength = exclusiveAwards.length;
+  const listLength = prizes.length;
 
   const containerVariants = {
     hidden: {},
@@ -47,20 +43,20 @@ const AnimatedExclusiveAwardsList: FC<IProps> = ({ exclusiveAwards }) => {
         animate={animate}
         ref={listRef}
       >
-        {exclusiveAwards.map(
+        {prizes.map(
           (
             {
-              award: {
-                widthDesk: awardWidthDesk,
-                widthMob: awardWidthMob,
-                heightDesk: awardHeightDesk,
-                heightMob: awardHeightMob,
-                img: awardImg,
+              prize: {
+                widthDesk: prizeWidthDesk,
+                widthMob: prizeWidthMob,
+                heightDesk: prizeHeightDesk,
+                heightMob: prizeHeightMob,
+                img: prizeImg,
                 position: {
-                  xDesk: awardRightDesk,
-                  xMob: awardRightMob,
-                  yDesk: awardTopDesk,
-                  yMob: awardTopMob,
+                  xDesk: prizeRightDesk,
+                  xMob: prizeRightMob,
+                  yDesk: prizeTopDesk,
+                  yMob: prizeTopMob,
                 },
               },
               conditions: {
@@ -91,16 +87,16 @@ const AnimatedExclusiveAwardsList: FC<IProps> = ({ exclusiveAwards }) => {
               key={index}
               listLength={listLength}
             >
-              <ExclusiveAwardsSectionExclusiveAward
-                awardHeightDesk={awardHeightDesk}
-                awardHeightMob={awardHeightMob}
-                awardImg={awardImg}
-                awardRightDesk={awardRightDesk}
-                awardRightMob={awardRightMob}
-                awardTopDesk={awardTopDesk}
-                awardTopMob={awardTopMob}
-                awardWidthDesk={awardWidthDesk}
-                awardWidthMob={awardWidthMob}
+              <PrizesSectionPrizeDetails
+                prizeHeightDesk={prizeHeightDesk}
+                prizeHeightMob={prizeHeightMob}
+                prizeImg={prizeImg}
+                prizeRightDesk={prizeRightDesk}
+                prizeRightMob={prizeRightMob}
+                prizeTopDesk={prizeTopDesk}
+                prizeTopMob={prizeTopMob}
+                prizeWidthDesk={prizeWidthDesk}
+                prizeWidthMob={prizeWidthMob}
                 conditions={conditionsText}
                 conditionsMaxWidthMob={conditionsMaxWidthMob}
                 conditionsMaxWidthDesk={conditionsMaxWidthDesk}
@@ -124,4 +120,4 @@ const AnimatedExclusiveAwardsList: FC<IProps> = ({ exclusiveAwards }) => {
   );
 };
 
-export default AnimatedExclusiveAwardsList;
+export default AnimatedPrizesList;

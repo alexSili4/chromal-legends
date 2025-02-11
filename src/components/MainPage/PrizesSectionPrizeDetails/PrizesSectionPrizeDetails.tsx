@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IProps } from './ExclusiveAwardsSectionExclusiveAward.types';
+import { IProps } from './PrizesSectionPrizeDetails.types';
 import {
   Conditions,
   Container,
@@ -9,9 +9,9 @@ import {
   Name,
   PartnerImg,
   TextWrap,
-} from './ExclusiveAwardsSectionExclusiveAward.styled';
+} from './PrizesSectionPrizeDetails.styled';
 
-const ExclusiveAwardsSectionExclusiveAward: FC<IProps> = ({
+const PrizesSectionPrizeDetails: FC<IProps> = ({
   partnerImg,
   partnerWidthMob,
   partnerWidthDesk,
@@ -23,22 +23,22 @@ const ExclusiveAwardsSectionExclusiveAward: FC<IProps> = ({
   partnerRightDesk,
   name,
   desc,
-  awardImg,
-  awardWidthMob,
-  awardWidthDesk,
-  awardHeightMob,
-  awardHeightDesk,
-  awardTopMob,
-  awardTopDesk,
-  awardRightMob,
-  awardRightDesk,
+  prizeImg,
+  prizeWidthMob,
+  prizeWidthDesk,
+  prizeHeightMob,
+  prizeHeightDesk,
+  prizeTopMob,
+  prizeTopDesk,
+  prizeRightMob,
+  prizeRightDesk,
   conditions,
   conditionsMaxWidthDesk,
   conditionsMaxWidthMob,
 }) => {
   return (
     <Container>
-      <Content >
+      <Content>
         <PartnerImg
           src={partnerImg}
           alt='Логотип партнера'
@@ -56,16 +56,16 @@ const ExclusiveAwardsSectionExclusiveAward: FC<IProps> = ({
           <Desc>{desc}</Desc>
         </TextWrap>
         <AwardImg
-          src={awardImg}
+          src={prizeImg}
           alt='Зображення ексклюзивної нагороди'
-          widthMob={awardWidthMob}
-          widthDesk={awardWidthDesk}
-          heightMob={awardHeightMob}
-          heightDesk={awardHeightDesk}
-          topMob={awardTopMob}
-          topDesk={awardTopDesk}
-          rightMob={awardRightMob}
-          rightDesk={awardRightDesk}
+          widthMob={prizeWidthMob}
+          widthDesk={prizeWidthDesk}
+          heightMob={prizeHeightMob}
+          heightDesk={prizeHeightDesk}
+          topMob={prizeTopMob}
+          topDesk={prizeTopDesk}
+          rightMob={prizeRightMob}
+          rightDesk={prizeRightDesk}
         />
       </Content>
       <Conditions
@@ -78,4 +78,4 @@ const ExclusiveAwardsSectionExclusiveAward: FC<IProps> = ({
   );
 };
 
-export default ExclusiveAwardsSectionExclusiveAward;
+export default PrizesSectionPrizeDetails;

@@ -3,7 +3,7 @@ import {
   IStyledAwardImgProps,
   IStyledConditionsProps,
   IStyledPartnerImgProps,
-} from './ExclusiveAwardsSectionExclusiveAward.types';
+} from './PrizesSectionPrizeDetails.types';
 
 export const Container = styled.div`
   position: relative;
