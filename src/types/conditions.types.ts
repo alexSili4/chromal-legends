@@ -1,3 +1,8 @@
+export interface ISubtitle {
+  text: string;
+  fontSize: number;
+}
+
 export interface IPosition {
   leftMob: number;
   topMob: number;
@@ -7,7 +12,7 @@ export interface IPosition {
 
 export interface ITitle {
   title: string;
-  subtitle: string;
+  subtitle: ISubtitle;
   position: IPosition;
 }
 
@@ -27,7 +32,6 @@ export interface IDesc {
 
 export interface ICondition {
   title: ITitle;
-
   desc: IDesc;
   img: IImg;
 }

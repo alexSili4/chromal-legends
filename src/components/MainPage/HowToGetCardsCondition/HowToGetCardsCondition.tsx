@@ -21,25 +21,35 @@ const HowToGetCardsCondition: FC<IProps> = ({
   imgWidthMob,
   descWidthDesk,
   descWidthMob,
+  titleLeftDesk,
+  titleLeftMob,
+  titleTopDesk,
+  titleTopMob,
+  subtitleFontSize,
 }) => {
   return (
     <Container>
-      <TitleWrap>
+      <TitleWrap
+        leftDesk={titleLeftDesk}
+        leftMob={titleLeftMob}
+        topDesk={titleTopDesk}
+        topMob={titleTopMob}
+      >
         <Text>
           <Title>{title}</Title>
           <br />
-          <Subtitle>{subtitle}</Subtitle>
+          <Subtitle fontSize={subtitleFontSize}>{subtitle}</Subtitle>
         </Text>
       </TitleWrap>
       <Image
         src={img}
         alt='декоративне зображення карток'
-        imgHeightDesk={imgHeightDesk}
-        imgHeightMob={imgHeightMob}
-        imgWidthDesk={imgWidthDesk}
-        imgWidthMob={imgWidthMob}
+        heightDesk={imgHeightDesk}
+        heightMob={imgHeightMob}
+        widthDesk={imgWidthDesk}
+        widthMob={imgWidthMob}
       />
-      <Description descWidthMob={descWidthMob} descWidthDesk={descWidthDesk}>
+      <Description widthMob={descWidthMob} widthDesk={descWidthDesk}>
         {desc}
       </Description>
     </Container>

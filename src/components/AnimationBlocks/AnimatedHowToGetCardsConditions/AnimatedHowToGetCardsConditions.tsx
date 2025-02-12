@@ -46,7 +46,7 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
           {
             title: {
               title,
-              subtitle,
+              subtitle: { text: subtitle, fontSize: subtitleFontSize },
               position: {
                 leftDesk: titleLeftDesk,
                 leftMob: titleLeftMob,
@@ -73,6 +73,7 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
               titleLeftMob={titleLeftMob}
               titleTopDesk={titleTopDesk}
               titleTopMob={titleTopMob}
+              subtitleFontSize={subtitleFontSize}
               desc={desc}
               descWidthMob={descWidthMob}
               descWidthDesk={descWidthDesk}

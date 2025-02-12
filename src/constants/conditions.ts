@@ -7,7 +7,7 @@ const conditions: Conditions = [
   {
     title: {
       title: '99',
-      subtitle: 'грн',
+      subtitle: { text: 'грн', fontSize: 36 },
       position: { leftMob: 24, topMob: 0, leftDesk: 35, topDesk: -3 },
     },
     desc: {
@@ -26,7 +26,7 @@ const conditions: Conditions = [
   {
     title: {
       title: '+1',
-      subtitle: 'картка',
+      subtitle: { text: 'картка', fontSize: 16 },
       position: {
         leftDesk: 65,
         leftMob: 24,
@@ -50,7 +50,7 @@ const conditions: Conditions = [
   {
     title: {
       title: '+2',
-      subtitle: 'картки',
+      subtitle: { text: 'картки', fontSize: 16 },
       position: { leftDesk: 44, leftMob: 24, topDesk: 1, topMob: 3 },
     },
     desc: {

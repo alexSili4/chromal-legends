@@ -5,6 +5,7 @@ export interface IProps {
   titleLeftMob: number;
   titleTopDesk: number;
   titleTopMob: number;
+  subtitleFontSize: number;
   desc: string;
   descWidthMob: number;
   descWidthDesk: number;
@@ -16,20 +17,24 @@ export interface IProps {
 }
 
 export interface IStyledTitleWrapProps {
-  titleLeftDesk: number;
-  titleLeftMob: number;
-  titleTopDesk: number;
-  titleTopMob: number;
+  leftDesk: number;
+  leftMob: number;
+  topDesk: number;
+  topMob: number;
 }
 
 export interface IStyledImageProps {
-  imgHeightDesk: number;
-  imgHeightMob: number;
-  imgWidthDesk: number;
-  imgWidthMob: number;
+  heightDesk: number;
+  heightMob: number;
+  widthDesk: number;
+  widthMob: number;
 }
 
 export interface IStyledDescProps {
-  descWidthMob: number;
-  descWidthDesk: number;
+  widthMob: number;
+  widthDesk: number;
+}
+
+export interface IStyledSubtitleProps {
+  fontSize: number;
 }

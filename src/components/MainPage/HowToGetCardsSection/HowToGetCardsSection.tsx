@@ -4,7 +4,7 @@ import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedHowToGetCardsConditions from '@AnimationBlocks/AnimatedHowToGetCardsConditions';
 import HowToGetCardsSectionGoods from '@MainPageComponents/HowToGetCardsSectionGoods';
 import { Container, Content, Section } from './HowToGetCardsSection.styled';
-import { conditions, SectionsIds } from '@/constants';
+import { conditions, SectionsIds, theme } from '@/constants';
 
 const HowToGetCardsSection: FC = () => {
   return (
@@ -14,7 +14,7 @@ const HowToGetCardsSection: FC = () => {
           <SectionTitle text='Як отримати картки?' />
           <Content>
             <AnimatedHowToGetCardsConditions conditions={conditions} />
-            <HowToGetCardsSectionGoods />
+            <HowToGetCardsSectionGoods sideGapMob={theme.spacing(2)} />
           </Content>
         </Container>
       </GeneralContainer>
