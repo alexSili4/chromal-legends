@@ -2,7 +2,7 @@ import GeneralContainer from '@/components/General/GeneralContainer';
 import { FC } from 'react';
 import SectionTitle from '@MainPageComponents/SectionTitle';
 import AppLink from '@GeneralComponents/AppLink';
-import BonusExchangeSectionSteps from '@MainPageComponents/BonusExchangeSectionSteps';
+import AnimatedBonusExchangeSectionSteps from '@AnimationBlocks/AnimatedBonusExchangeSectionSteps';
 import { Container, Content, Section } from './BonusExchangeSection.styled';
 
 const BonusExchangeSection: FC = () => {
@@ -12,7 +12,7 @@ const BonusExchangeSection: FC = () => {
         <Container>
           <SectionTitle text='Обмін балобонусів' />
           <Content>
-            <BonusExchangeSectionSteps />
+            <AnimatedBonusExchangeSectionSteps />
             <AppLink />
           </Content>
         </Container>

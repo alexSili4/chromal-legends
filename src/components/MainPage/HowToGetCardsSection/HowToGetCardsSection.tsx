@@ -1,18 +1,23 @@
 import { FC } from 'react';
 import SectionTitle from '@MainPageComponents/SectionTitle';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AnimatedHowToGetCardsConditions from '@AnimationBlocks/AnimatedHowToGetCardsConditions';
+import HowToGetCardsSectionGoods from '@MainPageComponents/HowToGetCardsSectionGoods';
+import { Container, Content, Section } from './HowToGetCardsSection.styled';
+import { conditions, SectionsIds } from '@/constants';
 
 const HowToGetCardsSection: FC = () => {
   return (
-    <Section>
-      <GeneralComponents>
+    <Section id={SectionsIds.cards}>
+      <GeneralContainer>
         <Container>
-          <SectionTitle />
+          <SectionTitle text='Як отримати картки?' />
           <Content>
-            <AnimatedHowToGetCardsConditions />
+            <AnimatedHowToGetCardsConditions conditions={conditions} />
             <HowToGetCardsSectionGoods />
           </Content>
         </Container>
-      </GeneralComponents>
+      </GeneralContainer>
     </Section>
   );
 };
