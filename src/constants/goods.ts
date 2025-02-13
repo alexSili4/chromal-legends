@@ -1,5 +1,5 @@
 import { Goods } from '@/types/goods.types';
 
-const goods: Goods = [{}, {}, {}, {}];
+const goods: Goods = [{}, {}, {}, {}, {}];
 
 export default goods;

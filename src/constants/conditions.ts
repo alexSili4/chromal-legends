@@ -7,8 +7,13 @@ const conditions: Conditions = [
   {
     title: {
       title: '99',
-      subtitle: { text: 'грн', fontSize: 36 },
-      position: { leftMob: 24, topMob: 0, leftDesk: 35, topDesk: -3 },
+      subtitle: { text: 'грн', fontSizeMob: 36, fontSizeDesk: 50 },
+      position: {
+        leftMob: 24,
+        topMob: 0,
+        leftDesk: 35,
+        topDesk: -3,
+      },
     },
     desc: {
       desc: 'За кожні 99 грн в чеку купуйте 1 картку за акційною ціною 2,99 грн',
@@ -26,12 +31,12 @@ const conditions: Conditions = [
   {
     title: {
       title: '+1',
-      subtitle: { text: 'картка', fontSize: 16 },
+      subtitle: { text: 'картка', fontSizeMob: 16, fontSizeDesk: 24 },
       position: {
-        leftDesk: 65,
         leftMob: 24,
-        topDesk: 0,
         topMob: -2,
+        leftDesk: 27,
+        topDesk: -6,
       },
     },
     desc: {
@@ -50,8 +55,13 @@ const conditions: Conditions = [
   {
     title: {
       title: '+2',
-      subtitle: { text: 'картки', fontSize: 16 },
-      position: { leftDesk: 44, leftMob: 24, topDesk: 1, topMob: 3 },
+      subtitle: { text: 'картки', fontSizeMob: 16, fontSizeDesk: 24 },
+      position: {
+        topMob: 3,
+        leftMob: 24,
+        topDesk: 1,
+        leftDesk: 44,
+      },
     },
     desc: {
       desc: 'За оплату карткою Mastercard купуйте 2 додаткові картки за акційною ціною 2,99 грн. кожна',

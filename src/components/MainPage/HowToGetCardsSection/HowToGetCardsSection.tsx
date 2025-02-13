@@ -11,10 +11,10 @@ const HowToGetCardsSection: FC = () => {
     <Section id={SectionsIds.cards}>
       <GeneralContainer>
         <Container>
-          <SectionTitle text='Як отримати картки?' />
+          <SectionTitle text='Як отримати картки?' isDark />
           <Content>
             <AnimatedHowToGetCardsConditions conditions={conditions} />
-            <HowToGetCardsSectionGoods sideGapMob={theme.spacing(2)} />
+            <HowToGetCardsSectionGoods sideGap={theme.spacing(2)} />
           </Content>
         </Container>
       </GeneralContainer>

@@ -6,18 +6,23 @@ import {
 import HowToGetCardsSectionGoodDetails from '@MainPageComponents/HowToGetCardsSectionGoodDetails';
 import { IProps } from './HowToGetCardsSectionGoodsSlider.types';
 
-const HowToGetCardsSectionGoodsSlider: FC<IProps> = ({ goods }) => {
+const HowToGetCardsSectionGoodsSlider: FC<IProps> = ({
+  goods,
+  gapMob,
+  gapDesk,
+  slideWidthMob,
+  slideWidthDesk,
+}) => {
   return (
-    <StyledSwiper
-      breakpoints={{
-        1: {
-          slidesPerView: 1.629,
-          spaceBetween: 19,
-        },
-      }}
-    >
+    <StyledSwiper slidesPerView='auto' grabCursor>
       {goods.map((_, index) => (
-        <StyledSwiperSlide key={index}>
+        <StyledSwiperSlide
+          key={index}
+          gapMob={gapMob}
+          gapDesk={gapDesk}
+          slideWidthMob={slideWidthMob}
+          slideWidthDesk={slideWidthDesk}
+        >
           <HowToGetCardsSectionGoodDetails />
         </StyledSwiperSlide>
       ))}

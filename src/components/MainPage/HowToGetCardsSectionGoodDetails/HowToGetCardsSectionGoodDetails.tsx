@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import { Container } from './HowToGetCardsSectionGoodDetails.styled';
 
 const HowToGetCardsSectionGoodDetails: FC = () => {
-  return <div>nGood</div>;
+  return <Container>content</Container>;
 };
 
 export default HowToGetCardsSectionGoodDetails;

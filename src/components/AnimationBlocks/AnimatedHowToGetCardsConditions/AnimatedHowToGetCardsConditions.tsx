@@ -1,5 +1,5 @@
 import { FC, useRef } from 'react';
-import HowToGetCardsCondition from '@MainPageComponents/HowToGetCardsCondition';
+import HowToGetCardsSectionCondition from '@MainPageComponents/HowToGetCardsSectionCondition';
 import { List, ListItem } from './AnimatedHowToGetCardsConditions.styled';
 import { IProps } from './AnimatedHowToGetCardsConditions.types';
 import { useInView } from 'framer-motion';
@@ -46,7 +46,11 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
           {
             title: {
               title,
-              subtitle: { text: subtitle, fontSize: subtitleFontSize },
+              subtitle: {
+                text: subtitle,
+                fontSizeMob: subtitleFontSizeMob,
+                fontSizeDesk: subtitleFontSizeDesk,
+              },
               position: {
                 leftDesk: titleLeftDesk,
                 leftMob: titleLeftMob,
@@ -66,14 +70,15 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
           index
         ) => (
           <ListItem key={index} variants={elementVariants}>
-            <HowToGetCardsCondition
+            <HowToGetCardsSectionCondition
               title={title}
               subtitle={subtitle}
               titleLeftDesk={titleLeftDesk}
               titleLeftMob={titleLeftMob}
               titleTopDesk={titleTopDesk}
               titleTopMob={titleTopMob}
-              subtitleFontSize={subtitleFontSize}
+              subtitleFontSizeMob={subtitleFontSizeMob}
+              subtitleFontSizeDesk={subtitleFontSizeDesk}
               desc={desc}
               descWidthMob={descWidthMob}
               descWidthDesk={descWidthDesk}

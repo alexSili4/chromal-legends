@@ -1,6 +1,7 @@
 export interface ISubtitle {
   text: string;
-  fontSize: number;
+  fontSizeMob: number;
+  fontSizeDesk: number;
 }
 
 export interface IPosition {
