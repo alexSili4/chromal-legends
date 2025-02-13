@@ -5,3 +5,7 @@ export interface IProps {
 export interface IStyledLinkWContainerProps {
   sideGapMob: number;
 }
+
+export interface IStyledSliderContainerProps {
+  sideGapMob: number;
+}

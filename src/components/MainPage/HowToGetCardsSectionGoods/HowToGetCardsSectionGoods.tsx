@@ -7,13 +7,24 @@ import {
   LinkWContainer,
   LinkWrap,
   Title,
+  SliderWrap,
+  TitleWrap,
+  SliderContainer,
+  SliderBg,
 } from './HowToGetCardsSectionGoods.styled';
 
 const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGapMob }) => {
   return (
     <Container>
-      <Title>Товари партнерів</Title>
-      <HowToGetCardsSectionGoodsSlider />
+      <TitleWrap>
+        <Title>Товари партнерів</Title>
+      </TitleWrap>
+      <SliderContainer sideGapMob={sideGapMob}>
+        <SliderBg></SliderBg>
+        <SliderWrap>
+          <HowToGetCardsSectionGoodsSlider />
+        </SliderWrap>
+      </SliderContainer>
       <LinkWContainer sideGapMob={sideGapMob}>
         <LinkWrap>
           <BuyOnlineLink />
