@@ -41,7 +41,6 @@ export const SliderWrap = styled.div`
   top: 50px;
   left: 0;
   width: 100%;
-  background-color: pink;
 `;
 
 export const LinkWContainer = styled.div<IStyledLinkWContainerProps>`

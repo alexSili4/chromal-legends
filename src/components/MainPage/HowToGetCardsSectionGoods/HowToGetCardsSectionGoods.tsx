@@ -12,6 +12,7 @@ import {
   SliderContainer,
   SliderBg,
 } from './HowToGetCardsSectionGoods.styled';
+import { goods } from '@/constants';
 
 const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGapMob }) => {
   return (
@@ -22,7 +23,7 @@ const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGapMob }) => {
       <SliderContainer sideGapMob={sideGapMob}>
         <SliderBg></SliderBg>
         <SliderWrap>
-          <HowToGetCardsSectionGoodsSlider />
+          <HowToGetCardsSectionGoodsSlider goods={goods} />
         </SliderWrap>
       </SliderContainer>
       <LinkWContainer sideGapMob={sideGapMob}>
