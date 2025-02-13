@@ -1,7 +1,7 @@
 const enum SectionsIds {
   about = 'about',
   league = 'league',
-  leaderboard = 'leaderboard ',
+  leaderboard = 'leaderboard',
   cards = 'cards',
   sets = 'sets',
   prizes = 'prizes',
