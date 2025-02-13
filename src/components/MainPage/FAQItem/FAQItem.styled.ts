@@ -25,7 +25,7 @@ export const Button = styled.button`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding: ${({ theme }) => theme.spacing(5)}px;
-    padding-left: ${({ theme }) => theme.spacing(5)}px;
+    padding-left: ${({ theme }) => theme.spacing(8)}px;
   }
 `;
 

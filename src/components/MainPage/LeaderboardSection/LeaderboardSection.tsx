@@ -1,15 +1,19 @@
 import { FC } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import LeaderboardSectionHowToJoin from '@MainPageComponents/LeaderboardSectionHowToJoin';
+import AnimatedHowToJoinLeaderboard from '@AnimationBlocks/AnimatedHowToJoinLeaderboard';
 import LeaderboardSectionShowLeaderboardBtn from '@MainPageComponents/LeaderboardSectionShowLeaderboardBtn';
-import { Container, Section } from './LeaderboardSection.styled';
+import { Container, Section, Content } from './LeaderboardSection.styled';
+import SectionTitle from '@MainPageComponents/SectionTitle';
 
 const LeaderboardSection: FC = () => {
   return (
     <Section>
       <GeneralContainer>
         <Container>
-          <LeaderboardSectionHowToJoin />
+          <Content>
+            <SectionTitle text='Як долучитись до турніру?' />
+            <AnimatedHowToJoinLeaderboard />
+          </Content>
           <LeaderboardSectionShowLeaderboardBtn />
         </Container>
       </GeneralContainer>
