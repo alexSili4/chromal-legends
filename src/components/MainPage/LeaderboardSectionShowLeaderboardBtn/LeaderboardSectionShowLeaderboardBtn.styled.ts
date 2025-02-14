@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-left: ${({ theme }) => theme.spacing(112)}px;
+    padding-right: ${({ theme }) => theme.spacing(112)}px;
+  }
+`;
 
 export const BtnWrap = styled.div`
   border-radius: 18px;
@@ -12,6 +17,7 @@ export const BtnWrap = styled.div`
 export const Button = styled.button`
   position: relative;
   width: 100%;
+  border: none;
   border-radius: 16px;
   background-color: #ffc90b;
   padding-top: ${({ theme }) => theme.spacing(5)}px;
@@ -24,6 +30,11 @@ export const Button = styled.button`
     width: 20px;
     height: 20px;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-top: ${({ theme }) => theme.spacing(7)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(7)}px;
+  }
 `;
 
 export const BtnTitle = styled.span`
@@ -33,4 +44,8 @@ export const BtnTitle = styled.span`
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 32px;
+  }
 `;

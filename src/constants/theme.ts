@@ -18,6 +18,9 @@ interface ITheme {
     proximaNova: string;
     luckiestGuyRUSBELUKR: string;
   };
+  zIndex: {
+    animatedModalWin: number;
+  };
   breakpoints: { tablet: number; desktop: number };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => number;
@@ -44,6 +47,9 @@ const theme: ITheme = {
     desktop: 1260,
   },
   breakpoints: { tablet: 768, desktop: 1330 },
+  zIndex: {
+    animatedModalWin: 100000,
+  },
   // shadows: {  },
   transitionDurationAndFunc: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => value * 4,

@@ -8,3 +8,4 @@ export { default as Links } from './links';
 export { default as prizes } from './prizes';
 export { default as collectibleSets } from './collectibleSets';
 export { default as conditions } from './conditions';
+export { default as teams } from './teams';

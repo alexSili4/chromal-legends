@@ -1,4 +1,4 @@
-import { IUseAccordionElement } from '@/types/hooks';
+import { IUseAccordionElement } from '@/types/hooks.types';
 import { NumberOrNull } from '@/types/types';
 import { useEffect, useRef, useState } from 'react';
 
