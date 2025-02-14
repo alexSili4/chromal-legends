@@ -2,6 +2,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { IProps } from './LeaderboardSectionTeamsList.types';
 import {
   Container,
+  Content,
   List,
   ListWrap,
 } from './LeaderboardSectionTeamsList.styled';
@@ -13,7 +14,7 @@ const LeaderboardSectionTeamsList: FC<IProps> = () => {
 
   useEffect(() => {
     if (containerRef?.current?.scrollHeight) {
-      setContentHeight(containerRef.current.scrollHeight);
+      setContentHeight(containerRef.current.clientHeight);
     }
   }, []);
 
@@ -23,9 +24,11 @@ const LeaderboardSectionTeamsList: FC<IProps> = () => {
 
   return (
     <Container ref={containerRef}>
-      <ListWrap height={contentHeight}>
-        <List></List>
-      </ListWrap>
+      <Content height={contentHeight}>
+        <ListWrap height={contentHeight}>
+          <List></List>
+        </ListWrap>
+      </Content>
     </Container>
   );
 };

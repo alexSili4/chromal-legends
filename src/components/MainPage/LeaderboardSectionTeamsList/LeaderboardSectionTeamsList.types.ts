@@ -5,6 +5,6 @@ export interface IProps {
   teams: Teams;
 }
 
-export interface IStyledListWrapProps {
+export interface IStyledContentProps {
   height: NumberOrNull;
 }
