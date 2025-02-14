@@ -24,5 +24,4 @@ export const Content = styled.div`
   border-radius: 24px;
   background-color: rgba(5, 45, 68, 0.3);
   padding-top: ${({ theme }) => theme.spacing(10)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(254)}px;
 `;
