@@ -6,10 +6,12 @@ import CollectibleSetsSection from '@MainPageComponents/CollectibleSetsSection';
 import HowToGetCardsSection from '@MainPageComponents/HowToGetCardsSection';
 import LeaderboardSection from '@MainPageComponents/LeaderboardSection';
 import LeagueSection from '@MainPageComponents/LeagueSection';
+import AboutSection from '@MainPageComponents/AboutSection';
 
 const Main: FC = () => {
   return (
     <>
+      <AboutSection />
       <LeagueSection />
       <LeaderboardSection />
       <HowToGetCardsSection />

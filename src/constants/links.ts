@@ -1,5 +1,6 @@
 const enum Links {
   app = '/',
+  game = '/',
   buyOnline = '/',
 }
 
