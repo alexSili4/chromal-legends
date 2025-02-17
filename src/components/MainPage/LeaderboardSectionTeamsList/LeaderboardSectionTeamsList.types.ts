@@ -8,3 +8,7 @@ export interface IProps {
 export interface IStyledContentProps {
   height: NumberOrNull;
 }
+
+export interface IStyledListWrapProps {
+  height: NumberOrNull;
+}

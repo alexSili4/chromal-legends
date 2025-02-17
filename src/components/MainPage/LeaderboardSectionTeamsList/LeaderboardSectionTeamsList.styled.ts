@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
-import { IStyledContentProps } from './LeaderboardSectionTeamsList.types';
+import {
+  IStyledContentProps,
+  IStyledListWrapProps,
+} from './LeaderboardSectionTeamsList.types';
 
 export const Container = styled.div`
   flex-grow: 1;
@@ -15,20 +18,20 @@ export const Content = styled.div<IStyledContentProps>`
   padding-right: ${({ theme }) => theme.spacing(2)}px;
 `;
 
-export const ListWrap = styled.div`
+export const ListContainer = styled.div<IStyledListWrapProps>`
   height: ${({ height }) => height}px;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: 3px;
+    width: 14px;
   }
 
   &::-webkit-scrollbar-track {
     margin-top: ${({ theme }) => theme.spacing(6)}px;
     margin-bottom: ${({ theme }) => theme.spacing(2)}px;
-
-    background-color: pink;
-    border-radius: 100px;
+    background-color: #004d79;
+    border-radius: 2px;
+    outline: 4px solid #052d44;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
       margin-bottom: ${({ theme }) => theme.spacing(8)};
@@ -36,12 +39,12 @@ export const ListWrap = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #9371f1;
-    border-radius: 10px;
+    background-color: #a8ff1a;
+    border-radius: 2px;
     cursor: pointer;
   }
 `;
 
-export const List = styled.ul`
-  height: 2000px;
-`;
+export const List = styled.ul``;
+
+export const ListItem = styled.li``;

@@ -19,6 +19,22 @@ const teams: Teams = [
   { name: 'clan name', rank: 16, score: '00000' },
   { name: 'clan name', rank: 17, score: '00000' },
   { name: 'clan name', rank: 18, score: '00000' },
+  { name: 'clan name', rank: 11, score: '00000' },
+  { name: 'clan name', rank: 12, score: '00000' },
+  { name: 'clan name', rank: 13, score: '00000' },
+  { name: 'clan name', rank: 14, score: '00000' },
+  { name: 'clan name', rank: 15, score: '00000' },
+  { name: 'clan name', rank: 16, score: '00000' },
+  { name: 'clan name', rank: 17, score: '00000' },
+  { name: 'clan name', rank: 18, score: '00000' },
+  { name: 'clan name', rank: 11, score: '00000' },
+  { name: 'clan name', rank: 12, score: '00000' },
+  { name: 'clan name', rank: 13, score: '00000' },
+  { name: 'clan name', rank: 14, score: '00000' },
+  { name: 'clan name', rank: 15, score: '00000' },
+  { name: 'clan name', rank: 16, score: '00000' },
+  { name: 'clan name', rank: 17, score: '00000' },
+  { name: 'clan name', rank: 18, score: '00000' },
 ];
 
 export default teams;

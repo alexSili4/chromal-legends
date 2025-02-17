@@ -4,11 +4,13 @@ import {
   Container,
   Content,
   List,
-  ListWrap,
+  ListItem,
+  ListContainer,
 } from './LeaderboardSectionTeamsList.styled';
 import { NumberOrNull } from '@/types/types';
+import LeaderboardSectionTeamDetails from '@MainPageComponents/LeaderboardSectionTeamDetails';
 
-const LeaderboardSectionTeamsList: FC<IProps> = () => {
+const LeaderboardSectionTeamsList: FC<IProps> = ({ teams }) => {
   const [contentHeight, setContentHeight] = useState<NumberOrNull>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -18,16 +20,22 @@ const LeaderboardSectionTeamsList: FC<IProps> = () => {
     }
   }, []);
 
-  useEffect(() => {
-    console.log(contentHeight);
-  });
-
   return (
     <Container ref={containerRef}>
       <Content height={contentHeight}>
-        <ListWrap height={contentHeight}>
-          <List></List>
-        </ListWrap>
+        <ListContainer height={contentHeight}>
+          <List>
+            {teams.map(({ name, rank, score }, index) => (
+              <ListItem key={index}>
+                <LeaderboardSectionTeamDetails
+                  name={name}
+                  rank={rank}
+                  score={score}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </ListContainer>
       </Content>
     </Container>
   );
