@@ -9,3 +9,4 @@ export { default as prizes } from './prizes';
 export { default as collectibleSets } from './collectibleSets';
 export { default as conditions } from './conditions';
 export { default as teams } from './teams';
+export { default as leaguePrizes } from './leaguePrizes';

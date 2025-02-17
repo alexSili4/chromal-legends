@@ -5,10 +5,12 @@ import PrizesSection from '@MainPageComponents/PrizesSection';
 import CollectibleSetsSection from '@MainPageComponents/CollectibleSetsSection';
 import HowToGetCardsSection from '@MainPageComponents/HowToGetCardsSection';
 import LeaderboardSection from '@MainPageComponents/LeaderboardSection';
+import LeagueSection from '@MainPageComponents/LeagueSection';
 
 const Main: FC = () => {
   return (
     <>
+      <LeagueSection />
       <LeaderboardSection />
       <HowToGetCardsSection />
       <CollectibleSetsSection />
