@@ -17,7 +17,10 @@ const LeaderboardModalWin: FC<IProps> = ({
   return (
     <AnimatedModalWin showModalWin={showModalWin}>
       <ModalWin modalRoot={modalRoot}>
-        <AnimatedLeaderboardModalWinContent hideModalWin={hideModalWin} />
+        <AnimatedLeaderboardModalWinContent
+          hideModalWin={hideModalWin}
+          setModalWinState={setModalWinState}
+        />
       </ModalWin>
     </AnimatedModalWin>
   );

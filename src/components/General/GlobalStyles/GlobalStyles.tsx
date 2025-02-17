@@ -9,6 +9,7 @@ import {
   proximaNovaExtraBold,
   proximaNovaRegular,
   proximaNovaSemiBold,
+  luckiestGuyRegular,
 } from '@/fonts';
 
 const GlobalStyles: FC = () => (
@@ -46,6 +47,13 @@ const GlobalStyles: FC = () => (
         font-family: ${theme.fontFamily.luckiestGuyRUSBELUKR};
         src: local(${theme.fontFamily.luckiestGuyRUSBELUKR}),
           url(${luckiestGuyRUSBELUKRRegular}) format('truetype');
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.luckiestGuy};
+        src: local(${theme.fontFamily.luckiestGuy}),
+          url(${luckiestGuyRegular}) format('truetype');
         font-weight: 400;
       }
 

@@ -16,6 +16,7 @@ interface ITheme {
   };
   fontFamily: {
     proximaNova: string;
+    luckiestGuy: string;
     luckiestGuyRUSBELUKR: string;
   };
   zIndex: {
@@ -33,6 +34,7 @@ const theme: ITheme = {
   },
   fontFamily: {
     proximaNova: 'Proxima Nova',
+    luckiestGuy: 'Luckiest Guy',
     luckiestGuyRUSBELUKR: 'Luckiest Guy RUS-BEL-UKR',
   },
   // fontFamily: {  },

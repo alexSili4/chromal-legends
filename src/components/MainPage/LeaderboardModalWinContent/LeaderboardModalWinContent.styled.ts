@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(5)}px;
@@ -10,6 +9,11 @@ export const Container = styled.div`
   background-color: #ffe600;
   padding: ${({ theme }) => theme.spacing(8)}px;
   padding-top: ${({ theme }) => theme.spacing(9)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding: ${({ theme: { spacing } }) =>
+      `${spacing(10)} ${spacing(23)} ${spacing(12)}`};
+  }
 `;
 
 export const Title = styled.p`
@@ -19,10 +23,13 @@ export const Title = styled.p`
   font-weight: 400;
   line-height: 1;
   text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 48px;
+  }
 `;
 
 export const Content = styled.div`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(8)}px;
@@ -30,6 +37,12 @@ export const Content = styled.div`
   padding-top: ${({ theme }) => theme.spacing(8)}px;
   border-radius: 18px;
   background-color: #052d44;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(6)}px;
+    padding-top: ${({ theme }) => theme.spacing(6)}px;
+    border-radius: 24px;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -39,4 +52,8 @@ export const Subtitle = styled.p`
   font-weight: 400;
   line-height: 1;
   text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 30px;
+  }
 `;

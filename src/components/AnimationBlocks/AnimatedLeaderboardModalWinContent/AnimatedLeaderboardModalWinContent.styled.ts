@@ -17,14 +17,39 @@ export const Backdrop = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: ${({ theme }) => theme.spacing(17)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(7)}px;
+  padding-top: ${({ theme }) => theme.spacing()}px;
+  padding-bottom: ${({ theme }) => theme.spacing()}px;
   background-color: rgba(5, 45, 68, 0.25);
 `;
 
 export const Container = styled(motion.div)`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 100vw;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 75vw;
+  }
+`;
+
+export const CloseBtn = styled.button`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+
+  & > svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    & > svg {
+      width: 56px;
+      height: 56px;
+    }
+  }
 `;
