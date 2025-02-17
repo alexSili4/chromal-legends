@@ -20,6 +20,10 @@ export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-left: ${({ theme }) => theme.spacing(9)}px;
     padding-right: ${({ theme }) => theme.spacing(10)}px;
+
+    *:last-of-type > & {
+      padding-bottom: ${({ theme }) => theme.spacing(10)}px;
+    }
   }
 `;
 
