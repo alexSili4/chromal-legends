@@ -1,3 +1,4 @@
+import { AboutCategories } from '@/constants';
 import { MouseEvent, RefObject } from 'react';
 
 // events
@@ -21,3 +22,5 @@ export type RefDivObject = RefObject<HTMLDivElement>;
 export type NumberOrNull = number | null;
 
 export type ElementOrNull = Element | null;
+
+export type AboutCategoriesKeys = AboutCategories[];
