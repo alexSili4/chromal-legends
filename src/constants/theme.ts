@@ -20,6 +20,7 @@ interface ITheme {
     luckiestGuyRUSBELUKR: string;
   };
   zIndex: {
+    sliderBtn: number;
     animatedModalWin: number;
   };
   breakpoints: { tablet: number; desktop: number };
@@ -50,6 +51,7 @@ const theme: ITheme = {
   },
   breakpoints: { tablet: 768, desktop: 1330 },
   zIndex: {
+    sliderBtn: 10,
     animatedModalWin: 100000,
   },
   // shadows: {  },

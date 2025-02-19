@@ -1,13 +1,17 @@
 import { AboutCategories } from '@/constants';
-import { MouseEvent, RefObject } from 'react';
+import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
 export type BtnClickEvent = MouseEvent<HTMLButtonElement>;
 
 export type DivClickEvent = MouseEvent<HTMLDivElement>;
 
+export type InputChangeEvent = ChangeEvent<HTMLInputElement>;
+
 // functions
 export type Func = () => void;
+
+export type InputChangeFunc = (e: InputChangeEvent) => void;
 
 export type OnBtnClickFunc = (e: BtnClickEvent) => void;
 
