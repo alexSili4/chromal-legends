@@ -165,10 +165,10 @@ const aboutTeams: AboutTeams = [
       leftDesk: 0,
     },
     crownPosition: {
-      topMob: -12,
-      leftMob: 16,
-      topDesk: -20,
-      leftDesk: 45,
+      topMob: -10,
+      leftMob: 14,
+      topDesk: -4,
+      leftDesk: 43,
     },
   },
   {
@@ -176,10 +176,10 @@ const aboutTeams: AboutTeams = [
     team: chromatekTeam,
     desc: 'Велетенський робот. Був однією з перших моделей важких роботів, призначених для прокладання та укріплення підземних тунелів',
     crownPosition: {
-      topMob: -12,
-      leftMob: 49,
-      topDesk: -20,
-      leftDesk: 133,
+      topMob: -10,
+      leftMob: 47,
+      topDesk: -4,
+      leftDesk: 131,
     },
     img: {
       img: dozer,
@@ -198,10 +198,10 @@ const aboutTeams: AboutTeams = [
     team: chromatekTeam,
     desc: 'Невеличкий, але незамінний член команди. На його спині розташований механізм для запуску дрона-помічника',
     crownPosition: {
-      topMob: -14,
-      leftMob: 37,
-      topDesk: -20,
-      leftDesk: 105,
+      topMob: -12,
+      leftMob: 35,
+      topDesk: -4,
+      leftDesk: 103,
     },
     img: {
       img: floppy,
@@ -231,10 +231,10 @@ const aboutTeams: AboutTeams = [
       leftDesk: 12,
     },
     crownPosition: {
-      topMob: -14,
-      leftMob: 14,
-      topDesk: -24,
-      leftDesk: 43,
+      topMob: -12,
+      leftMob: 12,
+      topDesk: -4,
+      leftDesk: 41,
     },
   },
 ];

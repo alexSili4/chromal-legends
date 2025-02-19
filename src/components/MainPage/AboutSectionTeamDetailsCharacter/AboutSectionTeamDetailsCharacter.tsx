@@ -8,8 +8,9 @@ import {
   Image,
   Name,
   NameWrap,
+  Crown,
 } from './AboutSectionTeamDetailsCharacter.styled';
-import Crown from '@/icons/about/crown.svg?react';
+import crown from '@/images/about/crown.png';
 
 const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
   img,
@@ -41,7 +42,7 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
           topDesk={crownTopDesk}
           topMob={crownTopMob}
         >
-          <Crown />
+          <Crown src={crown} alt='Декоративне зображення корони' />
         </CrownWrap>
       </NameWrap>
       <Image

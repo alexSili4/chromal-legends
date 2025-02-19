@@ -10,6 +10,15 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: 248px;
+    left: auto;
+    right: 0;
+    justify-content: flex-start;
+    gap: ${({ theme }) => theme.spacing(152)}px;
+    width: auto;
+  }
 `;
 
 export const SliderBtn = styled.button<IStyledSliderBtnProps>`
@@ -22,5 +31,10 @@ export const SliderBtn = styled.button<IStyledSliderBtnProps>`
   & > svg {
     width: 29px;
     height: 75px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+      width: 36px;
+      height: 82px;
+    }
   }
 `;

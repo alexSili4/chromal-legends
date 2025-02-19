@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Container } from './AboutSectionTeamDetails.styled';
-import AboutSectionTeamDetailsDesc from '@MainPageComponents/AboutSectionTeamDetailsDesc';
 import { IProps } from './AboutSectionTeamDetails.types';
+import AboutSectionTeamDetailsDesc from '@MainPageComponents/AboutSectionTeamDetailsDesc';
 import AboutSectionTeamDetailsCharacter from '@MainPageComponents/AboutSectionTeamDetailsCharacter';
 
 const AboutSectionTeamDetails: FC<IProps> = ({

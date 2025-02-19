@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import AboutSectionTeamCharacterInfo from '@MainPageComponents/AboutSectionTeamCharacterInfo';
 import {
   Container,
   Desc,
@@ -8,6 +7,7 @@ import {
   Name,
 } from './AboutSectionTeamDetailsDesc.styled';
 import { IProps } from './AboutSectionTeamDetailsDesc.types';
+import AboutSectionTeamCharacterInfo from '@MainPageComponents/AboutSectionTeamCharacterInfo';
 
 const AboutSectionTeamDetailsDesc: FC<IProps> = ({
   desc,
