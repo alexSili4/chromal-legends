@@ -2,12 +2,15 @@ import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import { FC } from 'react';
 import { useSwiper } from 'swiper/react';
-import { Container, SliderBtn } from './AboutSectionTeamsSliderControls.styled';
+import {
+  Container,
+  SliderBtn,
+} from './AboutSectionArtifactsSliderControls.styled';
 import PrevBtn from '@/icons/about/prev-btn.svg?react';
 import NextBtn from '@/icons/about/next-btn.svg?react';
-import { IProps } from './AboutSectionTeamsSliderControls.types';
+import { IProps } from './AboutSectionArtifactsSliderControls.types';
 
-const AboutSectionTeamsSliderControls: FC<IProps> = ({
+const AboutSectionArtifactsSliderControls: FC<IProps> = ({
   isHiddenNextBtn,
   isHiddenPrevBtn,
 }) => {
@@ -45,4 +48,4 @@ const AboutSectionTeamsSliderControls: FC<IProps> = ({
   );
 };
 
-export default AboutSectionTeamsSliderControls;
+export default AboutSectionArtifactsSliderControls;

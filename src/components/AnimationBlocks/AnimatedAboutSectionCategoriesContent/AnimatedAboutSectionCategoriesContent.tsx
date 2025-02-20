@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import AboutSectionTeamsSlider from '@MainPageComponents/AboutSectionTeamsSlider';
-import { aboutTeams } from '@/constants';
+import { aboutTeams, aboutArtifacts } from '@/constants';
 import { Container } from './AnimatedAboutSectionCategoriesContent.styled';
 import { AnimatePresence } from 'framer-motion';
 import { IProps } from './AnimatedAboutSectionCategoriesContent.types';
 import AnimatedAboutChromaLegends from '@AnimationBlocks/AnimatedAboutChromaLegends';
+import AboutSectionArtifactsSlider from '@MainPageComponents/AboutSectionArtifactsSlider';
 
 const AnimatedAboutSectionCategoriesContent: FC<IProps> = ({
   isArtifactsCategory,
@@ -12,6 +13,7 @@ const AnimatedAboutSectionCategoriesContent: FC<IProps> = ({
   isTeamsCategory,
   activeCategory,
   updateActiveTeam,
+  updateActiveArtifact,
 }) => {
   return (
     <AnimatePresence mode='wait'>
@@ -27,6 +29,12 @@ const AnimatedAboutSectionCategoriesContent: FC<IProps> = ({
           <AboutSectionTeamsSlider
             teams={aboutTeams}
             updateActiveTeam={updateActiveTeam}
+          />
+        )}
+        {isArtifactsCategory && (
+          <AboutSectionArtifactsSlider
+            artifacts={aboutArtifacts}
+            updateActiveArtifact={updateActiveArtifact}
           />
         )}
       </Container>

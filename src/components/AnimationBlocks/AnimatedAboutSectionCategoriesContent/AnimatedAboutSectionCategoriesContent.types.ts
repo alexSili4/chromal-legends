@@ -1,4 +1,7 @@
-import { SetActiveTeamFunc } from '@/types/functions.types';
+import {
+  SetActiveTeamFunc,
+  SetActiveArtifactFunc,
+} from '@/types/functions.types';
 
 export interface IProps {
   isArtifactsCategory: boolean;
@@ -6,4 +9,5 @@ export interface IProps {
   isTeamsCategory: boolean;
   activeCategory: string;
   updateActiveTeam: SetActiveTeamFunc;
+  updateActiveArtifact: SetActiveArtifactFunc;
 }

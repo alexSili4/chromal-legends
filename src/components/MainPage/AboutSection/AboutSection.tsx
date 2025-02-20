@@ -7,18 +7,19 @@ import AboutSectionCategories from '@MainPageComponents/AboutSectionCategories';
 import { InputChangeEvent } from '@/types/types';
 import AnimatedAboutSectionCategoriesContent from '@AnimationBlocks/AnimatedAboutSectionCategoriesContent';
 import AboutSectionBackground from '@MainPageComponents/AboutSectionBackground';
-import { TeamOrNull } from '@/types/aboutTeams';
-import { getActiveTeam } from '@/utils';
+import { TeamOrNull } from '@/types/aboutTeams.types';
+import { getCategory, getActiveTeam, getActiveArtifact } from '@/utils';
+import { ArtifactOrNull } from '@/types/aboutArtifacts.types';
 
 const AboutSection: FC = () => {
+  const [activeArtifact, setActiveArtifact] = useState<ArtifactOrNull>(null);
   const [activeTeam, setActiveTeam] = useState<TeamOrNull>(null);
   const [activeCategory, setActiveCategory] = useState<string>(
     () => AboutCategories.about
   );
 
-  const isAboutCategory = activeCategory === AboutCategories.about;
-  const isTeamsCategory = activeCategory === AboutCategories.teams;
-  const isArtifactsCategory = activeCategory === AboutCategories.artifacts;
+  const { isAboutCategory, isArtifactsCategory, isTeamsCategory } =
+    getCategory(activeCategory);
 
   const {
     isActiveChromatekTeam,
@@ -27,9 +28,14 @@ const AboutSection: FC = () => {
     isActiveFaunasphereRebelsTeam,
     isActiveLegendaryTeam,
   } = getActiveTeam({ activeTeam, isTeamsCategory });
+  const {} = getActiveArtifact({ activeArtifact, isArtifactsCategory });
 
   const updateActiveTeam = (data: TeamOrNull) => {
     setActiveTeam(data);
+  };
+
+  const updateActiveArtifact = (data: ArtifactOrNull) => {
+    setActiveArtifact(data);
   };
 
   const onCategoryChange = (e: InputChangeEvent) => {
@@ -61,6 +67,7 @@ const AboutSection: FC = () => {
               isArtifactsCategory={isArtifactsCategory}
               activeCategory={activeCategory}
               updateActiveTeam={updateActiveTeam}
+              updateActiveArtifact={updateActiveArtifact}
             />
           </Content>
           <GameLink />

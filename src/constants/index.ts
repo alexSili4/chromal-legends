@@ -12,3 +12,4 @@ export { default as teams } from './teams';
 export { default as leaguePrizes } from './leaguePrizes';
 export { default as AboutCategories } from './aboutCategories';
 export { default as aboutTeams } from './aboutTeams';
+export { default as aboutArtifacts } from './aboutArtifacts';

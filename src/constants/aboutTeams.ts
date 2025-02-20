@@ -1,4 +1,4 @@
-import { AboutTeams, ITeam } from '@/types/aboutTeams';
+import { AboutTeams, ITeam } from '@/types/aboutTeams.types';
 import Chromatek from '@/icons/about/chromatek.svg?react';
 import ColorMasters from '@/icons/about/color-masters.svg?react';
 import roxyPreview from '@/images/about/roxy-preview.png';

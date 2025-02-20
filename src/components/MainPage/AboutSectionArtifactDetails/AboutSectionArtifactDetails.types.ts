@@ -1,11 +1,11 @@
-import { Characters, Team } from '@/types/aboutTeams.types';
+import { Artifact, Artifacts } from '@/types/aboutArtifacts.types';
 import { FC } from 'react';
 
 export interface IProps {
-  characters: Characters;
-  teamDesc: string;
+  artifacts: Artifacts;
+  artifactDesc: string;
   logo: FC;
-  teamName: Team;
+  artifactName: Artifact;
   heightMob: number;
   heightDesk: number;
   crownTopMob: number;
@@ -18,7 +18,12 @@ export interface IProps {
   img: string;
   imgTopDesk: number;
   imgTopMob: number;
-  characterName: string;
+  currentArtifactName: string;
   widthDesk: number;
   widthMob: number;
+  paddingBottomMob: number;
+}
+
+export interface IStyledContainerProps {
+  paddingBottomMob: number;
 }

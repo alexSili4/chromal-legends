@@ -1,4 +1,4 @@
-import { NavLinks } from '@/types/navLinks';
+import { NavLinks } from '@/types/navLinks.types';
 import SectionsIds from './sectionsIds';
 
 const navLinks: NavLinks = [
