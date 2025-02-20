@@ -3,6 +3,8 @@ import sectionBgMob from '@/images/leaderboard/section-bg-mob.png';
 import sectionBgDesk from '@/images/leaderboard/section-bg-desk.png';
 
 export const Section = styled.section`
+  position: relative;
+  z-index: 1;
   width: calc(100% + 16px + 16px);
   border: 16px solid #001d2c;
   border-top-width: 0;

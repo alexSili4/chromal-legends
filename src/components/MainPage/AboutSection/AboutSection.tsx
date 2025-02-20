@@ -28,7 +28,12 @@ const AboutSection: FC = () => {
     isActiveFaunasphereRebelsTeam,
     isActiveLegendaryTeam,
   } = getActiveTeam({ activeTeam, isTeamsCategory });
-  const {} = getActiveArtifact({ activeArtifact, isArtifactsCategory });
+  const {
+    isActiveControlArtifact,
+    isActiveHealthArtifact,
+    isActiveLegendaryArtifact,
+    isActiveSpeedArtifact,
+  } = getActiveArtifact({ activeArtifact, isArtifactsCategory });
 
   const updateActiveTeam = (data: TeamOrNull) => {
     setActiveTeam(data);
@@ -52,6 +57,10 @@ const AboutSection: FC = () => {
         isActiveColorMastersTeam={isActiveColorMastersTeam}
         isActiveFaunasphereRebelsTeam={isActiveFaunasphereRebelsTeam}
         isActiveLegendaryTeam={isActiveLegendaryTeam}
+        isActiveControlArtifact={isActiveControlArtifact}
+        isActiveHealthArtifact={isActiveHealthArtifact}
+        isActiveLegendaryArtifact={isActiveLegendaryArtifact}
+        isActiveSpeedArtifact={isActiveSpeedArtifact}
       />
       <GeneralContainer isPositionRelative>
         <Container>

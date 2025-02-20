@@ -11,6 +11,14 @@ import legendaryTeamBgMob from '@/images/about/legendary-team-bg-mob.jpg';
 import legendaryTeamBgDesk from '@/images/about/legendary-team-bg-desk.jpg';
 import chronographyInstituteTeamBgMob from '@/images/about/chronography-institute-team-bg-mob.jpg';
 import chronographyInstituteTeamBgDesk from '@/images/about/chronography-institute-team-bg-desk.jpg';
+import legendaryArtifactBgMob from '@/images/about/legendary-artifact-bg-mob.jpg';
+import legendaryArtifactBgDesk from '@/images/about/legendary-artifact-bg-desk.jpg';
+import speedArtifactBgMob from '@/images/about/speed-artifact-bg-mob.jpg';
+import speedArtifactBgDesk from '@/images/about/speed-artifact-bg-desk.jpg';
+import healthArtifactBgMob from '@/images/about/health-artifact-dg-mob.jpg';
+import healthArtifactBgDesk from '@/images/about/health-artifact-dg-desk.jpg';
+import controlArtifactBgMob from '@/images/about/control-artifact-bg-mob.jpg';
+import controlArtifactBgDesk from '@/images/about/control-artifact-bg-desk.jpg';
 
 const AboutSectionBackground: FC<IProps> = ({
   isActiveChromatekTeam,
@@ -18,6 +26,10 @@ const AboutSectionBackground: FC<IProps> = ({
   isActiveColorMastersTeam,
   isActiveFaunasphereRebelsTeam,
   isActiveLegendaryTeam,
+  isActiveControlArtifact,
+  isActiveHealthArtifact,
+  isActiveLegendaryArtifact,
+  isActiveSpeedArtifact,
 }) => {
   return (
     <Container>
@@ -45,6 +57,26 @@ const AboutSectionBackground: FC<IProps> = ({
         bgImgMob={legendaryTeamBgMob}
         bgImgDesk={legendaryTeamBgDesk}
         isCurrentBg={isActiveLegendaryTeam}
+      ></TeamBg>
+      <TeamBg
+        bgImgMob={legendaryArtifactBgMob}
+        bgImgDesk={legendaryArtifactBgDesk}
+        isCurrentBg={isActiveLegendaryArtifact}
+      ></TeamBg>
+      <TeamBg
+        bgImgMob={speedArtifactBgMob}
+        bgImgDesk={speedArtifactBgDesk}
+        isCurrentBg={isActiveSpeedArtifact}
+      ></TeamBg>
+      <TeamBg
+        bgImgMob={healthArtifactBgMob}
+        bgImgDesk={healthArtifactBgDesk}
+        isCurrentBg={isActiveHealthArtifact}
+      ></TeamBg>
+      <TeamBg
+        bgImgMob={controlArtifactBgMob}
+        bgImgDesk={controlArtifactBgDesk}
+        isCurrentBg={isActiveControlArtifact}
       ></TeamBg>
     </Container>
   );

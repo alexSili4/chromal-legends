@@ -4,6 +4,10 @@ export interface IProps {
   isActiveColorMastersTeam: boolean;
   isActiveFaunasphereRebelsTeam: boolean;
   isActiveLegendaryTeam: boolean;
+  isActiveControlArtifact: boolean;
+  isActiveHealthArtifact: boolean;
+  isActiveLegendaryArtifact: boolean;
+  isActiveSpeedArtifact: boolean;
 }
 
 export interface IStyledTeamBgProps {
