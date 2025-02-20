@@ -3,6 +3,7 @@ import sectionBgMob from '@/images/league/section-bg-mob.png';
 import sectionBgDesk from '@/images/league/section-bg-desk.png';
 
 export const Section = styled.section`
+  position: relative;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
   padding-bottom: ${({ theme }) => theme.spacing(8)}px;
   background-color: #80b5e2;

@@ -22,3 +22,8 @@ export interface IUseModalWin {
   modalRoot: ElementOrNull;
   hideModalWin: OnDivClickFunc;
 }
+
+export interface IUseTopGap {
+  topGap: NumberOrNull;
+  sectionRef: RefDivObject;
+}

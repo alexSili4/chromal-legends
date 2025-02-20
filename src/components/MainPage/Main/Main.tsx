@@ -11,8 +11,11 @@ import AboutSection from '@MainPageComponents/AboutSection';
 const Main: FC = () => {
   return (
     <>
-      <AboutSection />
-      <LeagueSection />
+      <div>
+        <AboutSection />
+        <LeagueSection />
+      </div>
+
       <LeaderboardSection />
       <HowToGetCardsSection />
       <CollectibleSetsSection />

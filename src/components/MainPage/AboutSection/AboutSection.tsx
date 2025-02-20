@@ -10,6 +10,7 @@ import AboutSectionBackground from '@MainPageComponents/AboutSectionBackground';
 import { TeamOrNull } from '@/types/aboutTeams.types';
 import { getCategory, getActiveTeam, getActiveArtifact } from '@/utils';
 import { ArtifactOrNull } from '@/types/aboutArtifacts.types';
+import { useTopGap } from '@/hooks';
 
 const AboutSection: FC = () => {
   const [activeArtifact, setActiveArtifact] = useState<ArtifactOrNull>(null);
@@ -17,6 +18,7 @@ const AboutSection: FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>(
     () => AboutCategories.about
   );
+  const { sectionRef, topGap } = useTopGap();
 
   const { isAboutCategory, isArtifactsCategory, isTeamsCategory } =
     getCategory(activeCategory);
@@ -50,7 +52,7 @@ const AboutSection: FC = () => {
   const categories = Object.values(AboutCategories);
 
   return (
-    <Section id={SectionsIds.about}>
+    <Section id={SectionsIds.about} ref={sectionRef} topGap={topGap}>
       <AboutSectionBackground
         isActiveChromatekTeam={isActiveChromatekTeam}
         isActiveChronographyInstituteTeam={isActiveChronographyInstituteTeam}
