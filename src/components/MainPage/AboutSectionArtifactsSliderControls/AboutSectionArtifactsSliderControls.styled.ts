@@ -17,7 +17,7 @@ export const Container = styled.div`
     left: auto;
     right: 0;
     justify-content: flex-start;
-    gap: ${({ theme }) => theme.spacing(152)}px;
+    gap: ${({ theme }) => theme.spacing(149)}px;
     width: auto;
   }
 `;
