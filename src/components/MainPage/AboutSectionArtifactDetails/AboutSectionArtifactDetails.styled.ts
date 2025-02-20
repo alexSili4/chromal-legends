@@ -9,11 +9,11 @@ export const Container = styled.div<IStyledContainerProps>`
   padding-bottom: ${({ paddingBottomMob }) => paddingBottomMob}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* flex-direction: row-reverse; */
-    /* justify-content: space-between; */
-    /* gap: ${({ theme }) => theme.spacing(0)}px; */
-    /* padding-top: ${({ theme }) => theme.spacing(77)}px; */
-    /* padding-bottom: ${({ theme }) => theme.spacing(0)}px; */
-    /* padding-right: ${({ theme }) => theme.spacing(19)}px; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: ${({ theme }) => theme.spacing(0)}px;
+    padding-top: ${({ theme }) => theme.spacing(35)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(0)}px;
+    padding-right: ${({ theme }) => theme.spacing(29)}px;
   }
 `;

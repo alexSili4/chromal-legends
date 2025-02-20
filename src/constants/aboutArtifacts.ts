@@ -130,13 +130,13 @@ const speedArtifacts: IArtifact = {
 
 const aboutArtifacts: AboutArtifacts = [
   {
-    name: 'Плащ невидимки',
+    name: 'Плащ<br/>невидимки',
     artifact: legendaryArtifacts,
     desc: 'Легендарний артефакт, здатний дарувати своєму власнику неймовірну силу — володар плаща може миттєво зливатися із тінню іншої людини або предмета, стаючи невидимим навіть для тих, хто знаходиться зовсім близько',
     crownPosition: {
       topMob: -5,
       leftMob: 22,
-      topDesk: -12,
+      topDesk: -6,
       leftDesk: 28,
     },
     img: {
@@ -147,19 +147,19 @@ const aboutArtifacts: AboutArtifacts = [
       heightDesk: 345,
       topMob: 40,
       leftMob: 15,
-      topDesk: -318,
+      topDesk: -159,
       leftDesk: 26,
     },
     paddingBottomMob: 0,
   },
   {
-    name: 'Тотем Яструба',
+    name: 'Тотем<br/>Яструба',
     artifact: legendaryArtifacts,
     desc: 'Легендарний артефакт у формі дерев’яної маски із кори магічних блакитних дерев Фаунасферії. При активації призиває на допомогу володарю могутніх духів вітру, які сповільнюють і ускладнюють пересування ворогів',
     crownPosition: {
       topMob: -9,
       leftMob: 22,
-      topDesk: -12,
+      topDesk: -6,
       leftDesk: 28,
     },
     img: {
@@ -170,19 +170,19 @@ const aboutArtifacts: AboutArtifacts = [
       heightDesk: 309,
       topMob: 37,
       leftMob: 0,
-      topDesk: -283,
+      topDesk: -117,
       leftDesk: 0,
     },
     paddingBottomMob: 0,
   },
   {
-    name: 'Амулет блискавки',
+    name: 'Амулет<br/>блискавки',
     artifact: speedArtifacts,
     desc: 'Мініатюрний, розміром не більший за монету, але неймовірно потужний артефакт. Дозволяє своєму володарю опанувати мистецтво телепортації, легко долати всі перешкоди та уникати фізичних чи магічних загроз на своєму шляху',
     crownPosition: {
       topMob: -9,
       leftMob: 43,
-      topDesk: -12,
+      topDesk: -6,
       leftDesk: 100,
     },
     img: {
@@ -193,19 +193,19 @@ const aboutArtifacts: AboutArtifacts = [
       heightDesk: 302,
       topMob: 43,
       leftMob: 21,
-      topDesk: -281,
+      topDesk: -111,
       leftDesk: 0,
     },
     paddingBottomMob: 0,
   },
   {
-    name: 'Чоботи-скороходи',
+    name: 'Чоботи-<br/>скороходи',
     artifact: speedArtifacts,
     desc: 'Старовинний артефакт, здатний наділити свого власника надлюдською швидкістю та можливістю левітації',
     crownPosition: {
       topMob: -9,
       leftMob: 31,
-      topDesk: -11,
+      topDesk: -6,
       leftDesk: 71,
     },
     img: {
@@ -216,19 +216,19 @@ const aboutArtifacts: AboutArtifacts = [
       heightDesk: 346,
       topMob: 42,
       leftMob: 13,
-      topDesk: -297,
+      topDesk: -127,
       leftDesk: 0,
     },
     paddingBottomMob: 63,
   },
   {
-    name: 'Оберіг бастіону',
+    name: 'Оберіг<br/>бастіону',
     artifact: speedArtifacts,
     desc: 'Оберіг дозволяє миттєво знімати з союзників усі негативні ефекти — прокляття, отруту або магічне знесилення, а також знищувати джерела ворожої магії довкола. Власник артефакту відчуває значний приплив сил після кожної перемоги',
     crownPosition: {
       topMob: -9,
       leftMob: 37,
-      topDesk: -12,
+      topDesk: -6,
       leftDesk: 85,
     },
     img: {
@@ -239,7 +239,7 @@ const aboutArtifacts: AboutArtifacts = [
       heightDesk: 316,
       topMob: 37,
       leftMob: 0,
-      topDesk: -287,
+      topDesk: -117,
       leftDesk: 5,
     },
     paddingBottomMob: 0,

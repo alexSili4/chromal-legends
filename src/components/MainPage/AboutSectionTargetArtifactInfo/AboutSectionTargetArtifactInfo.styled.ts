@@ -13,11 +13,10 @@ export const NameWrap = styled.div<IStyledNameWrapProps>`
   background-color: ${({ isCurrent }) => (isCurrent ? '#FFE601' : '#052d44')};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* top: ${({ topDesk }) => topDesk}px; */
-    /* left: ${({ leftDesk }) => leftDesk}px; */
-    /* padding: ${({ theme: { spacing } }) =>
-      `${spacing(4)}px ${spacing(6)}px`}; */
-    /* border-radius: 16px; */
+    top: ${({ topDesk }) => topDesk}px;
+    left: ${({ leftDesk }) => leftDesk}px;
+    padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(6)}px`};
+    border-radius: 16px;
   }
 `;
 
@@ -32,11 +31,10 @@ export const Name = styled.p`
     1px 1px 0 #052d44, 0px 3px 0 #052d44, -1px 3px 0 #052d44, 1px 3px 0 #052d44;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* font-size: 24px; */
-    /* text-shadow: -2px -2px 0 #052d44, 2px -2px 0 #052d44, -2px 2px 0 #052d44,
+    font-size: 24px;
+    text-shadow: -2px -2px 0 #052d44, 2px -2px 0 #052d44, -2px 2px 0 #052d44,
       2px 2px 0 #052d44, 0px 4px 0 #052d44, -2px 4px 0 #052d44,
       2px 4px 0 #052d44;
-   */
   }
 `;
 

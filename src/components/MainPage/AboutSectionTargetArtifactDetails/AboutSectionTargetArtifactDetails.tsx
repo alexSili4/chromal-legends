@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IProps } from './AboutSectionTeamDetailsCharacter.types';
+import { IProps } from './AboutSectionTargetArtifactDetails.types';
 import {
   Container,
   CrownWrap,
@@ -9,10 +9,10 @@ import {
   Name,
   NameWrap,
   Crown,
-} from './AboutSectionTeamDetailsCharacter.styled';
+} from './AboutSectionTargetArtifactDetails.styled';
 import crown from '@/images/about/crown.png';
 
-const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
+const AboutSectionTargetArtifactDetails: FC<IProps> = ({
   img,
   heightDesk,
   heightMob,
@@ -33,18 +33,18 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
     <Container>
       <DescWrap>
         <Desc>{desc}</Desc>
+        <NameWrap>
+          <Name dangerouslySetInnerHTML={{ __html: name }}></Name>
+          <CrownWrap
+            leftDesk={crownLeftDesk}
+            leftMob={crownLeftMob}
+            topDesk={crownTopDesk}
+            topMob={crownTopMob}
+          >
+            <Crown src={crown} alt='Декоративне зображення корони' />
+          </CrownWrap>
+        </NameWrap>
       </DescWrap>
-      <NameWrap>
-        <Name>{name}</Name>
-        <CrownWrap
-          leftDesk={crownLeftDesk}
-          leftMob={crownLeftMob}
-          topDesk={crownTopDesk}
-          topMob={crownTopMob}
-        >
-          <Crown src={crown} alt='Декоративне зображення корони' />
-        </CrownWrap>
-      </NameWrap>
       <Image
         src={img}
         alt={name}
@@ -61,4 +61,4 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
   );
 };
 
-export default AboutSectionTeamDetailsCharacter;
+export default AboutSectionTargetArtifactDetails;

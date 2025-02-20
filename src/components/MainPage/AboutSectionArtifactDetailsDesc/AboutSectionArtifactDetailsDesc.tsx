@@ -21,11 +21,11 @@ const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
     <Container>
       <NameWrap>
         <Logo />
-        <DescWrap>
-          <Name>{name}</Name>
-          <Desc>{desc}</Desc>
-        </DescWrap>
+        <Name>{name}</Name>
       </NameWrap>
+      <DescWrap>
+        <Desc>{desc}</Desc>
+      </DescWrap>
       <ArtifactsWrap>
         {artifacts.map(
           ({

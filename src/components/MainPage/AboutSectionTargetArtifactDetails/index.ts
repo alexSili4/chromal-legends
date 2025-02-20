@@ -1,1 +1,1 @@
-export { default } from './AboutSectionTeamDetailsCharacter';
+export { default } from './AboutSectionTargetArtifactDetails';

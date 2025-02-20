@@ -2,15 +2,16 @@ import styled from '@emotion/styled';
 import {
   IStyledCrownWrapProps,
   IStyledImageProps,
-} from './AboutSectionTeamDetailsCharacter.types';
+} from './AboutSectionTargetArtifactDetails.types';
 
 export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* width: 529px; */
+    width: 524px;
   }
 `;
 
@@ -22,11 +23,12 @@ export const DescWrap = styled.div`
   background-color: #003c5e;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* display: flex; */
-    /* align-items: center; */
-    /* width: 100%; */
-    /* padding: ${({ theme }) => theme.spacing(8)}px; */
-    /* border-radius: 18px; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: ${({ theme }) => theme.spacing(8)}px;
+    border-radius: 18px;
   }
 `;
 
@@ -38,8 +40,8 @@ export const Desc = styled.p`
   line-height: 1;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* font-size: 20px; */
-    /* font-weight: 400; */
+    font-size: 20px;
+    font-weight: 400;
   }
 `;
 
@@ -52,27 +54,27 @@ export const NameWrap = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* top: -94px; */
-    /* right: 0; */
+    top: -102px;
+    right: 0px;
   }
 `;
 
 export const Name = styled.p`
-  max-width: 118px;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.luckiestGuyRUSBELUKR};
   font-size: 16px;
   font-weight: 400;
   line-height: 1.13;
+  white-space: break-spaces;
   text-shadow: -2px 0px 0 #052d44, -2px -2px 0 #052d44, 2px -2px 0 #052d44,
     -2px 2px 0 #052d44, 2px 2px 0 #052d44, 0px 4px 0 #052d44, -2px 4px 0 #052d44,
     2px 4px 0 #052d44;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* font-size: 64px; */
-    /* text-shadow: -2px 0px 0 #052d44, -2px -2px 0 #052d44, 2px -2px 0 #052d44,
-      -2px 2px 0 #052d44, 2px 2px 0 #052d44, 0px 10px 0 #052d44,
-      -2px 10px 0 #052d44, 2px 10px 0 #052d44; */
+    font-size: 36px;
+    text-shadow: -2px 0px 0 #052d44, -2px -2px 0 #052d44, 2px -2px 0 #052d44,
+      -2px 2px 0 #052d44, 2px 2px 0 #052d44, 0px 7px 0 #052d44,
+      -2px 7px 0 #052d44, 2px 7px 0 #052d44;
   }
 `;
 
@@ -93,9 +95,9 @@ export const Crown = styled.img`
   height: 10px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* width: 32px; */
-    /* max-width: 32px; */
-    /* height: 18px; */
+    width: 22px;
+    max-width: 22px;
+    height: 13px;
   }
 `;
 

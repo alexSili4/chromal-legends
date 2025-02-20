@@ -48,14 +48,10 @@ export const Name = styled.p`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     max-width: 267px;
     font-size: 36px;
-    text-shadow: -5px -5px 0 ${({ theme }) => theme.colors.black},
-      -5px 0px 0 ${({ theme }) => theme.colors.black},
-      -5px 5px 0 ${({ theme }) => theme.colors.black},
-      0px -5px 0 ${({ theme }) => theme.colors.black},
-      0px 5px 0 ${({ theme }) => theme.colors.black},
-      5px -5px 0 ${({ theme }) => theme.colors.black},
-      5px 0px 0 ${({ theme }) => theme.colors.black},
-      5px 5px 0 ${({ theme }) => theme.colors.black};
+    text-shadow: 0px 0px 0 #052d44, -1px 0px 0 #052d44, -1px 1px 0 #052d44,
+      0px 1px 0 #052d44, 1px 1px 0 #052d44, 1px 0px 0 #052d44,
+      1px -1px 0 #052d44, 0px -1px 0 #052d44, -1px -1px 0 #052d44,
+      0px 6px 0 ${({ theme }) => theme.colors.black};
   }
 `;
 

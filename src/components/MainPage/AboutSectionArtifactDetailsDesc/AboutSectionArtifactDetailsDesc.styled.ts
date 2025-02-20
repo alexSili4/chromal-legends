@@ -4,7 +4,7 @@ export const Container = styled.div`
   position: relative;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* width: 529px; */
+    width: 529px;
   }
 `;
 
@@ -13,12 +13,13 @@ export const NameWrap = styled.div`
   top: -79px;
   left: 72px;
   display: flex;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing(3)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* top: -288px; */
-    /* left: 0px; */
-    /* gap: ${({ theme }) => theme.spacing(4)}px; */
+    top: -117px;
+    left: 0px;
+    gap: ${({ theme }) => theme.spacing(4)}px;
   }
 
   & > svg {
@@ -26,8 +27,8 @@ export const NameWrap = styled.div`
     height: 46px;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-      /* width: 72px; */
-      /* height: 72px; */
+      width: 72px;
+      height: 72px;
     }
   }
 `;
@@ -45,25 +46,23 @@ export const Name = styled.p`
     1px 3px 0 ${({ theme }) => theme.colors.black};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* max-width: 267px; */
-    /* font-size: 36px; */
-    /* text-shadow: -5px -5px 0 ${({ theme }) => theme.colors.black},
-      -5px 0px 0 ${({ theme }) => theme.colors.black},
-      -5px 5px 0 ${({ theme }) => theme.colors.black},
-      0px -5px 0 ${({ theme }) => theme.colors.black},
-      0px 5px 0 ${({ theme }) => theme.colors.black},
-      5px -5px 0 ${({ theme }) => theme.colors.black},
-      5px 0px 0 ${({ theme }) => theme.colors.black},
-      5px 5px 0 ${({ theme }) => theme.colors.black}; */
+    max-width: 220px;
+    font-size: 36px;
+    text-shadow: 0px 0px 0 #052d44, -1px 0px 0 #052d44, -1px 1px 0 #052d44,
+      0px 1px 0 #052d44, 1px 1px 0 #052d44, 1px 0px 0 #052d44,
+      1px -1px 0 #052d44, 0px -1px 0 #052d44, -1px -1px 0 #052d44,
+      0px 6px 0 ${({ theme }) => theme.colors.black};
   }
 `;
 
 export const DescWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing()}px;
+  position: absolute;
+  top: -30px;
+  left: 128px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: -40px;
+    left: 88px;
   }
 `;
 
@@ -75,7 +74,7 @@ export const Desc = styled.p`
   line-height: 1;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    /* font-size: 20px; */
+    font-size: 19px;
   }
 `;
 
@@ -83,4 +82,8 @@ export const ArtifactsWrap = styled.div`
   height: 200px;
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.25);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    height: 360px;
+  }
 `;
