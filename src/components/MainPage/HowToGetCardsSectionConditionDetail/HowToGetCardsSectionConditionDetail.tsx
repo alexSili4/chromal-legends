@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IProps } from './HowToGetCardsSectionCondition.types';
+import { IProps } from './HowToGetCardsSectionConditionDetail.types';
 import {
   Container,
   TitleWrap,
@@ -8,9 +8,9 @@ import {
   Image,
   Subtitle,
   Title,
-} from './HowToGetCardsSectionCondition.styled';
+} from './HowToGetCardsSectionConditionDetail.styled';
 
-const HowToGetCardsSectionCondition: FC<IProps> = ({
+const HowToGetCardsSectionConditionDetail: FC<IProps> = ({
   desc,
   imgHeightDesk,
   imgHeightMob,
@@ -62,4 +62,4 @@ const HowToGetCardsSectionCondition: FC<IProps> = ({
   );
 };
 
-export default HowToGetCardsSectionCondition;
+export default HowToGetCardsSectionConditionDetail;

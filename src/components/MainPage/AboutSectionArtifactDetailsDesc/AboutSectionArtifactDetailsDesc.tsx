@@ -9,6 +9,7 @@ import {
 } from './AboutSectionArtifactDetailsDesc.styled';
 import { IProps } from './AboutSectionArtifactDetailsDesc.types';
 import AboutSectionTargetArtifactInfo from '@MainPageComponents/AboutSectionTargetArtifactInfo';
+import { Symbols } from '@/constants';
 
 const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
   desc,
@@ -47,25 +48,34 @@ const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
               topMob: nameTopMob,
               name: targetArtifactName,
             },
-          }) => (
-            <AboutSectionTargetArtifactInfo
-              heightDesk={heightDesk}
-              heightMob={heightMob}
-              img={img}
-              imgLeftDesk={imgLeftDesk}
-              imgLeftMob={imgLeftMob}
-              imgTopDesk={imgTopDesk}
-              imgTopMob={imgTopMob}
-              widthDesk={widthDesk}
-              widthMob={widthMob}
-              nameLeftDesk={nameLeftDesk}
-              nameLeftMob={nameLeftMob}
-              nameTopDesk={nameTopDesk}
-              nameTopMob={nameTopMob}
-              name={targetArtifactName}
-              isCurrent={currentArtifactName === targetArtifactName}
-            />
-          )
+          }) => {
+            const currentArtifactNameText = currentArtifactName
+              .split(Symbols.newLine)
+              .join(Symbols.space);
+            const isCurrent =
+              currentArtifactNameText.toLocaleLowerCase() ===
+              targetArtifactName.toLocaleLowerCase();
+
+            return (
+              <AboutSectionTargetArtifactInfo
+                heightDesk={heightDesk}
+                heightMob={heightMob}
+                img={img}
+                imgLeftDesk={imgLeftDesk}
+                imgLeftMob={imgLeftMob}
+                imgTopDesk={imgTopDesk}
+                imgTopMob={imgTopMob}
+                widthDesk={widthDesk}
+                widthMob={widthMob}
+                nameLeftDesk={nameLeftDesk}
+                nameLeftMob={nameLeftMob}
+                nameTopDesk={nameTopDesk}
+                nameTopMob={nameTopMob}
+                name={targetArtifactName}
+                isCurrent={isCurrent}
+              />
+            );
+          }
         )}
       </ArtifactsWrap>
     </Container>

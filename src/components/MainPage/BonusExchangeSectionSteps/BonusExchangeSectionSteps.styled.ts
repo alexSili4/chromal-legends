@@ -1,12 +1,11 @@
 import { theme } from '@/constants';
 import { getFlexItemWidth } from '@/utils';
 import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
 
 const listGap = theme.spacing(26);
 const stepWrapWidth = getFlexItemWidth({ listGap, listLength: 2 });
 
-export const Container = styled(motion.div)`
+export const Container = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacing(8)}px;
 
@@ -19,7 +18,7 @@ export const Container = styled(motion.div)`
   }
 `;
 
-export const FirstStepWrap = styled(motion.div)`
+export const FirstStepWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)}px;
@@ -176,7 +175,7 @@ export const Description = styled.p`
   }
 `;
 
-export const SecondStepWrap = styled(motion.div)`
+export const SecondStepWrap = styled.div`
   position: relative;
   padding-top: ${({ theme }) => theme.spacing(4)}px;
   border-radius: 29px;

@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import {
   Container,
   Description,
@@ -15,52 +15,17 @@ import {
   HeroLeftImg,
   HeroCenterImg,
   HeroRightImg,
-} from './AnimatedBonusExchangeSectionSteps.styled';
+} from './BonusExchangeSectionSteps.styled';
 import VlasnyiRakhunok from '@/icons/bonus-exchange/vlasnyi-rakhunok.svg?react';
 import gemPack from '@/images/bonus-exchange/gem-pack.png';
 import heroLeft from '@/images/bonus-exchange/hero-left.png';
 import heroCenter from '@/images/bonus-exchange/hero-center.png';
 import heroRight from '@/images/bonus-exchange/hero-right.png';
-import { useInView } from 'framer-motion';
 
-const AnimatedBonusExchangeSectionSteps: FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(containerRef, {
-    margin: '-100px 0px -200px 0px',
-  });
-  const animate = inView ? 'visible' : 'hidden';
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const transition = {
-    duration: 0.6,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
-
-  const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition,
-    },
-  };
-
+const BonusExchangeSectionSteps: FC = () => {
   return (
-    <Container
-      ref={containerRef}
-      variants={containerVariants}
-      initial='hidden'
-      animate={animate}
-    >
-      <FirstStepWrap variants={elementVariants}>
+    <Container>
+      <FirstStepWrap>
         <Title>
           Перетворіть балобонуси
           <br />
@@ -88,7 +53,7 @@ const AnimatedBonusExchangeSectionSteps: FC = () => {
           </Description>
         </FirstStepContentWrap>
       </FirstStepWrap>
-      <SecondStepWrap variants={elementVariants}>
+      <SecondStepWrap>
         <Title>
           Використовуйте кристали, щоб отримати унікальні костюми в грі «Chroma
           Legends»
@@ -101,4 +66,4 @@ const AnimatedBonusExchangeSectionSteps: FC = () => {
   );
 };
 
-export default AnimatedBonusExchangeSectionSteps;
+export default BonusExchangeSectionSteps;

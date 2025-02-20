@@ -1,46 +1,11 @@
-import { FC, useRef } from 'react';
-import HowToGetCardsSectionCondition from '@MainPageComponents/HowToGetCardsSectionCondition';
-import { List, ListItem } from './AnimatedHowToGetCardsConditions.styled';
-import { IProps } from './AnimatedHowToGetCardsConditions.types';
-import { useInView } from 'framer-motion';
+import { FC } from 'react';
+import HowToGetCardsSectionConditionDetail from '@MainPageComponents/HowToGetCardsSectionConditionDetail';
+import { List, ListItem } from './HowToGetCardsSectionConditions.styled';
+import { IProps } from './HowToGetCardsSectionConditions.types';
 
-const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
-  const listRef = useRef<HTMLUListElement>(null);
-  const inView = useInView(listRef, {
-    margin: '-100px 0px -200px 0px',
-  });
-  const animate = inView ? 'visible' : 'hidden';
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const transition = {
-    duration: 0.6,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
-
-  const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition,
-    },
-  };
-
+const HowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
   return (
-    <List
-      variants={containerVariants}
-      initial='hidden'
-      animate={animate}
-      ref={listRef}
-    >
+    <List>
       {conditions.map(
         (
           {
@@ -69,8 +34,8 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
           },
           index
         ) => (
-          <ListItem key={index} variants={elementVariants}>
-            <HowToGetCardsSectionCondition
+          <ListItem key={index}>
+            <HowToGetCardsSectionConditionDetail
               title={title}
               subtitle={subtitle}
               titleLeftDesk={titleLeftDesk}
@@ -95,4 +60,4 @@ const AnimatedHowToGetCardsConditions: FC<IProps> = ({ conditions }) => {
   );
 };
 
-export default AnimatedHowToGetCardsConditions;
+export default HowToGetCardsConditions;

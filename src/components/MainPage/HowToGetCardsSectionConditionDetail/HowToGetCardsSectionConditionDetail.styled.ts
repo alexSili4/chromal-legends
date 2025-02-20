@@ -4,7 +4,7 @@ import {
   IStyledImageProps,
   IStyledTitleWrapProps,
   IStyledSubtitleProps,
-} from './HowToGetCardsSectionCondition.types';
+} from './HowToGetCardsSectionConditionDetail.types';
 
 export const Container = styled.div`
   position: relative;

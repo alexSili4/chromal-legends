@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import SectionTitle from '@MainPageComponents/SectionTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AnimatedHowToGetCardsConditions from '@AnimationBlocks/AnimatedHowToGetCardsConditions';
+import HowToGetCardsSectionConditions from '@MainPageComponents/HowToGetCardsSectionConditions';
 import HowToGetCardsSectionGoods from '@MainPageComponents/HowToGetCardsSectionGoods';
 import { conditions, theme } from '@/constants';
 import { Container, Content } from './HowToGetCardsSectionContent.styled';
@@ -12,7 +12,7 @@ const HowToGetCardsSectionContent: FC = () => {
       <Container>
         <SectionTitle text='Як отримати картки?' isDark />
         <Content>
-          <AnimatedHowToGetCardsConditions conditions={conditions} />
+          <HowToGetCardsSectionConditions conditions={conditions} />
           <HowToGetCardsSectionGoods sideGap={theme.spacing(2)} />
         </Content>
       </Container>

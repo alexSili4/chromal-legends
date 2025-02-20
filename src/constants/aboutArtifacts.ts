@@ -11,6 +11,7 @@ import swiftBootsPreview from '@/images/about/swift-boots-review.png';
 import swiftBoots from '@/images/about/swift-boots.png';
 import lightningAmuletPreview from '@/images/about/lightning-amulet-preview.png';
 import lightningAmulet from '@/images/about/lightning-amulet.png';
+import Symbols from './symbols';
 
 const legendaryArtifacts: IArtifact = {
   name: 'ЛЕГЕНДАРНІ',
@@ -130,7 +131,7 @@ const speedArtifacts: IArtifact = {
 
 const aboutArtifacts: AboutArtifacts = [
   {
-    name: 'Плащ<br/>невидимки',
+    name: `Плащ${Symbols.newLine}невидимки`,
     artifact: legendaryArtifacts,
     desc: 'Легендарний артефакт, здатний дарувати своєму власнику неймовірну силу — володар плаща може миттєво зливатися із тінню іншої людини або предмета, стаючи невидимим навіть для тих, хто знаходиться зовсім близько',
     crownPosition: {
@@ -153,7 +154,7 @@ const aboutArtifacts: AboutArtifacts = [
     paddingBottomMob: 0,
   },
   {
-    name: 'Тотем<br/>Яструба',
+    name: `Тотем${Symbols.newLine}Яструба`,
     artifact: legendaryArtifacts,
     desc: 'Легендарний артефакт у формі дерев’яної маски із кори магічних блакитних дерев Фаунасферії. При активації призиває на допомогу володарю могутніх духів вітру, які сповільнюють і ускладнюють пересування ворогів',
     crownPosition: {
@@ -176,7 +177,7 @@ const aboutArtifacts: AboutArtifacts = [
     paddingBottomMob: 0,
   },
   {
-    name: 'Амулет<br/>блискавки',
+    name: `Амулет${Symbols.newLine}блискавки`,
     artifact: speedArtifacts,
     desc: 'Мініатюрний, розміром не більший за монету, але неймовірно потужний артефакт. Дозволяє своєму володарю опанувати мистецтво телепортації, легко долати всі перешкоди та уникати фізичних чи магічних загроз на своєму шляху',
     crownPosition: {
@@ -199,7 +200,7 @@ const aboutArtifacts: AboutArtifacts = [
     paddingBottomMob: 0,
   },
   {
-    name: 'Чоботи-<br/>скороходи',
+    name: `Чоботи-${Symbols.newLine}скороходи`,
     artifact: speedArtifacts,
     desc: 'Старовинний артефакт, здатний наділити свого власника надлюдською швидкістю та можливістю левітації',
     crownPosition: {
@@ -222,7 +223,7 @@ const aboutArtifacts: AboutArtifacts = [
     paddingBottomMob: 63,
   },
   {
-    name: 'Оберіг<br/>бастіону',
+    name: `Оберіг${Symbols.newLine}бастіону`,
     artifact: speedArtifacts,
     desc: 'Оберіг дозволяє миттєво знімати з союзників усі негативні ефекти — прокляття, отруту або магічне знесилення, а також знищувати джерела ворожої магії довкола. Власник артефакту відчуває значний приплив сил після кожної перемоги',
     crownPosition: {
