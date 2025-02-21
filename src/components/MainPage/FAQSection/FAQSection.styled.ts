@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 import sectionBg from '@/images/faq/section-bg.png';
 
 export const Section = styled.section`
+  position: relative;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
   padding-bottom: ${({ theme }) => theme.spacing(19)}px;
+  background-color: ${({ theme }) => theme.colors.white};
   background-image: linear-gradient(
       180deg,
       #ffe600,

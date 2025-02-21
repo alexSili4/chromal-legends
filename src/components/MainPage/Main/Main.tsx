@@ -7,21 +7,25 @@ import HowToGetCardsSection from '@MainPageComponents/HowToGetCardsSection';
 import LeaderboardSection from '@MainPageComponents/LeaderboardSection';
 import LeagueSection from '@MainPageComponents/LeagueSection';
 import AboutSection from '@MainPageComponents/AboutSection';
+import { Container } from './Main.styled';
 
 const Main: FC = () => {
   return (
     <>
-      <div>
+      <Container>
         <AboutSection />
         <LeagueSection />
-      </div>
-
+      </Container>
       <LeaderboardSection />
-      <HowToGetCardsSection />
-      <CollectibleSetsSection />
+      <Container>
+        <HowToGetCardsSection />
+        <CollectibleSetsSection />
+      </Container>
       <PrizesSection />
-      <BonusExchangeSection />
-      <FAQSection />
+      <Container>
+        <BonusExchangeSection />
+        <FAQSection />
+      </Container>
     </>
   );
 };

@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 import sectionBgMob from '@/images/bonus-exchange/section-bg-mob.png';
 import sectionBgDesk from '@/images/bonus-exchange/section-bg-desk.png';
+import { IStyledSectionProps } from './BonusExchangeSection.types';
 
-export const Section = styled.section`
+export const Section = styled.section<IStyledSectionProps>`
+  position: sticky;
+  top: ${({ topGap }) => topGap}px;
+  left: 0px;
   background-color: #a38ac5;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
   padding-bottom: ${({ theme }) => theme.spacing(8)}px;

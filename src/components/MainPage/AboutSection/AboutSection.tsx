@@ -18,7 +18,11 @@ const AboutSection: FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>(
     () => AboutCategories.about
   );
-  const { sectionRef, topGap } = useTopGap();
+  const { sectionRef, topGap } = useTopGap([
+    activeTeam,
+    activeArtifact,
+    activeCategory,
+  ]);
 
   const { isAboutCategory, isArtifactsCategory, isTeamsCategory } =
     getCategory(activeCategory);

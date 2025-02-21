@@ -2,7 +2,7 @@ import { IUseTopGap } from '@/types/hooks.types';
 import { NumberOrNull } from '@/types/types';
 import { useEffect, useRef, useState } from 'react';
 
-const useTopGap = (): IUseTopGap => {
+const useTopGap = (triggers?: Array<any>): IUseTopGap => {
   const [topGap, setTopGap] = useState<NumberOrNull>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -13,7 +13,7 @@ const useTopGap = (): IUseTopGap => {
       const topGap = window.innerHeight - scrollHeight;
       setTopGap(topGap);
     }
-  }, []);
+  }, [triggers]);
 
   return {
     topGap,

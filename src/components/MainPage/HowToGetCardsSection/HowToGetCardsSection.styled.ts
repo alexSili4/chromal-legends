@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 import sectionBgMob from '@/images/conditions/section-bg-mob.png';
 import sectionBgDesk from '@/images/conditions/section-bg-desk.png';
+import { IStyledSectionProps } from './HowToGetCardsSection.types';
 
-export const Section = styled.section`
+export const Section = styled.section<IStyledSectionProps>`
+  position: sticky;
+  top: ${({ topGap }) => topGap}px;
+  left: 0px;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
   padding-bottom: ${({ theme }) => theme.spacing(11)}px;
   background-image: linear-gradient(
