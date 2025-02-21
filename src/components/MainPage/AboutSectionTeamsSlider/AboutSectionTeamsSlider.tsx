@@ -53,12 +53,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
               widthDesk,
               widthMob,
             },
-            crownPosition: {
-              leftDesk: crownLeftDesk,
-              leftMob: crownLeftMob,
-              topDesk: crownTopDesk,
-              topMob: crownTopMob,
-            },
+            crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
           },
           index
         ) => (
@@ -72,8 +67,6 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
               characterName={characterName}
               crownLeftDesk={crownLeftDesk}
               crownLeftMob={crownLeftMob}
-              crownTopDesk={crownTopDesk}
-              crownTopMob={crownTopMob}
               heightDesk={heightDesk}
               heightMob={heightMob}
               img={img}

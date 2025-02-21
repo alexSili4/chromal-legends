@@ -26,8 +26,6 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
   desc,
   crownLeftDesk,
   crownLeftMob,
-  crownTopDesk,
-  crownTopMob,
 }) => {
   return (
     <Container>
@@ -36,12 +34,7 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
       </DescWrap>
       <NameWrap>
         <Name>{name}</Name>
-        <CrownWrap
-          leftDesk={crownLeftDesk}
-          leftMob={crownLeftMob}
-          topDesk={crownTopDesk}
-          topMob={crownTopMob}
-        >
+        <CrownWrap leftDesk={crownLeftDesk} leftMob={crownLeftMob}>
           <Crown src={crown} alt='Декоративне зображення корони' />
         </CrownWrap>
       </NameWrap>

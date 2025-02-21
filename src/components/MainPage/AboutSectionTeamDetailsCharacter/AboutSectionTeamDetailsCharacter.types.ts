@@ -12,15 +12,11 @@ export interface IProps {
   desc: string;
   crownLeftDesk: number;
   crownLeftMob: number;
-  crownTopDesk: number;
-  crownTopMob: number;
 }
 
 export interface IStyledCrownWrapProps {
   leftDesk: number;
   leftMob: number;
-  topDesk: number;
-  topMob: number;
 }
 
 export interface IStyledImageProps {

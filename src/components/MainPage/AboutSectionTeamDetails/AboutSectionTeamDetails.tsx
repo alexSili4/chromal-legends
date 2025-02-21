@@ -11,8 +11,6 @@ const AboutSectionTeamDetails: FC<IProps> = ({
   teamName,
   heightMob,
   heightDesk,
-  crownTopMob,
-  crownTopDesk,
   crownLeftMob,
   crownLeftDesk,
   characterDesc,
@@ -42,8 +40,6 @@ const AboutSectionTeamDetails: FC<IProps> = ({
         widthMob={widthMob}
         crownLeftDesk={crownLeftDesk}
         crownLeftMob={crownLeftMob}
-        crownTopDesk={crownTopDesk}
-        crownTopMob={crownTopMob}
         desc={characterDesc}
         heightDesk={heightDesk}
         heightMob={heightMob}

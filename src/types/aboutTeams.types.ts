@@ -45,9 +45,7 @@ export interface IAboutTeam {
   desc: string;
   img: IImageInfo;
   crownPosition: {
-    topMob: number;
     leftMob: number;
-    topDesk: number;
     leftDesk: number;
   };
 }
