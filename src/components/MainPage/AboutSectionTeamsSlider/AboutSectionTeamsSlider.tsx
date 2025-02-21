@@ -54,11 +54,13 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
               widthMob,
             },
             crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
+            paddingBottomMob,
           },
           index
         ) => (
           <SwiperSlide key={index}>
             <AboutSectionTeamDetails
+              paddingBottomMob={paddingBottomMob}
               characters={characters}
               teamDesc={teamDesc}
               logo={logo}

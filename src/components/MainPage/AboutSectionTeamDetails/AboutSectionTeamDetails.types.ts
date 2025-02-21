@@ -19,4 +19,9 @@ export interface IProps {
   characterName: string;
   widthDesk: number;
   widthMob: number;
+  paddingBottomMob: number;
+}
+
+export interface IStyledContainerProps {
+  paddingBottomMob: number;
 }

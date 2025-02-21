@@ -22,9 +22,10 @@ const AboutSectionTeamDetails: FC<IProps> = ({
   characterName,
   widthDesk,
   widthMob,
+  paddingBottomMob,
 }) => {
   return (
-    <Container>
+    <Container paddingBottomMob={paddingBottomMob}>
       <AboutSectionTeamDetailsDesc
         characters={characters}
         desc={teamDesc}

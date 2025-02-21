@@ -11,6 +11,8 @@ import kenshi from '@/images/about/kenshi.png';
 import kenshiPreview from '@/images/about/kenshi-preview.png';
 import yukiPreview from '@/images/about/yuki-preview.png';
 import nobuPreview from '@/images/about/nobu-preview.png';
+import yuki from '@/images/about/yuki.png';
+import nobu from '@/images/about/nobu.png';
 import FaunasphereRebel from '@/icons/about/faunasphere-rebel.svg?react';
 import marcy from '@/images/about/marcy.png';
 import marcyPreview from '@/images/about/marcy-preview.png';
@@ -25,6 +27,11 @@ import bergPreview from '@/images/about/berg-preview.png';
 import atlas from '@/images/about/atlas.png';
 import nova from '@/images/about/nova.png';
 import berg from '@/images/about/berg.png';
+import Legendary from '@/icons/about/legendary.svg?react';
+import xandraPreview from '@/images/about/xandra-preview.png';
+import neonPreview from '@/images/about/neon-preview.png';
+import xandra from '@/images/about/xandra.png';
+import neon from '@/images/about/neon.png';
 
 const chromatekTeam: ITeam = {
   name: 'Корпорація Хроматек',
@@ -298,6 +305,54 @@ const ChronographyInstituteTeam: ITeam = {
   ],
 };
 
+const legendaryTeam: ITeam = {
+  name: 'ЛЕГЕНДАРНІ',
+  desc: 'Унікальні герої всесвіту Магічних фарб, чиї історії стали справжніми легендами. Збери їх усіх у своїй колекції!',
+  logo: Legendary,
+  characters: [
+    {
+      img: {
+        img: neonPreview,
+        widthMob: 108,
+        heightMob: 123,
+        widthDesk: 217,
+        heightDesk: 249,
+        topMob: -107,
+        leftMob: 57,
+        topDesk: -223,
+        leftDesk: 76,
+      },
+      name: {
+        name: 'неон',
+        topMob: -75,
+        leftMob: 15,
+        topDesk: -114,
+        leftDesk: 0,
+      },
+    },
+    {
+      img: {
+        img: xandraPreview,
+        widthDesk: 233,
+        heightDesk: 254,
+        widthMob: 119,
+        heightMob: 129,
+        topMob: -105,
+        leftMob: 141,
+        topDesk: 218,
+        leftDesk: 219,
+      },
+      name: {
+        name: 'ксандра',
+        topMob: -27,
+        leftMob: 208,
+        topDesk: -69,
+        leftDesk: 374,
+      },
+    },
+  ],
+};
+
 const aboutTeams: AboutTeams = [
   {
     name: 'Роксі',
@@ -318,6 +373,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 14,
       leftDesk: 43,
     },
+    paddingBottomMob: 39,
   },
   {
     name: 'дозер',
@@ -338,6 +394,7 @@ const aboutTeams: AboutTeams = [
       topDesk: -317,
       leftDesk: 0,
     },
+    paddingBottomMob: 45,
   },
   {
     name: 'Флоппі',
@@ -358,6 +415,7 @@ const aboutTeams: AboutTeams = [
       topDesk: -325,
       leftDesk: 15,
     },
+    paddingBottomMob: 63,
   },
   {
     name: 'Кенші',
@@ -378,6 +436,49 @@ const aboutTeams: AboutTeams = [
       leftMob: 12,
       leftDesk: 41,
     },
+    paddingBottomMob: 39,
+  },
+  {
+    name: 'юкі',
+    team: colorMastersTeam,
+    desc: 'Народилася у невеликому селищі на околицях Таємничих Земель Єдиноборств. Її батьки були місцевими цілителям та навчили її трансформувати магічні фарби у лікувальне сяйво',
+    img: {
+      img: yuki,
+      widthMob: 132,
+      widthDesk: 318,
+      heightMob: 162,
+      heightDesk: 448,
+      topMob: 13,
+      leftMob: 3,
+      topDesk: 365,
+      leftDesk: 43,
+    },
+    crownPosition: {
+      leftMob: 33,
+      leftDesk: 92,
+    },
+    paddingBottomMob: 15,
+  },
+  {
+    name: 'нобу',
+    team: colorMastersTeam,
+    desc: 'Володіє унікальним звʼязком із магічними фарбами, особливо із відтінками землі. Його основна зброя - масивна гармата, яку він називає “Хроматичний Метеор”',
+    img: {
+      img: nobu,
+      widthMob: 128,
+      widthDesk: 297,
+      heightMob: 147,
+      heightDesk: 342,
+      topMob: 28,
+      leftMob: 8,
+      topDesk: -304,
+      leftDesk: 13,
+    },
+    crownPosition: {
+      leftMob: 16,
+      leftDesk: 44,
+    },
+    paddingBottomMob: 37,
   },
   {
     name: 'мун',
@@ -398,6 +499,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 20,
       leftDesk: 52,
     },
+    paddingBottomMob: 39,
   },
   {
     name: 'марсі',
@@ -418,6 +520,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 20,
       leftDesk: 93,
     },
+    paddingBottomMob: 39,
   },
   {
     name: 'ральф',
@@ -438,6 +541,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 31,
       leftDesk: 85,
     },
+    paddingBottomMob: 0,
   },
   {
     name: 'нова',
@@ -458,6 +562,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 16,
       leftDesk: 83,
     },
+    paddingBottomMob: 0,
   },
   {
     name: 'берг',
@@ -478,6 +583,7 @@ const aboutTeams: AboutTeams = [
       leftMob: 16,
       leftDesk: 79,
     },
+    paddingBottomMob: 27,
   },
   {
     name: 'атлас',
@@ -498,6 +604,49 @@ const aboutTeams: AboutTeams = [
       leftMob: 14,
       leftDesk: 122,
     },
+    paddingBottomMob: 87,
+  },
+  {
+    name: 'неон',
+    team: legendaryTeam,
+    desc: "Член Хроматичного Патруля - таємного ордену, метою якого є запобігти захопленню «Призма-Фокусера» та можливим катастрофам, пов'язаним із цим",
+    img: {
+      img: neon,
+      widthMob: 134,
+      widthDesk: 327,
+      heightMob: 153,
+      heightDesk: 376,
+      topMob: 22,
+      leftMob: 14,
+      topDesk: -321,
+      leftDesk: 6,
+    },
+    crownPosition: {
+      leftMob: 30,
+      leftDesk: 82,
+    },
+    paddingBottomMob: 39,
+  },
+  {
+    name: 'ксандра',
+    team: legendaryTeam,
+    desc: 'Вправна найманка з майбутнього. Прибула в наш час, щоб заволодіти «Призма-Фокусером» - легендарним артефактом',
+    img: {
+      img: xandra,
+      widthMob: 141,
+      widthDesk: 349,
+      heightMob: 153,
+      heightDesk: 379,
+      topMob: 22,
+      leftMob: 0,
+      topDesk: -335,
+      leftDesk: 0,
+    },
+    crownPosition: {
+      leftMob: 77,
+      leftDesk: 208,
+    },
+    paddingBottomMob: 51,
   },
 ];
 

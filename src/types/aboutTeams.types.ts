@@ -48,6 +48,7 @@ export interface IAboutTeam {
     leftMob: number;
     leftDesk: number;
   };
+  paddingBottomMob: number;
 }
 
 export type AboutTeams = IAboutTeam[];
