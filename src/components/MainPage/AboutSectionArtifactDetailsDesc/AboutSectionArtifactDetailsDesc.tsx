@@ -10,13 +10,16 @@ import {
 import { IProps } from './AboutSectionArtifactDetailsDesc.types';
 import AboutSectionTargetArtifactInfo from '@MainPageComponents/AboutSectionTargetArtifactInfo';
 import { Symbols } from '@/constants';
+import { BtnClickEvent } from '@/types/types';
+import { makeBlur } from '@/utils';
 
 const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
+  preview,
   desc,
   name,
-  currentArtifactName,
-  artifacts,
+  artifactName,
   logo: Logo,
+  updateActiveIndex,
 }) => {
   return (
     <Container>
@@ -28,33 +31,46 @@ const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
         <Desc>{desc}</Desc>
       </DescWrap>
       <ArtifactsWrap>
-        {artifacts.map(
-          ({
-            img: {
-              heightDesk,
-              heightMob,
-              img,
-              leftDesk: imgLeftDesk,
-              leftMob: imgLeftMob,
-              topDesk: imgTopDesk,
-              topMob: imgTopMob,
-              widthDesk,
-              widthMob,
+        {preview.map(
+          (
+            {
+              img: {
+                heightDesk,
+                heightMob,
+                img,
+                leftDesk: imgLeftDesk,
+                leftMob: imgLeftMob,
+                topDesk: imgTopDesk,
+                topMob: imgTopMob,
+                widthDesk,
+                widthMob,
+              },
+              name: {
+                leftDesk: nameLeftDesk,
+                leftMob: nameLeftMob,
+                topDesk: nameTopDesk,
+                topMob: nameTopMob,
+                name,
+              },
             },
-            name: {
-              leftDesk: nameLeftDesk,
-              leftMob: nameLeftMob,
-              topDesk: nameTopDesk,
-              topMob: nameTopMob,
-              name: targetArtifactName,
-            },
-          }) => {
-            const currentArtifactNameText = currentArtifactName
+            index
+          ) => {
+            const isHyphen = artifactName.includes(Symbols.hyphen);
+            const joinSymbol = isHyphen ? '' : Symbols.space;
+
+            const currentArtifactNameText = artifactName
               .split(Symbols.newLine)
-              .join(Symbols.space);
+              .join(joinSymbol);
+
             const isCurrent =
               currentArtifactNameText.toLocaleLowerCase() ===
-              targetArtifactName.toLocaleLowerCase();
+              name.toLocaleLowerCase();
+
+            const onNameBtnClick = (e: BtnClickEvent) => {
+              makeBlur(e.currentTarget);
+
+              updateActiveIndex(index);
+            };
 
             return (
               <AboutSectionTargetArtifactInfo
@@ -71,8 +87,10 @@ const AboutSectionArtifactDetailsDesc: FC<IProps> = ({
                 nameLeftMob={nameLeftMob}
                 nameTopDesk={nameTopDesk}
                 nameTopMob={nameTopMob}
-                name={targetArtifactName}
+                name={name}
                 isCurrent={isCurrent}
+                onClick={onNameBtnClick}
+                key={index}
               />
             );
           }

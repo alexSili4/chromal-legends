@@ -14,8 +14,7 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
   const [isHiddenNextBtn, setIsHiddenNextBtn] = useState<boolean>(false);
 
   const onSwipe = ({ activeIndex, isBeginning, isEnd }: ISwiper) => {
-    const index = activeIndex;
-    const { name } = artifacts[index].artifact;
+    const { name } = artifacts[activeIndex];
 
     updateActiveArtifact(name);
 
@@ -39,57 +38,17 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
       grabCursor
       autoHeight
     >
-      {artifacts.map(
-        (
-          {
-            name: currentArtifactName,
-            desc: characterDesc,
-            artifact: {
-              artifacts,
-              desc: artifactDesc,
-              logo,
-              name: artifactName,
-            },
-            img: {
-              heightDesk,
-              heightMob,
-              img,
-              leftDesk: imgLeftDesk,
-              leftMob: imgLeftMob,
-              topDesk: imgTopDesk,
-              topMob: imgTopMob,
-              widthDesk,
-              widthMob,
-            },
-            crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
-            paddingBottomMob,
-          },
-          index
-        ) => (
-          <SwiperSlide key={index}>
-            <AboutSectionArtifactDetails
-              artifacts={artifacts}
-              artifactDesc={artifactDesc}
-              logo={logo}
-              artifactName={artifactName}
-              characterDesc={characterDesc}
-              currentArtifactName={currentArtifactName}
-              crownLeftDesk={crownLeftDesk}
-              crownLeftMob={crownLeftMob}
-              heightDesk={heightDesk}
-              heightMob={heightMob}
-              img={img}
-              imgLeftDesk={imgLeftDesk}
-              imgLeftMob={imgLeftMob}
-              imgTopDesk={imgTopDesk}
-              imgTopMob={imgTopMob}
-              widthDesk={widthDesk}
-              widthMob={widthMob}
-              paddingBottomMob={paddingBottomMob}
-            />
-          </SwiperSlide>
-        )
-      )}
+      {artifacts.map(({ name, desc, artifacts, logo, preview }, index) => (
+        <SwiperSlide key={index}>
+          <AboutSectionArtifactDetails
+            name={name}
+            desc={desc}
+            logo={logo}
+            artifacts={artifacts}
+            preview={preview}
+          />
+        </SwiperSlide>
+      ))}
       <AboutSectionArtifactsSliderControls
         isHiddenPrevBtn={isHiddenPrevBtn}
         isHiddenNextBtn={isHiddenNextBtn}

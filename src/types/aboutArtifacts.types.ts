@@ -29,18 +29,10 @@ export interface IArtifactPreview {
   };
 }
 
-export type Artifacts = IArtifactPreview[];
+export type ArtifactsPreview = IArtifactPreview[];
 
 export interface IArtifact {
-  name: Artifact;
-  desc: string;
-  logo: FC;
-  artifacts: Artifacts;
-}
-
-export interface IAboutArtifact {
   name: string;
-  artifact: IArtifact;
   desc: string;
   img: IImageInfo;
   crownPosition: {
@@ -48,6 +40,16 @@ export interface IAboutArtifact {
     leftDesk: number;
   };
   paddingBottomMob: number;
+}
+
+export type Artifacts = IArtifact[];
+
+export interface IAboutArtifact {
+  name: Artifact;
+  desc: string;
+  logo: FC;
+  preview: ArtifactsPreview;
+  artifacts: Artifacts;
 }
 
 export type AboutArtifacts = IAboutArtifact[];

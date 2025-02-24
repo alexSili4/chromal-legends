@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './AboutSectionTargetArtifactInfo.types';
-import { NameWrap, Image, Name } from './AboutSectionTargetArtifactInfo.styled';
+import { NameBtn, Image, Title } from './AboutSectionTargetArtifactInfo.styled';
 
 const AboutSectionTargetArtifactInfo: FC<IProps> = ({
   heightDesk,
@@ -18,18 +18,21 @@ const AboutSectionTargetArtifactInfo: FC<IProps> = ({
   nameTopMob,
   name,
   isCurrent,
+  onClick,
 }) => {
   return (
     <>
-      <NameWrap
+      <NameBtn
+        type='button'
+        onClick={onClick}
         leftDesk={nameLeftDesk}
         leftMob={nameLeftMob}
         topDesk={nameTopDesk}
         topMob={nameTopMob}
         isCurrent={isCurrent}
       >
-        <Name>{name}</Name>
-      </NameWrap>
+        <Title>{name}</Title>
+      </NameBtn>
       <Image
         src={img}
         alt={name}
