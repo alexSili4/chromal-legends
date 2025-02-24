@@ -261,7 +261,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 448,
           topMob: 13,
           leftMob: 3,
-          topDesk: 365,
+          topDesk: -365,
           leftDesk: 43,
         },
         crownPosition: {
@@ -360,26 +360,6 @@ const aboutTeams: AboutTeams = [
     ],
     characters: [
       {
-        name: 'мун',
-        desc: 'Лідер команди бунтарів Фаунасферії. Свою славу та визнання він отримав, коли намалював мурал на найвищому хмарочосі міста - Кришталевих Баштах',
-        img: {
-          img: mun,
-          widthMob: 138,
-          widthDesk: 399,
-          heightMob: 165,
-          heightDesk: 435,
-          topMob: 10,
-          leftMob: 7,
-          topDesk: -348,
-          leftDesk: 0,
-        },
-        crownPosition: {
-          leftMob: 20,
-          leftDesk: 52,
-        },
-        paddingBottomMob: 39,
-      },
-      {
         name: 'марсі',
         desc: 'Не лише майстер графіті, а й віртуозна музикантка. Вона завжди носить із собою велику музичну колонку, додатково обладнану розпилювачем фарби',
         img: {
@@ -396,6 +376,26 @@ const aboutTeams: AboutTeams = [
         crownPosition: {
           leftMob: 20,
           leftDesk: 93,
+        },
+        paddingBottomMob: 39,
+      },
+      {
+        name: 'мун',
+        desc: 'Лідер команди бунтарів Фаунасферії. Свою славу та визнання він отримав, коли намалював мурал на найвищому хмарочосі міста - Кришталевих Баштах',
+        img: {
+          img: mun,
+          widthMob: 138,
+          widthDesk: 399,
+          heightMob: 165,
+          heightDesk: 435,
+          topMob: 10,
+          leftMob: 7,
+          topDesk: -348,
+          leftDesk: 0,
+        },
+        crownPosition: {
+          leftMob: 20,
+          leftDesk: 52,
         },
         paddingBottomMob: 39,
       },

@@ -4,6 +4,7 @@ export interface IProps {
   name: string;
   rank: NumberOrNull;
   text: string;
+  img: string;
 }
 
 export interface IStyledContainerProps {

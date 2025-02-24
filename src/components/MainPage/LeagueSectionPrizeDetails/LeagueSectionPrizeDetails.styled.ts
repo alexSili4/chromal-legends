@@ -12,19 +12,19 @@ export const Button = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+`;
 
-  & > svg {
-    width: 161px;
-    height: 154px;
-    transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+export const Image = styled.img`
+  width: 161px;
+  height: 154px;
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-      width: 100%;
-      height: 205px;
-    }
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 100%;
+    height: 205px;
   }
 
-  &:is(:hover, :focus) > svg {
+  button:is(:hover, :focus) > & {
     transform: scale(1.1);
   }
 `;

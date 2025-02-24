@@ -273,26 +273,6 @@ const aboutArtifacts: AboutArtifacts = [
       },
       {
         name: {
-          name: 'Маяк регенерації',
-          topMob: 168,
-          leftMob: 10,
-          topDesk: 286,
-          leftDesk: 41,
-        },
-        img: {
-          img: regenerationBeaconPreview,
-          topMob: 67,
-          leftMob: 53,
-          topDesk: 150,
-          leftDesk: 10,
-          widthMob: 88,
-          heightMob: 105,
-          widthDesk: 166,
-          heightDesk: 199,
-        },
-      },
-      {
-        name: {
           name: 'Парасолька наснаги',
           topMob: 41,
           leftMob: 124,
@@ -309,6 +289,26 @@ const aboutArtifacts: AboutArtifacts = [
           heightMob: 117,
           widthDesk: 178,
           heightDesk: 176,
+        },
+      },
+      {
+        name: {
+          name: 'Маяк регенерації',
+          topMob: 168,
+          leftMob: 10,
+          topDesk: 286,
+          leftDesk: 41,
+        },
+        img: {
+          img: regenerationBeaconPreview,
+          topMob: 67,
+          leftMob: 53,
+          topDesk: 150,
+          leftDesk: 10,
+          widthMob: 88,
+          heightMob: 105,
+          widthDesk: 166,
+          heightDesk: 199,
         },
       },
     ],

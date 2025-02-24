@@ -52,6 +52,9 @@ const AboutSectionTeamDetailsDesc: FC<IProps> = ({
           },
           index
         ) => {
+          const isCurrent =
+            characterName.toLocaleLowerCase() ===
+            targetCharacterName.toLocaleLowerCase();
           const onNameBtnClick = (e: BtnClickEvent) => {
             makeBlur(e.currentTarget);
 
@@ -75,7 +78,7 @@ const AboutSectionTeamDetailsDesc: FC<IProps> = ({
               nameTopDesk={nameTopDesk}
               nameTopMob={nameTopMob}
               name={targetCharacterName}
-              isCurrent={characterName === targetCharacterName}
+              isCurrent={isCurrent}
               onClick={onNameBtnClick}
             />
           );
