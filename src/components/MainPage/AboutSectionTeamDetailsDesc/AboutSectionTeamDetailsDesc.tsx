@@ -8,6 +8,8 @@ import {
 } from './AboutSectionTeamDetailsDesc.styled';
 import { IProps } from './AboutSectionTeamDetailsDesc.types';
 import AboutSectionTeamCharacterInfo from '@MainPageComponents/AboutSectionTeamCharacterInfo';
+import { BtnClickEvent } from '@/types/types';
+import { makeBlur } from '@/utils';
 
 const AboutSectionTeamDetailsDesc: FC<IProps> = ({
   desc,
@@ -15,6 +17,7 @@ const AboutSectionTeamDetailsDesc: FC<IProps> = ({
   characterName,
   characters,
   logo: Logo,
+  updateActiveIndex,
 }) => {
   return (
     <Container>
@@ -26,44 +29,57 @@ const AboutSectionTeamDetailsDesc: FC<IProps> = ({
         <Desc>{desc}</Desc>
       </DescWrap>
       {characters.map(
-        ({
-          img: {
-            heightDesk,
-            heightMob,
-            img,
-            leftDesk: imgLeftDesk,
-            leftMob: imgLeftMob,
-            topDesk: imgTopDesk,
-            topMob: imgTopMob,
-            widthDesk,
-            widthMob,
+        (
+          {
+            img: {
+              heightDesk,
+              heightMob,
+              img,
+              leftDesk: imgLeftDesk,
+              leftMob: imgLeftMob,
+              topDesk: imgTopDesk,
+              topMob: imgTopMob,
+              widthDesk,
+              widthMob,
+            },
+            name: {
+              leftDesk: nameLeftDesk,
+              leftMob: nameLeftMob,
+              topDesk: nameTopDesk,
+              topMob: nameTopMob,
+              name: targetCharacterName,
+            },
           },
-          name: {
-            leftDesk: nameLeftDesk,
-            leftMob: nameLeftMob,
-            topDesk: nameTopDesk,
-            topMob: nameTopMob,
-            name: targetCharacterName,
-          },
-        }) => (
-          <AboutSectionTeamCharacterInfo
-            heightDesk={heightDesk}
-            heightMob={heightMob}
-            img={img}
-            imgLeftDesk={imgLeftDesk}
-            imgLeftMob={imgLeftMob}
-            imgTopDesk={imgTopDesk}
-            imgTopMob={imgTopMob}
-            widthDesk={widthDesk}
-            widthMob={widthMob}
-            nameLeftDesk={nameLeftDesk}
-            nameLeftMob={nameLeftMob}
-            nameTopDesk={nameTopDesk}
-            nameTopMob={nameTopMob}
-            name={targetCharacterName}
-            isCurrent={characterName === targetCharacterName}
-          />
-        )
+          index
+        ) => {
+          const onNameBtnClick = (e: BtnClickEvent) => {
+            makeBlur(e.currentTarget);
+
+            updateActiveIndex(index);
+          };
+
+          return (
+            <AboutSectionTeamCharacterInfo
+              key={index}
+              heightDesk={heightDesk}
+              heightMob={heightMob}
+              img={img}
+              imgLeftDesk={imgLeftDesk}
+              imgLeftMob={imgLeftMob}
+              imgTopDesk={imgTopDesk}
+              imgTopMob={imgTopMob}
+              widthDesk={widthDesk}
+              widthMob={widthMob}
+              nameLeftDesk={nameLeftDesk}
+              nameLeftMob={nameLeftMob}
+              nameTopDesk={nameTopDesk}
+              nameTopMob={nameTopMob}
+              name={targetCharacterName}
+              isCurrent={characterName === targetCharacterName}
+              onClick={onNameBtnClick}
+            />
+          );
+        }
       )}
     </Container>
   );

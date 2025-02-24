@@ -29,6 +29,8 @@ export type SetActiveTeamFunc = (data: TeamOrNull) => void;
 
 export type SetActiveArtifactFunc = (data: ArtifactOrNull) => void;
 
+export type SetNumberFunc = (data: number) => void;
+
 export interface IGetCategory {
   isAboutCategory: boolean;
   isTeamsCategory: boolean;

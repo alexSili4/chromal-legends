@@ -1,16 +1,22 @@
 import styled from '@emotion/styled';
 import {
   IStyledImageProps,
-  IStyledNameWrapProps,
+  IStyledNameBtnProps,
 } from './AboutSectionTeamCharacterInfo.types';
 
-export const NameWrap = styled.div<IStyledNameWrapProps>`
+export const NameBtn = styled.button<IStyledNameBtnProps>`
   position: absolute;
   top: ${({ topMob }) => topMob}px;
   left: ${({ leftMob }) => leftMob}px;
   padding: ${({ theme: { spacing } }) => `${spacing(2)}px ${spacing(3)}px`};
+  border: none;
   border-radius: 8px;
   background-color: ${({ isCurrent }) => (isCurrent ? '#FFE601' : '#052d44')};
+  transition: background-color ${({ theme }) => theme.transitionDurationAndFunc};
+
+  &:is(:hover, :focus) {
+    background-color: #ffe601;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => topDesk}px;
@@ -20,7 +26,7 @@ export const NameWrap = styled.div<IStyledNameWrapProps>`
   }
 `;
 
-export const Name = styled.p`
+export const Title = styled.span`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.luckiestGuyRUSBELUKR};
   font-size: 14px;
@@ -45,6 +51,7 @@ export const Image = styled.img<IStyledImageProps>`
   width: ${({ widthMob }) => widthMob}px;
   max-width: ${({ widthMob }) => widthMob}px;
   height: ${({ heightMob }) => heightMob}px;
+  pointer-events: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => topDesk}px;

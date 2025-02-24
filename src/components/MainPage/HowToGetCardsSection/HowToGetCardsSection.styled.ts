@@ -17,6 +17,7 @@ export const Section = styled.section<IStyledSectionProps>`
     url(${sectionBgMob});
   background-position: bottom 0 left 0;
   background-size: 100% 100%, 100% auto;
+  overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding-top: ${({ theme }) => theme.spacing(20)}px;

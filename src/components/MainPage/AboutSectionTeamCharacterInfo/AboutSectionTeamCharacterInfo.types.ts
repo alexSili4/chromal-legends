@@ -1,3 +1,5 @@
+import { OnBtnClickFunc } from '@/types/types';
+
 export interface IProps {
   heightDesk: number;
   heightMob: number;
@@ -14,9 +16,10 @@ export interface IProps {
   nameTopMob: number;
   name: string;
   isCurrent: boolean;
+  onClick: OnBtnClickFunc;
 }
 
-export interface IStyledNameWrapProps {
+export interface IStyledNameBtnProps {
   leftDesk: number;
   leftMob: number;
   topDesk: number;

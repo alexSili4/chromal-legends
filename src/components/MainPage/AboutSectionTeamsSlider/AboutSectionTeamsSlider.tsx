@@ -11,8 +11,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
   const [isHiddenNextBtn, setIsHiddenNextBtn] = useState<boolean>(false);
 
   const onSwipe = ({ activeIndex, isBeginning, isEnd }: ISwiper) => {
-    const index = activeIndex;
-    const { name } = teams[index].team;
+    const { name } = teams[activeIndex];
 
     updateActiveTeam(name);
 
@@ -36,52 +35,17 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
       grabCursor
       autoHeight
     >
-      {teams.map(
-        (
-          {
-            name: characterName,
-            desc: characterDesc,
-            team: { preview, desc: teamDesc, logo, name: teamName },
-            img: {
-              heightDesk,
-              heightMob,
-              img,
-              leftDesk: imgLeftDesk,
-              leftMob: imgLeftMob,
-              topDesk: imgTopDesk,
-              topMob: imgTopMob,
-              widthDesk,
-              widthMob,
-            },
-            crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
-            paddingBottomMob,
-          },
-          index
-        ) => (
-          <SwiperSlide key={index}>
-            <AboutSectionTeamDetails
-              paddingBottomMob={paddingBottomMob}
-              characters={preview}
-              teamDesc={teamDesc}
-              logo={logo}
-              teamName={teamName}
-              characterDesc={characterDesc}
-              characterName={characterName}
-              crownLeftDesk={crownLeftDesk}
-              crownLeftMob={crownLeftMob}
-              heightDesk={heightDesk}
-              heightMob={heightMob}
-              img={img}
-              imgLeftDesk={imgLeftDesk}
-              imgLeftMob={imgLeftMob}
-              imgTopDesk={imgTopDesk}
-              imgTopMob={imgTopMob}
-              widthDesk={widthDesk}
-              widthMob={widthMob}
-            />
-          </SwiperSlide>
-        )
-      )}
+      {teams.map(({ name, desc, characters, logo, preview }, index) => (
+        <SwiperSlide key={index}>
+          <AboutSectionTeamDetails
+            name={name}
+            desc={desc}
+            characters={characters}
+            logo={logo}
+            preview={preview}
+          />
+        </SwiperSlide>
+      ))}
       <AboutSectionTeamsSliderControls
         isHiddenPrevBtn={isHiddenPrevBtn}
         isHiddenNextBtn={isHiddenNextBtn}

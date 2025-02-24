@@ -1,4 +1,5 @@
 import { CharactersPreview, Team } from '@/types/aboutTeams.types';
+import { SetNumberFunc } from '@/types/functions.types';
 import { FC } from 'react';
 
 export interface IProps {
@@ -7,4 +8,5 @@ export interface IProps {
   characters: CharactersPreview;
   characterName: string;
   logo: FC;
+  updateActiveIndex: SetNumberFunc;
 }

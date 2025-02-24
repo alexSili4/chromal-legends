@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './AboutSectionTeamCharacterInfo.types';
-import { NameWrap, Image, Name } from './AboutSectionTeamCharacterInfo.styled';
+import { NameBtn, Image, Title } from './AboutSectionTeamCharacterInfo.styled';
 
 const AboutSectionTeamCharacterInfo: FC<IProps> = ({
   heightDesk,
@@ -18,18 +18,21 @@ const AboutSectionTeamCharacterInfo: FC<IProps> = ({
   nameTopMob,
   name,
   isCurrent,
+  onClick,
 }) => {
   return (
     <>
-      <NameWrap
+      <NameBtn
+        type='button'
+        onClick={onClick}
         leftDesk={nameLeftDesk}
         leftMob={nameLeftMob}
         topDesk={nameTopDesk}
         topMob={nameTopMob}
         isCurrent={isCurrent}
       >
-        <Name>{name}</Name>
-      </NameWrap>
+        <Title>{name}</Title>
+      </NameBtn>
       <Image
         src={img}
         alt={name}

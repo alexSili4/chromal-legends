@@ -18,7 +18,6 @@ export interface IImageInfo {
   widthDesk: number;
   heightDesk: number;
 }
-
 export interface ICharacterPreview {
   img: IImageInfo;
   name: {
@@ -32,16 +31,8 @@ export interface ICharacterPreview {
 
 export type CharactersPreview = ICharacterPreview[];
 
-export interface ITeam {
-  name: Team;
-  desc: string;
-  logo: FC;
-  preview: CharactersPreview;
-}
-
-export interface IAboutTeam {
+export interface ICharacter {
   name: string;
-  team: ITeam;
   desc: string;
   img: IImageInfo;
   crownPosition: {
@@ -49,6 +40,16 @@ export interface IAboutTeam {
     leftDesk: number;
   };
   paddingBottomMob: number;
+}
+
+export type Characters = ICharacter[];
+
+export interface IAboutTeam {
+  name: Team;
+  desc: string;
+  logo: FC;
+  preview: CharactersPreview;
+  characters: Characters;
 }
 
 export type AboutTeams = IAboutTeam[];

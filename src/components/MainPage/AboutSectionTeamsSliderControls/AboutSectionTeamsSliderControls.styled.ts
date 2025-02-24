@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  pointer-events: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: 248px;

@@ -1,25 +1,12 @@
-import { CharactersPreview, Team } from '@/types/aboutTeams.types';
+import { Characters, CharactersPreview, Team } from '@/types/aboutTeams.types';
 import { FC } from 'react';
 
 export interface IProps {
-  characters: CharactersPreview;
-  teamDesc: string;
+  name: Team;
+  desc: string;
+  characters: Characters;
   logo: FC;
-  teamName: Team;
-  heightMob: number;
-  heightDesk: number;
-  crownLeftMob: number;
-  crownLeftDesk: number;
-  characterDesc: string;
-  imgLeftDesk: number;
-  imgLeftMob: number;
-  img: string;
-  imgTopDesk: number;
-  imgTopMob: number;
-  characterName: string;
-  widthDesk: number;
-  widthMob: number;
-  paddingBottomMob: number;
+  preview: CharactersPreview;
 }
 
 export interface IStyledContainerProps {
