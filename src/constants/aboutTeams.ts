@@ -37,7 +37,7 @@ const chromatekTeam: ITeam = {
   name: 'Корпорація Хроматек',
   desc: 'Спеціалізуються на пошуку та видобутку кристалів у нових світах, щоб отримати корисні речовини та енергію',
   logo: Chromatek,
-  characters: [
+  preview: [
     {
       img: {
         img: roxyPreview,
@@ -105,7 +105,7 @@ const colorMastersTeam: ITeam = {
   name: 'Клан Майстрів Кольору',
   desc: 'Учні клану досліджували різні види єдиноборств і вивчали, як кольорові шматочки мозаїки могли посилити їхні навички та наділяти їхні предмети магічними здібностями',
   logo: ColorMasters,
-  characters: [
+  preview: [
     {
       img: {
         img: kenshiPreview,
@@ -173,7 +173,7 @@ const faunasphereRebelTeam: ITeam = {
   name: 'Бунтарі Фаунасферії',
   desc: 'Команда підлітків, що стомились від заборон і обмежень, обрала графіті магічними фарбами як спосіб вираження свого протесту та поширення власних ідей',
   logo: FaunasphereRebel,
-  characters: [
+  preview: [
     {
       img: {
         img: marcyPreview,
@@ -237,11 +237,11 @@ const faunasphereRebelTeam: ITeam = {
   ],
 };
 
-const ChronographyInstituteTeam: ITeam = {
+const chronographyInstituteTeam: ITeam = {
   name: 'інститут Хронографії',
   desc: 'Група дослідників, що спеціалізуються на вивченні унікальних мінералів і кристалів з чарівними властивостями. Шукають та вивчають стародавні камені, які містять в собі світло і силу Призми',
   logo: ChronographyInstitute,
-  characters: [
+  preview: [
     {
       img: {
         img: novaPreview,
@@ -309,7 +309,7 @@ const legendaryTeam: ITeam = {
   name: 'ЛЕГЕНДАРНІ',
   desc: 'Унікальні герої всесвіту Магічних фарб, чиї історії стали справжніми легендами. Збери їх усіх у своїй колекції!',
   logo: Legendary,
-  characters: [
+  preview: [
     {
       img: {
         img: neonPreview,
@@ -545,7 +545,7 @@ const aboutTeams: AboutTeams = [
   },
   {
     name: 'нова',
-    team: ChronographyInstituteTeam,
+    team: chronographyInstituteTeam,
     desc: 'Майстер паркуру та чемпіон із швидкісних забігів по місту. Його унікальний пневматичний пульверизатор може змінювати властивості магічних фарб, перетворюючи малюнки на мережу порталів',
     img: {
       img: nova,
@@ -566,7 +566,7 @@ const aboutTeams: AboutTeams = [
   },
   {
     name: 'берг',
-    team: ChronographyInstituteTeam,
+    team: chronographyInstituteTeam,
     desc: 'Досвідчений археолог, який спеціалізується на консервації та захисті археологічних знахідок. У своїй роботі він використовує балон із особливим фарбувальним складом',
     img: {
       img: berg,
@@ -587,7 +587,7 @@ const aboutTeams: AboutTeams = [
   },
   {
     name: 'атлас',
-    team: ChronographyInstituteTeam,
+    team: chronographyInstituteTeam,
     desc: 'Інженер-розвідник. Має технологічну рацію, щоб завжди залишатись на звʼязку',
     img: {
       img: atlas,

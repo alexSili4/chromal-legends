@@ -46,3 +46,9 @@ export interface IGetActiveArtifact {
   isActiveHealthArtifact: boolean;
   isActiveControlArtifact: boolean;
 }
+
+export interface IMakeScrollProps {
+  id: string;
+  block?: ScrollLogicalPosition;
+  behavior?: ScrollBehavior;
+}

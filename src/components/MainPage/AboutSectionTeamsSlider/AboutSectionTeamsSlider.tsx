@@ -41,7 +41,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
           {
             name: characterName,
             desc: characterDesc,
-            team: { characters, desc: teamDesc, logo, name: teamName },
+            team: { preview, desc: teamDesc, logo, name: teamName },
             img: {
               heightDesk,
               heightMob,
@@ -61,7 +61,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
           <SwiperSlide key={index}>
             <AboutSectionTeamDetails
               paddingBottomMob={paddingBottomMob}
-              characters={characters}
+              characters={preview}
               teamDesc={teamDesc}
               logo={logo}
               teamName={teamName}

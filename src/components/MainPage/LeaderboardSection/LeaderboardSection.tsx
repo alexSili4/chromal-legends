@@ -7,6 +7,7 @@ import SectionTitle from '@MainPageComponents/SectionTitle';
 import LeaderboardModalWin from '@MainPageComponents/LeaderboardModalWin';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
+import { SectionsIds } from '@/constants';
 
 const LeaderboardSection: FC = () => {
   const [showLeaderboardModalWin, setShowLeaderboardModalWin] =
@@ -24,7 +25,7 @@ const LeaderboardSection: FC = () => {
 
   return (
     <>
-      <Section>
+      <Section id={SectionsIds.leaderboard}>
         <GeneralContainer>
           <Container>
             <Content>

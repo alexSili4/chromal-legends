@@ -61,12 +61,7 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
               widthDesk,
               widthMob,
             },
-            crownPosition: {
-              leftDesk: crownLeftDesk,
-              leftMob: crownLeftMob,
-              topDesk: crownTopDesk,
-              topMob: crownTopMob,
-            },
+            crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
             paddingBottomMob,
           },
           index
@@ -81,8 +76,6 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
               currentArtifactName={currentArtifactName}
               crownLeftDesk={crownLeftDesk}
               crownLeftMob={crownLeftMob}
-              crownTopDesk={crownTopDesk}
-              crownTopMob={crownTopMob}
               heightDesk={heightDesk}
               heightMob={heightMob}
               img={img}

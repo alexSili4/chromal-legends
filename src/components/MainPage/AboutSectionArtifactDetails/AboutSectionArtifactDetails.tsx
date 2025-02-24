@@ -11,8 +11,6 @@ const AboutSectionArtifactDetails: FC<IProps> = ({
   logo,
   heightMob,
   heightDesk,
-  crownTopMob,
-  crownTopDesk,
   crownLeftMob,
   crownLeftDesk,
   characterDesc,
@@ -43,8 +41,6 @@ const AboutSectionArtifactDetails: FC<IProps> = ({
         widthMob={widthMob}
         crownLeftDesk={crownLeftDesk}
         crownLeftMob={crownLeftMob}
-        crownTopDesk={crownTopDesk}
-        crownTopMob={crownTopMob}
         desc={characterDesc}
         heightDesk={heightDesk}
         heightMob={heightMob}

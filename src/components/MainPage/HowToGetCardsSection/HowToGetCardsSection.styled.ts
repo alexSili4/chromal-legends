@@ -8,7 +8,7 @@ export const Section = styled.section<IStyledSectionProps>`
   top: ${({ topGap }) => topGap}px;
   left: 0px;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(11)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(25)}px;
   background-image: linear-gradient(
       180deg,
       #ffe600 16%,
@@ -20,7 +20,6 @@ export const Section = styled.section<IStyledSectionProps>`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding-top: ${({ theme }) => theme.spacing(20)}px;
-    padding-bottom: ${({ theme }) => theme.spacing(17)}px;
     background-image: linear-gradient(
         180deg,
         #ffe600 16%,

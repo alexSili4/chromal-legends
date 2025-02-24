@@ -7,7 +7,7 @@ export const Section = styled.section<IStyledSectionProps>`
   position: sticky;
   top: ${({ topGap }) => topGap}px;
   left: 0px;
-  padding-bottom: ${({ theme }) => theme.spacing(4)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(25)}px;
   background-image: url(${sectionBgMob});
   background-position: left 0 bottom 0;
   background-size: contain;

@@ -19,7 +19,7 @@ const AnimatedHowToGetCardsSectionContent: FC = () => {
   };
 
   const transition = {
-    duration: 3,
+    duration: 2,
     ease: [0.25, 0.1, 0.25, 1],
   };
 

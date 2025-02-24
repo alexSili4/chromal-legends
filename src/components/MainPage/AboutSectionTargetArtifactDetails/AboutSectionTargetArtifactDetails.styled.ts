@@ -27,6 +27,7 @@ export const DescWrap = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    min-height: 190px;
     padding: ${({ theme }) => theme.spacing(8)}px;
     border-radius: 18px;
   }
@@ -80,11 +81,11 @@ export const Name = styled.p`
 
 export const CrownWrap = styled.div<IStyledCrownWrapProps>`
   position: absolute;
-  top: ${({ topMob }) => topMob}px;
+  top: -10px;
   left: ${({ leftMob }) => leftMob}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    top: ${({ topDesk }) => topDesk}px;
+    top: -4px;
     left: ${({ leftDesk }) => leftDesk}px;
   }
 `;

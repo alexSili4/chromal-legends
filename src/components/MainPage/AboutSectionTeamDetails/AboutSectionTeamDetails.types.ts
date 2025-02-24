@@ -1,8 +1,8 @@
-import { Characters, Team } from '@/types/aboutTeams.types';
+import { CharactersPreview, Team } from '@/types/aboutTeams.types';
 import { FC } from 'react';
 
 export interface IProps {
-  characters: Characters;
+  characters: CharactersPreview;
   teamDesc: string;
   logo: FC;
   teamName: Team;

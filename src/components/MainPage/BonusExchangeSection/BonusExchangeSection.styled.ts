@@ -9,7 +9,7 @@ export const Section = styled.section<IStyledSectionProps>`
   left: 0px;
   background-color: #a38ac5;
   padding-top: ${({ theme }) => theme.spacing(15)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(8)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(25)}px;
   background-image: url(${sectionBgMob});
   background-size: 679px 233px;
   background-position: left calc(50% + 51px) bottom 0;
@@ -23,6 +23,5 @@ export const Section = styled.section<IStyledSectionProps>`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     background-image: url(${sectionBgDesk});
     padding-top: ${({ theme }) => theme.spacing(20)}px;
-    padding-bottom: ${({ theme }) => theme.spacing(12)}px;
   }
 `;

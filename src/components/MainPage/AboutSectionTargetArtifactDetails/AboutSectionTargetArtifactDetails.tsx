@@ -26,8 +26,6 @@ const AboutSectionTargetArtifactDetails: FC<IProps> = ({
   desc,
   crownLeftDesk,
   crownLeftMob,
-  crownTopDesk,
-  crownTopMob,
 }) => {
   return (
     <Container>
@@ -35,12 +33,7 @@ const AboutSectionTargetArtifactDetails: FC<IProps> = ({
         <Desc>{desc}</Desc>
         <NameWrap>
           <Name dangerouslySetInnerHTML={{ __html: name }}></Name>
-          <CrownWrap
-            leftDesk={crownLeftDesk}
-            leftMob={crownLeftMob}
-            topDesk={crownTopDesk}
-            topMob={crownTopMob}
-          >
+          <CrownWrap leftDesk={crownLeftDesk} leftMob={crownLeftMob}>
             <Crown src={crown} alt='Декоративне зображення корони' />
           </CrownWrap>
         </NameWrap>

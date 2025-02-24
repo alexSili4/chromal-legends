@@ -19,7 +19,7 @@ export interface IImageInfo {
   heightDesk: number;
 }
 
-export interface ICharacter {
+export interface ICharacterPreview {
   img: IImageInfo;
   name: {
     topMob: number;
@@ -30,13 +30,13 @@ export interface ICharacter {
   };
 }
 
-export type Characters = ICharacter[];
+export type CharactersPreview = ICharacterPreview[];
 
 export interface ITeam {
   name: Team;
   desc: string;
   logo: FC;
-  characters: Characters;
+  preview: CharactersPreview;
 }
 
 export interface IAboutTeam {

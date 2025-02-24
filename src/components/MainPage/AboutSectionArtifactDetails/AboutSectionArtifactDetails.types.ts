@@ -8,8 +8,6 @@ export interface IProps {
   artifactName: Artifact;
   heightMob: number;
   heightDesk: number;
-  crownTopMob: number;
-  crownTopDesk: number;
   crownLeftMob: number;
   crownLeftDesk: number;
   characterDesc: string;
