@@ -3,6 +3,11 @@ import sectionBottomBg from '@/images/collectible-sets/section-bottom-bg.png';
 import sectionTopBg from '@/images/collectible-sets/section-top-bg.png';
 
 export const Section = styled.section`
+  position: relative;
+  overflow: hidden;
+`;
+
+export const Background = styled.div`
   width: calc(100% + 16px + 16px);
   border: 16px solid #001d2c;
   border-bottom-width: 0;

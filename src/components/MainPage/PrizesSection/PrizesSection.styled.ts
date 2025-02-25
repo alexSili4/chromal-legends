@@ -6,6 +6,11 @@ import sectionTopBgMob from '@/images/prizes/section-top-bg-mob.png';
 
 export const Section = styled.section`
   position: relative;
+  overflow: hidden;
+`;
+
+export const Background = styled.div`
+  position: relative;
   z-index: 10;
   width: calc(100% + 16px + 16px);
   border: 16px solid #001d2c;

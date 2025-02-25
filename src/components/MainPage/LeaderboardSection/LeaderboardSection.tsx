@@ -2,7 +2,12 @@ import { FC, useState } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedHowToJoinLeaderboard from '@AnimationBlocks/AnimatedHowToJoinLeaderboard';
 import LeaderboardSectionShowLeaderboardBtn from '@MainPageComponents/LeaderboardSectionShowLeaderboardBtn';
-import { Container, Section, Content } from './LeaderboardSection.styled';
+import {
+  Container,
+  Section,
+  Content,
+  Background,
+} from './LeaderboardSection.styled';
 import SectionTitle from '@MainPageComponents/SectionTitle';
 import LeaderboardModalWin from '@MainPageComponents/LeaderboardModalWin';
 import { BtnClickEvent } from '@/types/types';
@@ -26,17 +31,19 @@ const LeaderboardSection: FC = () => {
   return (
     <>
       <Section id={SectionsIds.leaderboard}>
-        <GeneralContainer>
-          <Container>
-            <Content>
-              <SectionTitle text='Як долучитись до турніру?' />
-              <AnimatedHowToJoinLeaderboard />
-            </Content>
-            <LeaderboardSectionShowLeaderboardBtn
-              onClick={onShowLeaderboardBtnClick}
-            />
-          </Container>
-        </GeneralContainer>
+        <Background>
+          <GeneralContainer>
+            <Container>
+              <Content>
+                <SectionTitle text='Як долучитись до турніру?' />
+                <AnimatedHowToJoinLeaderboard />
+              </Content>
+              <LeaderboardSectionShowLeaderboardBtn
+                onClick={onShowLeaderboardBtnClick}
+              />
+            </Container>
+          </GeneralContainer>
+        </Background>
       </Section>
       <LeaderboardModalWin
         setModalWinState={toggleShowLeaderboardModalWin}

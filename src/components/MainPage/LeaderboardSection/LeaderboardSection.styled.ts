@@ -4,6 +4,11 @@ import sectionBgDesk from '@/images/leaderboard/section-bg-desk.png';
 
 export const Section = styled.section`
   position: relative;
+  overflow: hidden;
+`;
+
+export const Background = styled.div`
+  position: relative;
   z-index: 1;
   width: calc(100% + 16px + 16px);
   border: 16px solid #001d2c;

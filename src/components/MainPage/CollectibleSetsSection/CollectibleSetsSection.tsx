@@ -10,27 +10,30 @@ import {
   Content,
   Section,
   TextWrap,
+  Background,
 } from './CollectibleSetsSection.styled';
 import { collectibleSets } from '@/constants';
 
 const CollectibleSetsSection: FC = () => {
   return (
     <Section id={SectionsIds.sets}>
-      <GeneralContainer>
-        <Container>
-          <TextWrap>
-            <SectionTitle text='Колекційні набори' />
-            <SectionSubtitle
-              text='Шукай легендарні картки в складі колекційних наборів Chroma
-              Legends'
-            />
-          </TextWrap>
-          <Content>
-            <AnimatedCollectibleSetsList collectibleSets={collectibleSets} />
-            <BuyOnlineLink />
-          </Content>
-        </Container>
-      </GeneralContainer>
+      <Background>
+        <GeneralContainer>
+          <Container>
+            <TextWrap>
+              <SectionTitle text='Колекційні набори' />
+              <SectionSubtitle
+                text='Шукай легендарні картки в складі колекційних наборів Chroma
+                Legends'
+              />
+            </TextWrap>
+            <Content>
+              <AnimatedCollectibleSetsList collectibleSets={collectibleSets} />
+              <BuyOnlineLink />
+            </Content>
+          </Container>
+        </GeneralContainer>
+      </Background>
     </Section>
   );
 };
