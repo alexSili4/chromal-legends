@@ -23,6 +23,6 @@ export const TeamBg = styled.div<IStyledTeamBgProps>`
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    background-image: ${({ bgImgDesk }) => bgImgDesk};
+    background-image: url(${({ bgImgDesk }) => bgImgDesk});
   }
 `;
