@@ -23,6 +23,8 @@ export type RefListObject = RefObject<HTMLUListElement>;
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 // other
+export type StringOrNull = string | null;
+
 export type NumberOrNull = number | null;
 
 export type ElementOrNull = Element | null;

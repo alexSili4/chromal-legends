@@ -13,19 +13,11 @@ import {
 import crown from '@/images/about/crown.png';
 
 const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
-  img,
-  heightDesk,
-  heightMob,
-  imgLeftDesk,
-  imgLeftMob,
-  imgTopDesk,
-  imgTopMob,
-  widthDesk,
-  widthMob,
   name,
   desc,
   crownLeftDesk,
   crownLeftMob,
+  characters,
 }) => {
   return (
     <Container>
@@ -38,18 +30,36 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
           <Crown src={crown} alt='Декоративне зображення корони' />
         </CrownWrap>
       </NameWrap>
-      <Image
-        src={img}
-        alt={name}
-        heightDesk={heightDesk}
-        heightMob={heightMob}
-        leftDesk={imgLeftDesk}
-        leftMob={imgLeftMob}
-        topDesk={imgTopDesk}
-        topMob={imgTopMob}
-        widthDesk={widthDesk}
-        widthMob={widthMob}
-      />
+      {characters.map(
+        ({
+          name: targetName,
+          img: {
+            img,
+            heightDesk,
+            heightMob,
+            leftDesk,
+            leftMob,
+            topDesk,
+            topMob,
+            widthDesk,
+            widthMob,
+          },
+        }) => (
+          <Image
+            src={img}
+            alt={name}
+            heightDesk={heightDesk}
+            heightMob={heightMob}
+            leftDesk={leftDesk}
+            leftMob={leftMob}
+            topDesk={topDesk}
+            topMob={topMob}
+            widthDesk={widthDesk}
+            widthMob={widthMob}
+            isCurrent={name === targetName}
+          />
+        )
+      )}
     </Container>
   );
 };

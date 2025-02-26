@@ -15,17 +15,6 @@ const AboutSectionArtifactDetails: FC<IProps> = ({
   const {
     crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
     desc: artifactDesc,
-    img: {
-      img,
-      heightDesk,
-      heightMob,
-      widthDesk,
-      widthMob,
-      leftDesk: imgLeftDesk,
-      leftMob: imgLeftMob,
-      topDesk: imgTopDesk,
-      topMob: imgTopMob,
-    },
     name: artifactName,
     paddingBottomMob,
   } = artifacts[activeIndex];
@@ -45,19 +34,11 @@ const AboutSectionArtifactDetails: FC<IProps> = ({
         updateActiveIndex={updateActiveIndex}
       />
       <AboutSectionTargetArtifactDetails
-        imgTopDesk={imgTopDesk}
-        imgTopMob={imgTopMob}
         name={artifactName}
-        widthDesk={widthDesk}
-        widthMob={widthMob}
         crownLeftDesk={crownLeftDesk}
         crownLeftMob={crownLeftMob}
         desc={artifactDesc}
-        heightDesk={heightDesk}
-        heightMob={heightMob}
-        img={img}
-        imgLeftDesk={imgLeftDesk}
-        imgLeftMob={imgLeftMob}
+        artifacts={artifacts}
       />
     </Container>
   );

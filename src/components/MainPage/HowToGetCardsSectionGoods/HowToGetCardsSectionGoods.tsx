@@ -12,9 +12,9 @@ import {
   SliderContainer,
   SliderBg,
 } from './HowToGetCardsSectionGoods.styled';
-import { goods } from '@/constants';
+import { Links } from '@/constants';
 
-const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGap }) => {
+const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGap, partnersGoods }) => {
   return (
     <Container>
       <TitleWrap>
@@ -24,7 +24,7 @@ const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGap }) => {
         <SliderBg></SliderBg>
         <SliderWrap>
           <HowToGetCardsSectionGoodsSlider
-            goods={goods}
+            partnersGoods={partnersGoods}
             gapMob={19}
             gapDesk={28}
             slideWidthMob={186}
@@ -34,7 +34,7 @@ const HowToGetCardsSectionGoods: FC<IProps> = ({ sideGap }) => {
       </SliderContainer>
       <LinkWContainer sideGap={sideGap}>
         <LinkWrap>
-          <BuyOnlineLink />
+          <BuyOnlineLink href={Links.buyOnlineGoods} />
         </LinkWrap>
       </LinkWContainer>
     </Container>

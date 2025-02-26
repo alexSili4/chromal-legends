@@ -3,7 +3,7 @@ import { FC } from 'react';
 import SectionTitle from '@MainPageComponents/SectionTitle';
 import SectionSubtitle from '@MainPageComponents/SectionSubtitle';
 import AnimatedCollectibleSetsList from '@AnimationBlocks/AnimatedCollectibleSetsList';
-import { SectionsIds } from '@/constants';
+import { Links, SectionsIds } from '@/constants';
 import BuyOnlineLink from '@MainPageComponents/BuyOnlineLink';
 import {
   Container,
@@ -29,7 +29,7 @@ const CollectibleSetsSection: FC = () => {
             </TextWrap>
             <Content>
               <AnimatedCollectibleSetsList collectibleSets={collectibleSets} />
-              <BuyOnlineLink />
+              <BuyOnlineLink href={Links.buyOnlineSets} />
             </Content>
           </Container>
         </GeneralContainer>

@@ -8,8 +8,9 @@ import LeaderboardSection from '@MainPageComponents/LeaderboardSection';
 import LeagueSection from '@MainPageComponents/LeagueSection';
 import AboutSection from '@MainPageComponents/AboutSection';
 import { Container } from './Main.styled';
+import { IProps } from './Main.types';
 
-const Main: FC = () => {
+const Main: FC<IProps> = ({ partnersGoods }) => {
   return (
     <>
       <Container>
@@ -18,7 +19,7 @@ const Main: FC = () => {
       </Container>
       <LeaderboardSection />
       <Container>
-        <HowToGetCardsSection />
+        <HowToGetCardsSection partnersGoods={partnersGoods} />
         <CollectibleSetsSection />
       </Container>
       <PrizesSection />

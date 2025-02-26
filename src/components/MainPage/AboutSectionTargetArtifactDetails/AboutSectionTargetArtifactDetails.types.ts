@@ -1,13 +1,7 @@
+import { Artifacts } from '@/types/aboutArtifacts.types';
+
 export interface IProps {
-  img: string;
-  imgLeftDesk: number;
-  imgLeftMob: number;
-  imgTopDesk: number;
-  imgTopMob: number;
-  widthMob: number;
-  heightMob: number;
-  widthDesk: number;
-  heightDesk: number;
+  artifacts: Artifacts;
   name: string;
   desc: string;
   crownLeftDesk: number;
@@ -28,4 +22,5 @@ export interface IStyledImageProps {
   heightMob: number;
   widthDesk: number;
   widthMob: number;
+  isCurrent: boolean;
 }

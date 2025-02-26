@@ -1,7 +1,7 @@
-import { Goods } from '@/types/goods.types.ts';
+import { PartnersGoods } from '@/types/partnersGoods.types';
 
 export interface IProps {
-  goods: Goods;
+  partnersGoods: PartnersGoods;
   gapMob: number;
   gapDesk: number;
   slideWidthMob: number;

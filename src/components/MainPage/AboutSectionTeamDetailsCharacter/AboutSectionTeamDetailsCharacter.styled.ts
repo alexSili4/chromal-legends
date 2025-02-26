@@ -104,6 +104,8 @@ export const Image = styled.img<IStyledImageProps>`
   width: ${({ widthMob }) => widthMob}px;
   max-width: ${({ widthMob }) => widthMob}px;
   height: ${({ heightMob }) => heightMob}px;
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  opacity: ${({ isCurrent }) => (isCurrent ? 1 : 0)};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => topDesk}px;

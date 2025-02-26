@@ -5,8 +5,9 @@ import {
 } from './AnimatedHowToGetCardsSectionContent.styled';
 import { useInView } from 'framer-motion';
 import HowToGetCardsSectionContent from '@MainPageComponents/HowToGetCardsSectionContent';
+import { IProps } from './AnimatedHowToGetCardsSectionContent.types';
 
-const AnimatedHowToGetCardsSectionContent: FC = () => {
+const AnimatedHowToGetCardsSectionContent: FC<IProps> = ({ partnersGoods }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef, {
     margin: '-100px 0px -200px 0px',
@@ -44,7 +45,7 @@ const AnimatedHowToGetCardsSectionContent: FC = () => {
       animate={animate}
     >
       <AnimatedItem variants={itemVariants}>
-        <HowToGetCardsSectionContent />
+        <HowToGetCardsSectionContent partnersGoods={partnersGoods} />
       </AnimatedItem>
     </AnimatedContainer>
   );

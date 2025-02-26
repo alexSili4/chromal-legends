@@ -19,17 +19,6 @@ const AboutSectionTeamDetails: FC<IProps> = ({
 
   const {
     crownPosition: { leftDesk: crownLeftDesk, leftMob: crownLeftMob },
-    img: {
-      img,
-      topDesk: imgTopDesk,
-      topMob: imgTopMob,
-      leftDesk: imgLeftDesk,
-      leftMob: imgLeftMob,
-      widthDesk: widthDesk,
-      widthMob: widthMob,
-      heightDesk: heightDesk,
-      heightMob: heightMob,
-    },
     paddingBottomMob,
     desc: characterDesc,
     name: characterName,
@@ -46,19 +35,11 @@ const AboutSectionTeamDetails: FC<IProps> = ({
         updateActiveIndex={updateActiveIndex}
       />
       <AboutSectionTeamDetailsCharacter
-        imgTopDesk={imgTopDesk}
-        imgTopMob={imgTopMob}
         name={characterName}
-        widthDesk={widthDesk}
-        widthMob={widthMob}
+        characters={characters}
         crownLeftDesk={crownLeftDesk}
         crownLeftMob={crownLeftMob}
         desc={characterDesc}
-        heightDesk={heightDesk}
-        heightMob={heightMob}
-        img={img}
-        imgLeftDesk={imgLeftDesk}
-        imgLeftMob={imgLeftMob}
       />
     </Container>
   );

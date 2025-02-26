@@ -13,19 +13,11 @@ import {
 import crown from '@/images/about/crown.png';
 
 const AboutSectionTargetArtifactDetails: FC<IProps> = ({
-  img,
-  heightDesk,
-  heightMob,
-  imgLeftDesk,
-  imgLeftMob,
-  imgTopDesk,
-  imgTopMob,
-  widthDesk,
-  widthMob,
   name,
   desc,
   crownLeftDesk,
   crownLeftMob,
+  artifacts,
 }) => {
   return (
     <Container>
@@ -38,18 +30,36 @@ const AboutSectionTargetArtifactDetails: FC<IProps> = ({
           </CrownWrap>
         </NameWrap>
       </DescWrap>
-      <Image
-        src={img}
-        alt={name}
-        heightDesk={heightDesk}
-        heightMob={heightMob}
-        leftDesk={imgLeftDesk}
-        leftMob={imgLeftMob}
-        topDesk={imgTopDesk}
-        topMob={imgTopMob}
-        widthDesk={widthDesk}
-        widthMob={widthMob}
-      />
+      {artifacts.map(
+        ({
+          name: targetName,
+          img: {
+            img,
+            heightDesk,
+            heightMob,
+            widthDesk,
+            widthMob,
+            leftDesk,
+            leftMob,
+            topDesk,
+            topMob,
+          },
+        }) => (
+          <Image
+            src={img}
+            alt={name}
+            heightDesk={heightDesk}
+            heightMob={heightMob}
+            leftDesk={leftDesk}
+            leftMob={leftMob}
+            topDesk={topDesk}
+            topMob={topMob}
+            widthDesk={widthDesk}
+            widthMob={widthMob}
+            isCurrent={name === targetName}
+          />
+        )
+      )}
     </Container>
   );
 };
