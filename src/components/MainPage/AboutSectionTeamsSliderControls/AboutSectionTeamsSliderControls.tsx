@@ -16,13 +16,21 @@ const AboutSectionTeamsSliderControls: FC<IProps> = ({
   const onNextBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
-    swiper.slideNext();
+    swiper.translateTo(swiper.translate + 50, 400, false);
+
+    setTimeout(() => {
+      swiper.slideTo(swiper.activeIndex + 1, 400);
+    }, 400);
   };
 
   const onPrevBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
-    swiper.slidePrev();
+    swiper.translateTo(swiper.translate - 50, 400, false);
+
+    setTimeout(() => {
+      swiper.slideTo(swiper.activeIndex - 1, 400);
+    }, 400);
   };
 
   return (

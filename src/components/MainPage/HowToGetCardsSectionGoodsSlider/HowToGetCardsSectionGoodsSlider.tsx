@@ -15,13 +15,14 @@ const HowToGetCardsSectionGoodsSlider: FC<IProps> = ({
 }) => {
   return (
     <StyledSwiper slidesPerView='auto' grabCursor>
-      {partnersGoods.map(({ slug, icon }, index) => {
+      {partnersGoods.map(({ slug, icon, price, title }, index) => {
         const good = `${
           import.meta.env.VITE_APP_PARTNERS_GOODS_BASE_URL
         }/${slug}`;
         const img = `${
           import.meta.env.VITE_APP_PARTNERS_GOOD_IMG_BASE_URL
         }/${icon}`;
+        const targetPrice = `${price} грн`;
 
         return (
           <StyledSwiperSlide
@@ -31,7 +32,12 @@ const HowToGetCardsSectionGoodsSlider: FC<IProps> = ({
             slideWidthMob={slideWidthMob}
             slideWidthDesk={slideWidthDesk}
           >
-            <HowToGetCardsSectionGoodDetails good={good} img={img} />
+            <HowToGetCardsSectionGoodDetails
+              good={good}
+              img={img}
+              price={targetPrice}
+              name={title}
+            />
           </StyledSwiperSlide>
         );
       })}

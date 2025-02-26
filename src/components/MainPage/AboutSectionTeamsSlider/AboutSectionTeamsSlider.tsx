@@ -10,13 +10,20 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
   const [isHiddenPrevBtn, setIsHiddenPrevBtn] = useState<boolean>(true);
   const [isHiddenNextBtn, setIsHiddenNextBtn] = useState<boolean>(false);
 
-  const onSwipe = ({ activeIndex, isBeginning, isEnd }: ISwiper) => {
-    const { name } = teams[activeIndex];
+  const onSwipe = (swiper: ISwiper) => {
+    const { name } = teams[swiper.activeIndex];
 
-    updateActiveTeam(name);
+    const direction = swiper.activeIndex > swiper.previousIndex ? 1 : -1;
+    const bounceOffset = 100 * direction;
 
-    setIsHiddenPrevBtn(isBeginning);
-    setIsHiddenNextBtn(isEnd);
+    swiper.translateTo(swiper.translate - bounceOffset, 400, false);
+
+    setTimeout(() => {
+      swiper.slideTo(swiper.activeIndex, 800); // 600 — основная анимация
+      updateActiveTeam(name);
+      setIsHiddenPrevBtn(swiper.isBeginning);
+      setIsHiddenNextBtn(swiper.isEnd);
+    }, 400);
   };
 
   const onDestroy = () => {
@@ -33,7 +40,6 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
       slidesPerView={1}
       speed={900}
       grabCursor
-      autoHeight
     >
       {teams.map(({ name, desc, characters, logo, preview }, index) => (
         <SwiperSlide key={index}>
