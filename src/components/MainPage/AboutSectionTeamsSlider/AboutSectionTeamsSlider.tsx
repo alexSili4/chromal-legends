@@ -16,14 +16,14 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
     const direction = swiper.activeIndex > swiper.previousIndex ? 1 : -1;
     const bounceOffset = 100 * direction;
 
-    swiper.translateTo(swiper.translate - bounceOffset, 400, false);
+    swiper.translateTo(swiper.translate - bounceOffset, 300, false);
 
     setTimeout(() => {
-      swiper.slideTo(swiper.activeIndex, 400); // 600 — основная анимация
+      swiper.slideTo(swiper.activeIndex, 600);
       updateActiveTeam(name);
       setIsHiddenPrevBtn(swiper.isBeginning);
       setIsHiddenNextBtn(swiper.isEnd);
-    }, 400);
+    }, 300);
   };
 
   const onDestroy = () => {
