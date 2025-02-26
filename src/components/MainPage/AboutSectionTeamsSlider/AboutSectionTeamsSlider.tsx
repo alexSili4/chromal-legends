@@ -19,7 +19,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
     swiper.translateTo(swiper.translate - bounceOffset, 400, false);
 
     setTimeout(() => {
-      swiper.slideTo(swiper.activeIndex, 800); // 600 — основная анимация
+      swiper.slideTo(swiper.activeIndex, 400); // 600 — основная анимация
       updateActiveTeam(name);
       setIsHiddenPrevBtn(swiper.isBeginning);
       setIsHiddenNextBtn(swiper.isEnd);
