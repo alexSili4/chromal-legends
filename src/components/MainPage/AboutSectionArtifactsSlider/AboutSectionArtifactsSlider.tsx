@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
 import { IProps } from './AboutSectionArtifactsSlider.types';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import ISwiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import AboutSectionArtifactsSliderControls from '@MainPageComponents/AboutSectionArtifactsSliderControls';
 import AboutSectionArtifactDetails from '@MainPageComponents/AboutSectionArtifactDetails';
+import { StyledSwiperSlide } from './AboutSectionArtifactsSlider.styled';
 
 const AboutSectionArtifactsSlider: FC<IProps> = ({
   artifacts,
@@ -13,13 +14,20 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
   const [isHiddenPrevBtn, setIsHiddenPrevBtn] = useState<boolean>(true);
   const [isHiddenNextBtn, setIsHiddenNextBtn] = useState<boolean>(false);
 
-  const onSwipe = ({ activeIndex, isBeginning, isEnd }: ISwiper) => {
-    const { name } = artifacts[activeIndex];
+  const onSwipe = (swiper: ISwiper) => {
+    const { name } = artifacts[swiper.activeIndex];
 
-    updateActiveArtifact(name);
+    const direction = swiper.activeIndex > swiper.previousIndex ? 1 : -1;
+    const bounceOffset = 100 * direction;
 
-    setIsHiddenPrevBtn(isBeginning);
-    setIsHiddenNextBtn(isEnd);
+    swiper.translateTo(swiper.translate - bounceOffset, 300, false);
+
+    setTimeout(() => {
+      swiper.slideTo(swiper.activeIndex, 600);
+      updateActiveArtifact(name);
+      setIsHiddenPrevBtn(swiper.isBeginning);
+      setIsHiddenNextBtn(swiper.isEnd);
+    }, 300);
   };
 
   const onDestroy = () => {
@@ -39,7 +47,7 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
       autoHeight
     >
       {artifacts.map(({ name, desc, artifacts, logo, preview }, index) => (
-        <SwiperSlide key={index}>
+        <StyledSwiperSlide key={index}>
           <AboutSectionArtifactDetails
             name={name}
             desc={desc}
@@ -47,7 +55,7 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
             artifacts={artifacts}
             preview={preview}
           />
-        </SwiperSlide>
+        </StyledSwiperSlide>
       ))}
       <AboutSectionArtifactsSliderControls
         isHiddenPrevBtn={isHiddenPrevBtn}

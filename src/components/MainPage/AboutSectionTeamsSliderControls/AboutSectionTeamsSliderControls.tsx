@@ -1,37 +1,15 @@
-import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
 import { FC } from 'react';
-import { useSwiper } from 'swiper/react';
 import { Container, SliderBtn } from './AboutSectionTeamsSliderControls.styled';
 import PrevBtn from '@/icons/about/prev-btn.svg?react';
 import NextBtn from '@/icons/about/next-btn.svg?react';
 import { IProps } from './AboutSectionTeamsSliderControls.types';
+import { useSliderControls } from '@/hooks';
 
 const AboutSectionTeamsSliderControls: FC<IProps> = ({
   isHiddenNextBtn,
   isHiddenPrevBtn,
 }) => {
-  const swiper = useSwiper();
-
-  const onNextBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    swiper.translateTo(swiper.translate + 50, 300, false);
-
-    setTimeout(() => {
-      swiper.slideTo(swiper.activeIndex + 1, 600);
-    }, 300);
-  };
-
-  const onPrevBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    swiper.translateTo(swiper.translate - 50, 300, false);
-
-    setTimeout(() => {
-      swiper.slideTo(swiper.activeIndex - 1, 300);
-    }, 300);
-  };
+  const { onNextBtnClick, onPrevBtnClick } = useSliderControls();
 
   return (
     <Container>

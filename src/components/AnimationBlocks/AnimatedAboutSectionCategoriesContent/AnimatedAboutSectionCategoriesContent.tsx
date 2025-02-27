@@ -12,6 +12,7 @@ const AnimatedAboutSectionCategoriesContent: FC<IProps> = ({
   isAboutCategory,
   isTeamsCategory,
   activeCategory,
+  images,
   updateActiveTeam,
   updateActiveArtifact,
 }) => {
@@ -24,7 +25,7 @@ const AnimatedAboutSectionCategoriesContent: FC<IProps> = ({
         exit={{ y: -20, opacity: 0 }}
         transition={{ duration: 0.4 }}
       >
-        {isAboutCategory && <AnimatedAboutChromaLegends />}
+        {isAboutCategory && <AnimatedAboutChromaLegends images={images} />}
         {isTeamsCategory && (
           <AboutSectionTeamsSlider
             teams={aboutTeams}

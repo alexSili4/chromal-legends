@@ -2,6 +2,7 @@ import {
   ElementOrNull,
   Func,
   NumberOrNull,
+  OnBtnClickFunc,
   OnDivClickFunc,
   RefDivObject,
 } from './types';
@@ -26,4 +27,9 @@ export interface IUseModalWin {
 export interface IUseTopGap {
   topGap: NumberOrNull;
   sectionRef: RefDivObject;
+}
+
+export interface IUseSliderControls {
+  onPrevBtnClick: OnBtnClickFunc;
+  onNextBtnClick: OnBtnClickFunc;
 }

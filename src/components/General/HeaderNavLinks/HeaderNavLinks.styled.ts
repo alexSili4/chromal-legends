@@ -23,4 +23,9 @@ export const NavLink = styled.a`
   font-weight: 700;
   line-height: 1.19;
   text-transform: uppercase;
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+
+  &:is(:hover, :focus) {
+    color: #052d44;
+  }
 `;

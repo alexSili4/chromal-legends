@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import { IProps } from './AnimatedLeaderboardModalWinContent.types';
-import LeaderboardModalWinContent from '@MainPageComponents/LeaderboardModalWinContent';
+import { IProps } from './AnimatedGetPrizeModalWinModalWinContent.types';
+import GetPrizeModalWinContent from '@MainPageComponents/GetPrizeModalWinContent';
 import {
   BackdropWrap,
   Backdrop,
   Container,
   CloseBtn,
-} from './AnimatedLeaderboardModalWinContent.styled';
+} from './AnimatedGetPrizeModalWinModalWinContent.styled';
 import Close from '@/icons/general/close.svg?react';
 
-const AnimatedLeaderboardModalWinContent: FC<IProps> = ({
+const AnimatedGetPrizeModalWinModalWinContent: FC<IProps> = ({
   hideModalWin,
   setModalWinState,
 }) => {
@@ -28,11 +28,11 @@ const AnimatedLeaderboardModalWinContent: FC<IProps> = ({
           <CloseBtn type='button' onClick={setModalWinState}>
             <Close />
           </CloseBtn>
-          <LeaderboardModalWinContent />
+          <GetPrizeModalWinContent />
         </Container>
       </Backdrop>
     </BackdropWrap>
   );
 };
 
-export default AnimatedLeaderboardModalWinContent;
+export default AnimatedGetPrizeModalWinModalWinContent;

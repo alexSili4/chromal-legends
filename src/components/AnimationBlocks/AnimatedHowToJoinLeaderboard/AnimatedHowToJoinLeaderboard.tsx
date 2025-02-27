@@ -27,24 +27,26 @@ const AnimatedHowToJoinLeaderboard: FC = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 1,
+        staggerChildren: 0.5,
       },
     },
   };
 
-  const transition = {
-    duration: 0.6,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
+  const baseDuration = 1.5;
 
-  const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
+  const getTransition = (index: number) => ({
+    duration: baseDuration * Math.pow(0.8, index),
+    ease: [0.25, 0.1, 0.25, 1],
+  });
+
+  const getElementVariants = (index: number) => ({
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition,
+      transition: getTransition(index),
     },
-  };
+  });
 
   return (
     <Container
@@ -52,9 +54,10 @@ const AnimatedHowToJoinLeaderboard: FC = () => {
       initial='hidden'
       animate={animate}
       ref={containerRef}
+      custom={9}
     >
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(0)}
         topMob={0}
         leftMob={41}
         topDesk={6}
@@ -74,7 +77,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(1)}
         topMob={117}
         leftMob={17}
         topDesk={183}
@@ -92,7 +95,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(2)}
         topMob={188}
         leftMob={84}
         topDesk={247}
@@ -111,7 +114,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(3)}
         topMob={282}
         leftMob={-9}
         topDesk={165}
@@ -129,7 +132,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(4)}
         topMob={400}
         leftMob={41}
         topDesk={0}
@@ -148,7 +151,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(5)}
         topMob={540}
         leftMob={49}
         topDesk={196}
@@ -166,7 +169,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(6)}
         topMob={613}
         leftMob={154}
         topDesk={255}
@@ -186,7 +189,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(7)}
         topMob={743}
         leftMob={13}
         topDesk={189}
@@ -204,7 +207,7 @@ Chroma Legends'
         />
       </Item>
       <Item
-        variants={elementVariants}
+        variants={getElementVariants(8)}
         topMob={812}
         leftMob={41}
         topDesk={24}

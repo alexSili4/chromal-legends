@@ -7,8 +7,12 @@ import {
   BtnTitle,
   Button,
   Container,
+  IconWrap,
 } from './FAQItem.styled';
-import QuestionBtnIcon from '@/icons/faq/question-btn.svg?react';
+import QuestionBtnIconClose from '@/icons/faq/question-btn-close.svg?react';
+import QuestionBtnIconOpen from '@/icons/faq/question-btn-open.svg?react';
+import { BtnClickEvent } from '@/types/types';
+import { makeBlur } from '@/utils';
 
 const FAQItem: FC<IProps> = ({ question, answer }) => {
   const {
@@ -18,7 +22,9 @@ const FAQItem: FC<IProps> = ({ question, answer }) => {
     toggleIsShowElement,
   } = useAccordionElement();
 
-  const onQuestionBtnClick = () => {
+  const onQuestionBtnClick = (e: BtnClickEvent) => {
+    makeBlur(e.currentTarget);
+
     toggleIsShowElement();
   };
 
@@ -26,7 +32,10 @@ const FAQItem: FC<IProps> = ({ question, answer }) => {
     <Container>
       <Button type='button' onClick={onQuestionBtnClick}>
         <BtnTitle>{question}</BtnTitle>
-        <QuestionBtnIcon />
+        <IconWrap isShowElement={isShowElement}>
+          <QuestionBtnIconClose />
+          <QuestionBtnIconOpen />
+        </IconWrap>
       </Button>
       <AnswerWrap
         ref={elementRef}

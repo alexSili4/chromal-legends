@@ -1,7 +1,4 @@
 import { FC, useRef } from 'react';
-import phone from '@/images/about/phone.png';
-import ray from '@/images/about/ray.png';
-import hero from '@/images/about/hero.png';
 import {
   Background,
   Container,
@@ -13,8 +10,9 @@ import {
   TextWrap,
 } from './AnimatedAboutChromaLegends.styled';
 import { useInView } from 'framer-motion';
+import { IProps } from './AnimatedAboutChromaLegends.types';
 
-const AnimatedAboutChromaLegends: FC = () => {
+const AnimatedAboutChromaLegends: FC<IProps> = ({ images }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef, {
     margin: '-100px 0px -400px 0px',
@@ -30,19 +28,23 @@ const AnimatedAboutChromaLegends: FC = () => {
     },
   };
 
-  const transition = {
-    duration: 0.6,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
+  const baseDuration = 0.6;
 
-  const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
+  const getTransition = (index: number) => ({
+    duration: baseDuration * Math.pow(0.8, index),
+    ease: [0.25, 0.1, 0.25, 1],
+  });
+
+  const getElementVariants = (index: number) => ({
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition,
+      transition: getTransition(index),
     },
-  };
+  });
+
+  const elementVariants = getElementVariants(3);
 
   return (
     <Container
@@ -60,45 +62,42 @@ const AnimatedAboutChromaLegends: FC = () => {
               Магічної Призми
             </Desc>
           </DescWrap>
-          <Image
-            src={phone}
-            alt='Декоративне зображення телефона'
-            topMob={328}
-            leftMob={87}
-            topDesk={95}
-            leftDesk={713}
-            widthMob={219}
-            heightMob={143}
-            widthDesk={524}
-            heightDesk={341}
-            variants={elementVariants}
-          />
-          <Image
-            src={ray}
-            alt='Декоративне зображення променя'
-            topMob={248}
-            leftMob={-9}
-            topDesk={-96}
-            leftDesk={484}
-            widthMob={267}
-            heightMob={182}
-            widthDesk={639}
-            heightDesk={434}
-            variants={elementVariants}
-          />
-          <Image
-            src={hero}
-            alt='Декоративне зображення героя'
-            topMob={276}
-            leftMob={-9}
-            topDesk={-30}
-            leftDesk={484}
-            widthMob={198}
-            heightMob={236}
-            widthDesk={474}
-            heightDesk={563}
-            variants={elementVariants}
-          />
+          {images.map(
+            (
+              {
+                alt,
+                heightDesk,
+                heightMob,
+                leftDesk,
+                leftMob,
+                src,
+                topDesk,
+                topMob,
+                widthDesk,
+                widthMob,
+              },
+              index
+            ) => {
+              const elementVariants = getElementVariants(index);
+
+              return (
+                <Image
+                  key={index}
+                  src={src}
+                  alt={alt}
+                  heightDesk={heightDesk}
+                  heightMob={heightMob}
+                  leftDesk={leftDesk}
+                  leftMob={leftMob}
+                  topDesk={topDesk}
+                  topMob={topMob}
+                  widthDesk={widthDesk}
+                  widthMob={widthMob}
+                  variants={elementVariants}
+                />
+              );
+            }
+          )}
           <TextWrap variants={elementVariants}>
             <Text>
               Приєднуйся і ти, герою, – знайомся з командами Chroma Legends та

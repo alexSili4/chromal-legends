@@ -12,7 +12,8 @@ import {
 } from './HeaderMobileMenu.styled';
 import { useAccordionElement } from '@/hooks';
 import { makeBlur } from '@/utils';
-import { BtnClickEvent } from '@/types/types';
+import { AnchorClickEvent, BtnClickEvent } from '@/types/types';
+import rules from '@/documents/rules.pdf';
 
 const HeaderMobileMenu: FC<IProps> = ({ navLinks }) => {
   const {
@@ -28,6 +29,10 @@ const HeaderMobileMenu: FC<IProps> = ({ navLinks }) => {
     toggleIsShowElement();
   };
 
+  const onNavLinkClick = (e: AnchorClickEvent) => {
+    makeBlur(e.currentTarget);
+  };
+
   return (
     <Container>
       <Button type='button' onClick={onMenuBtnClick} isShowList={isShowElement}>
@@ -40,11 +45,22 @@ const HeaderMobileMenu: FC<IProps> = ({ navLinks }) => {
         elementScrollHeight={elementScrollHeight}
       >
         <List>
-          {navLinks.map(({ path, title }, index) => (
-            <ListItem key={index}>
-              <NavLink href={path}>{title}</NavLink>
-            </ListItem>
-          ))}
+          {navLinks.map(({ path, title }, index) => {
+            const isRulesLink = title === 'Правила акції';
+
+            return (
+              <ListItem key={index}>
+                <NavLink
+                  href={isRulesLink ? rules : path}
+                  target={isRulesLink ? '_blank' : '_self'}
+                  rel='noopener noreferrer nofollow'
+                  onClick={onNavLinkClick}
+                >
+                  {title}
+                </NavLink>
+              </ListItem>
+            );
+          })}
         </List>
       </ListWrap>
     </Container>

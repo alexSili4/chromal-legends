@@ -21,6 +21,7 @@ export const Container = styled.span`
 `;
 
 export const ImgWrap = styled.span`
+  display: flex;
   overflow: hidden;
 `;
 

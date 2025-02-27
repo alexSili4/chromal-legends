@@ -39,6 +39,16 @@ export const TitleWrap = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(9)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(15)}px;
+  }
+`;
+
+export const ListWrap = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: ${({ theme }) => theme.spacing(21)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {

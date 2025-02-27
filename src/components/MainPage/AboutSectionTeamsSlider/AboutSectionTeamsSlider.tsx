@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import { IProps } from './AboutSectionTeamsSlider.types';
 import { Navigation } from 'swiper/modules';
 import ISwiper from 'swiper';
 import AboutSectionTeamDetails from '@MainPageComponents/AboutSectionTeamDetails';
 import AboutSectionTeamsSliderControls from '@MainPageComponents/AboutSectionTeamsSliderControls';
+import { StyledSwiperSlide } from './AboutSectionTeamsSlider.styled';
 
 const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
   const [isHiddenPrevBtn, setIsHiddenPrevBtn] = useState<boolean>(true);
@@ -42,7 +43,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
       grabCursor
     >
       {teams.map(({ name, desc, characters, logo, preview }, index) => (
-        <SwiperSlide key={index}>
+        <StyledSwiperSlide key={index}>
           <AboutSectionTeamDetails
             name={name}
             desc={desc}
@@ -50,7 +51,7 @@ const AboutSectionTeamsSlider: FC<IProps> = ({ teams, updateActiveTeam }) => {
             logo={logo}
             preview={preview}
           />
-        </SwiperSlide>
+        </StyledSwiperSlide>
       ))}
       <AboutSectionTeamsSliderControls
         isHiddenPrevBtn={isHiddenPrevBtn}

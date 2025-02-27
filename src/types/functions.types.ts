@@ -1,5 +1,6 @@
 import { TeamOrNull } from './aboutTeams.types';
 import { ArtifactOrNull } from './aboutArtifacts.types';
+import ISwiper from 'swiper';
 
 export interface IGetFlexItemWidthProps {
   listLength: number;
@@ -54,3 +55,5 @@ export interface IMakeScrollProps {
   block?: ScrollLogicalPosition;
   behavior?: ScrollBehavior;
 }
+
+export type OnSliderSwipeFunc = (swiper: ISwiper) => void;

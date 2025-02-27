@@ -9,3 +9,7 @@ export interface IStyledAnswerWrapProps {
   isShowElement: boolean;
   elementScrollHeight: NumberOrNull;
 }
+
+export interface IStyledIconWrapProps {
+  isShowElement: boolean;
+}

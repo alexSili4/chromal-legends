@@ -1,3 +1,4 @@
+import { AboutChromaLegendsImgs } from '@/types/aboutChromaLegendsImgs.types';
 import {
   SetActiveTeamFunc,
   SetActiveArtifactFunc,
@@ -8,6 +9,7 @@ export interface IProps {
   isAboutCategory: boolean;
   isTeamsCategory: boolean;
   activeCategory: string;
+  images: AboutChromaLegendsImgs;
   updateActiveTeam: SetActiveTeamFunc;
   updateActiveArtifact: SetActiveArtifactFunc;
 }

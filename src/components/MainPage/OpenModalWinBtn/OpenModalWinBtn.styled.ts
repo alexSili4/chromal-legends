@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    padding-left: ${({ theme }) => theme.spacing(112)}px;
-    padding-right: ${({ theme }) => theme.spacing(112)}px;
+    align-self: center;
+    /* padding-left: ${({ theme }) => theme.spacing(112)}px;
+    padding-right: ${({ theme }) => theme.spacing(112)}px; */
   }
 `;
 
@@ -20,8 +21,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 16px;
   background-color: #ffc90b;
-  padding-top: ${({ theme }) => theme.spacing(5)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(5)}px;
+  padding: ${({ theme: { spacing } }) => `${spacing(5)}px ${spacing(13)}px`};
 
   & > svg {
     position: absolute;
@@ -44,6 +44,7 @@ export const BtnTitle = styled.span`
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     font-size: 32px;

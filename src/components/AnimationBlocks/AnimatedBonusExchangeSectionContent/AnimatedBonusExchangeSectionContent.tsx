@@ -19,7 +19,7 @@ const AnimatedBonusExchangeSectionContent: FC = () => {
   };
 
   const transition = {
-    duration: 2,
+    duration: 1.5,
     ease: [0.25, 0.1, 0.25, 1],
   };
 

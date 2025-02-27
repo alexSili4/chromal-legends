@@ -2,6 +2,8 @@ import { AboutCategories } from '@/constants';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
+export type AnchorClickEvent = MouseEvent<HTMLAnchorElement>;
+
 export type BtnClickEvent = MouseEvent<HTMLButtonElement>;
 
 export type DivClickEvent = MouseEvent<HTMLDivElement>;

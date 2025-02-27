@@ -16,24 +16,26 @@ const AnimatedPrizesList: FC<IProps> = ({ prizes }) => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.4,
       },
     },
   };
 
-  const transition = {
-    duration: 0.6,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
+  const baseDuration = 0.6;
 
-  const elementVariants = {
-    hidden: { y: 50, opacity: 0, transition },
+  const getTransition = (index: number) => ({
+    duration: baseDuration * Math.pow(0.65, index),
+    ease: [0.25, 0.1, 0.25, 1],
+  });
+
+  const getElementVariants = (index: number) => ({
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition,
+      transition: getTransition(index),
     },
-  };
+  });
 
   return (
     <Container>
@@ -83,7 +85,7 @@ const AnimatedPrizesList: FC<IProps> = ({ prizes }) => {
             index
           ) => (
             <ListItem
-              variants={elementVariants}
+              variants={getElementVariants(index)}
               key={index}
               listLength={listLength}
             >

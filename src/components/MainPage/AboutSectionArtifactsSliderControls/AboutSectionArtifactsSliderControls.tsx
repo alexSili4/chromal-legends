@@ -1,7 +1,4 @@
-import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
 import { FC } from 'react';
-import { useSwiper } from 'swiper/react';
 import {
   Container,
   SliderBtn,
@@ -9,24 +6,13 @@ import {
 import PrevBtn from '@/icons/about/prev-btn.svg?react';
 import NextBtn from '@/icons/about/next-btn.svg?react';
 import { IProps } from './AboutSectionArtifactsSliderControls.types';
+import { useSliderControls } from '@/hooks';
 
 const AboutSectionArtifactsSliderControls: FC<IProps> = ({
   isHiddenNextBtn,
   isHiddenPrevBtn,
 }) => {
-  const swiper = useSwiper();
-
-  const onNextBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    swiper.slideNext();
-  };
-
-  const onPrevBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    swiper.slidePrev();
-  };
+  const { onNextBtnClick, onPrevBtnClick } = useSliderControls();
 
   return (
     <Container>

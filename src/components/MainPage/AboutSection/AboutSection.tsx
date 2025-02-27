@@ -1,5 +1,9 @@
 import GeneralContainer from '@/components/General/GeneralContainer';
-import { AboutCategories, SectionsIds } from '@/constants';
+import {
+  AboutCategories,
+  aboutChromaLegendsImgs,
+  SectionsIds,
+} from '@/constants';
 import { FC, useState } from 'react';
 import { Section, Container, Content } from './AboutSection.styled';
 import GameLink from '@GeneralComponents/GameLink';
@@ -83,6 +87,7 @@ const AboutSection: FC = () => {
               activeCategory={activeCategory}
               updateActiveTeam={updateActiveTeam}
               updateActiveArtifact={updateActiveArtifact}
+              images={aboutChromaLegendsImgs}
             />
           </Content>
           <GameLink />
