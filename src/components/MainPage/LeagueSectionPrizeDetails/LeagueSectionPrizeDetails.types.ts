@@ -3,8 +3,9 @@ import { NumberOrNull } from '@/types/types';
 export interface IProps {
   name: string;
   rank: NumberOrNull;
-  text: string;
+  text?: string;
   img: string;
+  prizeImg: string;
 }
 
 export interface IStyledContainerProps {

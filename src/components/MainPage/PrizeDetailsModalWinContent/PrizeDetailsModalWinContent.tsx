@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { IProps } from './PrizeDetailsModalWinContent.types';
-import { Container, Text } from './PrizeDetailsModalWinContent.styled';
+import { Container, Image, Text } from './PrizeDetailsModalWinContent.styled';
 
-const PrizeDetailsModalWinContent: FC<IProps> = ({ text }) => {
+const PrizeDetailsModalWinContent: FC<IProps> = ({ text, prizeImg }) => {
   return (
     <Container>
-      <Text>{text}</Text>
+      {text && <Text>{text}</Text>}
+      <Image src={prizeImg} alt='Зображення призу' />
     </Container>
   );
 };

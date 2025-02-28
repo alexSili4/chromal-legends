@@ -42,20 +42,23 @@ const AnimatedLeaguePrizes: FC<IProps> = ({ leaguePrizes }) => {
       animate={animate}
       ref={listRef}
     >
-      {leaguePrizes.map(({ name, rank, text, img }, index) => (
-        <ListItem
-          key={index}
-          variants={elementVariants}
-          leaguePrizes={leaguePrizesLength}
-        >
-          <LeagueSectionPrizeDetails
-            name={name}
-            rank={rank}
-            text={text}
-            img={img}
-          />
-        </ListItem>
-      ))}
+      {leaguePrizes.map(
+        ({ name, rank, img, prize: { img: prizeImg, text } }, index) => (
+          <ListItem
+            key={index}
+            variants={elementVariants}
+            leaguePrizes={leaguePrizesLength}
+          >
+            <LeagueSectionPrizeDetails
+              name={name}
+              rank={rank}
+              text={text}
+              img={img}
+              prizeImg={prizeImg}
+            />
+          </ListItem>
+        )
+      )}
     </List>
   );
 };

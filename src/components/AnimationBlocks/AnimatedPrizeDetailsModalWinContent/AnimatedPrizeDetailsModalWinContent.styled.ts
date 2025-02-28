@@ -24,10 +24,9 @@ export const Backdrop = styled.div`
 
 export const Container = styled(motion.div)`
   position: relative;
-  width: 100vw;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: 39.9vw;
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    width: 100vw;
   }
 `;
 

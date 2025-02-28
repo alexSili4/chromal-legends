@@ -13,6 +13,7 @@ const AnimatedPrizeDetailsModalWinContent: FC<IProps> = ({
   hideModalWin,
   setModalWinState,
   text,
+  prizeImg,
 }) => {
   return (
     <BackdropWrap
@@ -29,7 +30,7 @@ const AnimatedPrizeDetailsModalWinContent: FC<IProps> = ({
           <CloseBtn type='button' onClick={setModalWinState}>
             <Close />
           </CloseBtn>
-          <PrizeDetailsModalWinContent text={text} />
+          <PrizeDetailsModalWinContent text={text} prizeImg={prizeImg} />
         </Container>
       </Backdrop>
     </BackdropWrap>

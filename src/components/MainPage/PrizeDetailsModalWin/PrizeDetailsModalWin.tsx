@@ -9,6 +9,7 @@ const PrizeDetailsModalWin: FC<IProps> = ({
   setModalWinState,
   showModalWin,
   text,
+  prizeImg,
 }) => {
   const { hideModalWin, modalRoot } = useModalWin({
     setModalWinState,
@@ -22,6 +23,7 @@ const PrizeDetailsModalWin: FC<IProps> = ({
           hideModalWin={hideModalWin}
           setModalWinState={setModalWinState}
           text={text}
+          prizeImg={prizeImg}
         />
       </ModalWin>
     </AnimatedModalWin>

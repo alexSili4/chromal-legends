@@ -15,7 +15,13 @@ import FirstPlace from '@/icons/league/first-place.svg?react';
 import SecondPlace from '@/icons/league/second-place.svg?react';
 import ThirdPlace from '@/icons/league/third-place.svg?react';
 
-const LeagueSectionPrizeDetails: FC<IProps> = ({ name, rank, text, img }) => {
+const LeagueSectionPrizeDetails: FC<IProps> = ({
+  name,
+  rank,
+  text,
+  img,
+  prizeImg,
+}) => {
   const [showPrizeDetailsModalWin, setShowPrizeDetailsModalWin] =
     useState<boolean>(false);
   const { isFirstPlace, isSecondPlace, isThirdPlace } = getTeamPlace(rank);
@@ -34,7 +40,7 @@ const LeagueSectionPrizeDetails: FC<IProps> = ({ name, rank, text, img }) => {
   return (
     <>
       <Button type='button' onClick={onShowPrizeDetailsBtnClick}>
-        <Image src={img} alt='Зображення  коробки з призом'/>
+        <Image src={img} alt='Зображення  коробки з призом' />
         <Container isPrizeInfo={isPrizeInfo}>
           <RankWrap>
             {isFirstPlace && <FirstPlace />}
@@ -49,6 +55,7 @@ const LeagueSectionPrizeDetails: FC<IProps> = ({ name, rank, text, img }) => {
         setModalWinState={toggleShowPrizeDetailsModalWin}
         showModalWin={showPrizeDetailsModalWin}
         text={text}
+        prizeImg={prizeImg}
       />
     </>
   );
