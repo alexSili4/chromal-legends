@@ -13,7 +13,7 @@ import {
   Content,
 } from './LeagueSection.styled';
 import { leaguePrizes } from '@/constants';
-import OpenModalWinBtn from '@MainPageComponents/OpenModalWinBtn';
+import Button from '@MainPageComponents/Button';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import GetPrizeModalWin from '@MainPageComponents/GetPrizeModalWin';
@@ -51,7 +51,7 @@ const LeagueSection: FC = () => {
                   *Шукай більше інформації в застосунку Сhroma Legends
                 </Desc>
               </ListWrap>
-              <OpenModalWinBtn
+              <Button
                 title='Забрати приз Переможця'
                 onClick={onShowGetPrizeBtnClick}
               />

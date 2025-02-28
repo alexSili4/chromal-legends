@@ -6,6 +6,7 @@ interface ITheme {
   colors: {
     white: string;
     black: string;
+    lightGray: string;
   };
   padding: {
     container: number;
@@ -32,6 +33,7 @@ const theme: ITheme = {
   colors: {
     white: '#ffffff',
     black: '#000000',
+    lightGray: '#eeeeee',
   },
   fontFamily: {
     proximaNova: 'Proxima Nova',

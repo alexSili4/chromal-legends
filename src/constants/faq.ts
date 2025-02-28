@@ -2,74 +2,166 @@ import { FAQ } from '@/types/faq.types';
 
 const faq: FAQ = [
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Як можна отримати картки Chroma Legends?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Отримуй на касах магазинів «Сільпо» картки за акційною ціною 2,99 грн за кожні 99 грн у чеку, за кожен товар партнерів у чеку, а також за оплату покупки від 99 грн карткою Mastercard®.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Як правильно сканувати картку?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Завантаж і запусти застосунок Chroma Legends, натисни кнопку "Скануй картки" у головному меню гри, а потім наведи камеру телефону на QR-код на картці.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Що робити, якщо сканер не розпізнає картку?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Переконайся, що скануєш саме QR-код на колекційній картці Chroma Legends.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Чи можна сканувати одну й ту саму картку кілька разів?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Кожну картку можна просканувати лише один раз, тому будь уважним і скануй картки лише зі свого акаунта в грі Chroma Legends.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Що дає сканування дублікатів карток?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Сканування дублікатів у грі Chroma Legends підвищує максимальний рівень Героїв та Артефактів, що робить їх сильнішими.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question:
+      'Чи можна використовувати цифрові зображення карток (наприклад, фото)?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Так, можна. Для цього перейди в розділ "Скануй картки", натисни кнопку "Галерея", обери фото картки, збережене на своєму смартфоні.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Які види колекційних карток існують у грі?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Колекційні картки у грі поділяються на три види:<br/>• Картки Героїв – відкривають нових Героїв або збільшують максимальний рівень уже наявних.<br/>• Картки Артефактів – відкривають нові Артефакти або покращують їхні характеристики.<br/>• Картки Костюмів – відкривають нові костюми для Героїв у грі.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Як дізнатися, які картки мені ще потрібно зібрати?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Щоб зручно відстежувати прогрес, у грі Chroma Legends є розділ "Колекція", де можна побачити, яких карток ще не вистачає, а також прочитати описи всіх Героїв та Артефактів.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Чи є рідкісні або легендарні картки?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'У грі є чотири види карток за рівнем рідкості:<br/>• Звичайні<br/>• Рідкісні<br/>• Епічні<br/>• Легендарні',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Як отримати легендарні картки?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Легендарні картки можна знайти в колекційних наборах:<br/>• «Набір карток Chroma Legends. Неон»<br/>• «Набір карток Chroma Legends. Ксандра» Шукай ці набори на полицях магазинів «Сільпо».',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    question: 'Для чого потрібен застосунок Chroma Legends?',
+    answer: `Chroma Legends — це мобільна гра, де ти можеш колекціонувати картки, грати персонажами, об'єднуватися з друзями в команди та брати участь у Суперлізі "Сільпо", щоб виграти додаткові подарунки.`,
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    question: 'На яких платформах доступна гра?',
+    answer: 'Гру можна завантажити у Google Play та App Store.',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Як отримати нових персонажів, артефакти та костюми?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Купуй картки Chroma Legends у магазинах Сільпо та бери участь у подіях у мобільному застосунку!',
   },
   {
-    question: 'Як мені придбати картку за акційною ціною?',
+    question: 'Які є додаткові нагороди від Сільпо для гри?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Користувачі мобільного застосунку Сільпо можуть отримати унікальні епічні костюми Металевий Мун та Майстер Роксі, а також епічні та містичні скрині для гри Chroma Legends. Більше інформації шукай за посиланням.',
+  },
+  {
+    question: 'Як отримати Містичну скриню?',
+    answer:
+      'Купуй товари партнерів, позначені спеціальними жовто-фіолетовими підцінниками у магазині чи фіолетовими позначками на сайті й у застосунку Сільпо. При оплаті обов’язково відскануй картку лояльності Власний рахунок та шукай скриню у застосунку Сільпо. Містичну скриню можна отримати за кожні три товари партнерів.',
+  },
+  {
+    question: 'Як отримати Епічну скриню?',
+    answer:
+      'Епічну скриню можна отримати, зробивши три покупки на суму понад 99 грн кожна й розрахувавшись карткою Mastercard® . При оплаті обов’язково відскануй картку лояльності Власний рахунок та шукай скриню у застосунку Сільпо.',
+  },
+  {
+    question: 'Як отримати додаткові кристали для гри?',
+    answer:
+      'Додаткові кристали можна отримати, взявши участь в одному з чотирьох турнірів у Chroma Legends або обмінявши балобонуси в застосунку Сільпо. Шукай більше деталей у розділі "Chroma Legends" у застосунку Сільпо.',
+  },
+  {
+    question: 'Чи є в грі система прогресу та нагород?',
+    answer:
+      'Кожного героя чи артефакт у грі можна посилити, підвищивши його рівень до 50. Також у грі є щоденні завдання, за виконання яких гравці отримують додаткові нагороди.',
+  },
+  {
+    question: 'Як додати друзів до переліку друзів у грі?',
+    answer:
+      'Натисни кнопку “Друзі” на головному екрані гри, потім обери “Запросити друга”. Відправ посилання на свій профіль тим, кого хочеш додати в друзі у грі. У цьому ж розділі ти можеш переглядати вхідні запрошення та приймати запити на дружбу.',
+  },
+  {
+    question: 'Як взяти участь у турнірі?',
+    answer:
+      'Натисни на іконку з назвою поточного турніру (вона знаходиться над кнопкою “Грати”), створи власний клан або приєднайся до існуючого. Виконуй кланові завдання, заробляй Турнірні токени та піднімай свій клан у рейтингу!',
+  },
+  {
+    question: 'Які вимоги до участі?',
+    answer:
+      'Щоб взяти участь у Турнірі, потрібно бути членом клану. Ти можеш створити власний клан або приєднатися до вже існуючого.',
+  },
+  {
+    question: 'У якому форматі проходить турнір?',
+    answer:
+      'Кожен турнір триває два тижні. Протягом цього часу учасники кланів повинні виконувати Турнірні завдання у грі Chroma Legends, отримуючи за них Турнірні токени. За підсумками турніру клан може потрапити до бронзової, срібної, золотої, платинової або діамантової ліги та отримати віртуальні нагороди. Детальну інформацію про нагороди можна знайти у грі Chroma Legends. Три клани, які наберуть найбільше Турнірних токенів, отримають додаткові подарунки від Сільпо.',
+  },
+  {
+    question: 'Як створити або приєднатися до клану?',
+    answer:
+      'Натисни на іконку з назвою поточного турніру (вона знаходиться над кнопкою “Грати”).<br/>• Хочеш створити власний клан? Натисни “Створити” і стань його капітаном.<br/>• Хочеш приєднатися до клану? Натисни “Переглянути”, щоб переглянути список існуючих кланів і вступити до одного з них.',
+  },
+  {
+    question: 'Як управляти кланом?',
+    answer:
+      'Щоб керувати кланом, натисни на іконку з назвою поточного турніру (вона знаходиться над кнопкою “Грати”) і відкрий вкладку “Учасники”. Капітан клану може приймати або відхиляти заявки від нових гравців, а також керувати складом клану.',
+  },
+  {
+    question: 'Які призи передбачені для переможців?',
+    answer:
+      'Кожен раунд турніру у Chroma Legends приносить нові віртуальні нагороди для кланів, які досягнуть бронзової, срібної, золотої, платинової та діамантової ліг. Актуальну інформацію про нагороди можна знайти у застосунку Chroma Legends. Три клани, які наберуть найбільше Турнірних токенів за підсумками кожного турніру, отримають додаткові подарунки від Сільпо. Докладніше – за посиланням.',
+  },
+  {
+    question: 'Як будуть оголошувати переможців?',
+    answer:
+      'Список команд-переможців можна переглянути на сайті <a href="http://silpo.ua" target="_blank" rel="noopener noreferrer nofollow">silpo.ua</a> на сторінці гри у розділі турнірів. Список команд переможців фіксується о 23:59:59 у останній день турніру. Якщо переможцем стала твоя команда, ти отримаєш індивідуальний одноразовий “Код переможця”, що відображатиметься у грі до закінчення наступного турніру (14 днів).',
+  },
+  {
+    question: 'Як отримати подарунки, якщо я виграв?',
+    answer:
+      'У разі перемоги ти маєш заповнити спеціальну форму на сайті. Обов’язково вкажи свій “Код переможця”, ім’я та прізвище, контактний номер телефону. Організатори акції зв’яжуться з тобою для вручення подарунку протягом 72 годин з моменту заповнення заявки.',
+  },
+  {
+    question: 'Чи можна брати участь у декількох турнірах поспіль?',
+    answer:
+      'Так, кожен гравець може брати участь у будь-якій кількості Турнірів.',
+  },
+  {
+    question: 'Які системні вимоги для гри?',
+    answer:
+      'Для запуску гри потрібен телефон або планшет із операційною системою Android чи iOS. Пристрій має мати щонайменше 3 ГБ оперативної пам’яті.',
+  },
+  {
+    question: 'Як повідомити про баг або проблему?',
+    answer: 'Найшвидший спосіб – заповнити коротку форму за посиланням.',
+  },
+  {
+    question: 'Як зв’язатися зі службою підтримки?',
+    answer: `Якщо твоє питання стосується Chroma Legends, ти можеш відправити запит через коротку форму за посиланням. Для будь-яких інших запитань обери зручний спосіб зв'язку з нами:<br/>• Напиши в чат Viber або Telegram<br/>• Надішли лист на <a href="mailto:program@silpo.ua">program@silpo.ua</a><br/>• Зателефонуй на гарячу лінію <a href="tel:0800301707">0 800 301 707</a>`,
+  },
+  {
+    question: 'Чи можна грати без інтернету?',
+    answer:
+      'На жаль, ні. Для гри телефон або планшет мають мати стабільний доступ до мережі Інтернет.',
+  },
+  {
+    question: 'Чи можна переносити прогрес гри між пристроями?',
+    answer:
+      'Перенесення прогресу можливе лише між пристроями з однаковою операційною системою (Android → Android або iOS → iOS) і за умови авторизації через той самий обліковий запис.Бик.Якщо ти змінюєш телефон, просто увійди у той самий обліковий запис – прогрес автоматично відновиться.<br/>❗ Зверни увагу: передати дані між Android та iOS неможливо. Якщо ти використовуєш локальний профіль, перенести прогрес не вийде, а у разі видалення гри всі дані буде втрачено.',
   },
 ];
 

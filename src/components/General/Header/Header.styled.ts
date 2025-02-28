@@ -11,22 +11,11 @@ export const StyledHeader = styled.header`
 `;
 
 export const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(9)}px;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    gap: ${({ theme }) => theme.spacing(19)}px;
-    padding-top: ${({ theme }) => theme.spacing(35)}px;
   }
 `;
 
-export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(9)}px;
-`;
+export const Info = styled.div``;
 
 export const Border = styled.div`
   height: 59px;
@@ -40,15 +29,20 @@ export const Border = styled.div`
 export const GeneralInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(12)}px;
+  gap: ${({ theme }) => theme.spacing(80)}px;
+  padding-top: ${({ theme }) => theme.spacing(10)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(19)}px;
+    padding-top: ${({ theme }) => theme.spacing(37)}px;
+  }
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(5)}px;
+  position: relative;
+  padding-bottom: ${({ theme }) => theme.spacing(15)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    gap: ${({ theme }) => theme.spacing(40)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(40)}px;
   }
 `;

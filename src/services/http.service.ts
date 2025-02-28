@@ -8,15 +8,13 @@ interface HttpConfig<T> extends AxiosRequestConfig {
 
 class HttpService {
   constructor(
-    public baseUrl: string = 'https://sf-ecom-api.silpo.ua',
     public fetchingService: AxiosInstance = axios
   ) {
-    this.baseUrl = baseUrl;
     this.fetchingService = fetchingService;
   }
 
   private getFullApiUrl(url: string): string {
-    return `${this.baseUrl}/${url}`;
+    return `${url}`;
   }
 
   private populateTokenToHeaderConfig(): { Authorization: string } {

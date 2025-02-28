@@ -1,7 +1,7 @@
-export interface IProps {
-  isHiddenOnDesk?: boolean;
+export interface IStyledVideoWrapProps {
+  playing: boolean;
 }
 
-export interface IStyledContainerProps {
-  isHiddenOnDesk: boolean;
+export interface IStyledPlayBtnProps {
+  playing: boolean;
 }

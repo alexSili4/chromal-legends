@@ -8,18 +8,17 @@ export const BackdropWrap = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
 `;
 
 export const Backdrop = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding-top: ${({ theme }) => theme.spacing()}px;
-  padding-bottom: ${({ theme }) => theme.spacing()}px;
-  background-color: rgba(5, 45, 68, 0.25);
+  padding-top: ${({ theme }) => theme.spacing(14)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(14)}px;
+  background: rgba(5, 45, 68, 0.25);
 `;
 
 export const Container = styled(motion.div)`
@@ -27,7 +26,7 @@ export const Container = styled(motion.div)`
   width: 100vw;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: 75vw;
+    width: 830px;
   }
 `;
 
@@ -44,10 +43,8 @@ export const CloseBtn = styled.button`
   & > svg {
     width: 26px;
     height: 26px;
-  }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    & > svg {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
       width: 56px;
       height: 56px;
     }

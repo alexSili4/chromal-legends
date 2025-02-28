@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedHowToJoinLeaderboard from '@AnimationBlocks/AnimatedHowToJoinLeaderboard';
-import OpenModalWinBtn from '@MainPageComponents/OpenModalWinBtn';
+import Button from '@MainPageComponents/Button';
 import {
   Container,
   Section,
@@ -38,7 +38,7 @@ const LeaderboardSection: FC = () => {
                 <SectionTitle text='Як долучитись до турніру?' />
                 <AnimatedHowToJoinLeaderboard />
               </Content>
-              <OpenModalWinBtn
+              <Button
                 title='рейтинг кланів'
                 onClick={onShowLeaderboardBtnClick}
               />

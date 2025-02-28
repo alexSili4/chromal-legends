@@ -42,7 +42,7 @@ const FAQItem: FC<IProps> = ({ question, answer }) => {
         elementScrollHeight={elementScrollHeight}
         isShowElement={isShowElement}
       >
-        <Answer>{answer}</Answer>
+        <Answer dangerouslySetInnerHTML={{ __html: answer }}></Answer>
       </AnswerWrap>
     </Container>
   );

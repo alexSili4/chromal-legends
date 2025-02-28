@@ -1,6 +1,7 @@
 import { TeamOrNull } from './aboutTeams.types';
 import { ArtifactOrNull } from './aboutArtifacts.types';
 import ISwiper from 'swiper';
+import { StringOrNull } from './types';
 
 export interface IGetFlexItemWidthProps {
   listLength: number;
@@ -31,6 +32,10 @@ export type SetActiveTeamFunc = (data: TeamOrNull) => void;
 export type SetActiveArtifactFunc = (data: ArtifactOrNull) => void;
 
 export type SetNumberFunc = (data: number) => void;
+
+export type SetStringOrNullFunc = (data: StringOrNull) => void;
+
+export type SetBooleanFunc = (data: boolean) => void;
 
 export interface IGetCategory {
   isAboutCategory: boolean;

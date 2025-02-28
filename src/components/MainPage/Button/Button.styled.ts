@@ -3,8 +3,6 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     align-self: center;
-    /* padding-left: ${({ theme }) => theme.spacing(112)}px;
-    padding-right: ${({ theme }) => theme.spacing(112)}px; */
   }
 `;
 
@@ -15,7 +13,7 @@ export const BtnWrap = styled.div`
   padding-bottom: ${({ theme }) => theme.spacing(3)}px;
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
   position: relative;
   width: 100%;
   border: none;

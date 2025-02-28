@@ -32,3 +32,12 @@ export type NumberOrNull = number | null;
 export type ElementOrNull = Element | null;
 
 export type AboutCategoriesKeys = AboutCategories[];
+
+export type BtnType = 'button' | 'submit';
+
+export type InputType = 'text' | 'number' | 'tel';
+
+export interface IRegExp {
+  digitsOnly: RegExp;
+  phone: RegExp;
+}

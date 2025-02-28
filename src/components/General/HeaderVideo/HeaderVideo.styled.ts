@@ -1,21 +1,60 @@
 import styled from '@emotion/styled';
-import bgImg from '@/images/header/video-bg.png';
-import { IStyledContainerProps } from './HeaderVideo.types';
+import ReactPlayer from 'react-player';
+import {
+  IStyledPlayBtnProps,
+  IStyledVideoWrapProps,
+} from './HeaderVideo.types';
 
-export const Container = styled.div<IStyledContainerProps>`
+export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  aspect-ratio: 375 / 250;
-  background-image: url(${bgImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100%;
+`;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    position: absolute;
-    top: 150px;
-    left: ${({ theme }) => theme.padding.container + 287}px;
-    display: ${({ isHiddenOnDesk }) => isHiddenOnDesk && 'none'};
-    width: 660px;
-    aspect-ratio: 660 / 440;
+export const VideoWrap = styled.div<IStyledVideoWrapProps>`
+  opacity: ${({ playing }) => (playing ? 1 : 0)};
+
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+`;
+
+export const StyledReactPlayer = styled(ReactPlayer)`
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none;
+`;
+
+export const PlayBtn = styled.button<IStyledPlayBtnProps>`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  border: none;
+  opacity: ${({ playing }) => (playing ? 0 : 1)};
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: ${({ playing }) => (playing ? 'none' : 'all')};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+
+  & > svg {
+    color: ${({ theme }) => theme.colors.lightGray};
+  }
+`;
+
+export const PauseBtn = styled.button<IStyledPlayBtnProps>`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  opacity: ${({ playing }) => (playing ? 1 : 0)};
+  pointer-events: ${({ playing }) => (playing ? 'all' : 'none')};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+
+  & > svg {
+    color: ${({ theme }) => theme.colors.lightGray};
   }
 `;
