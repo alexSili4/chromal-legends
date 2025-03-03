@@ -7,6 +7,7 @@ const enum SectionsIds {
   prizes = 'prizes',
   rules = 'rules',
   signUp = 'sign-up',
+  rating = 'rating',
 }
 
 export default SectionsIds;
