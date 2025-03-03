@@ -43,7 +43,7 @@ const prizes: Prizes = [
       },
     },
     conditions: {
-      text: 'Подарунок у  застосунку Сільпо, за те, що Сільпо любить тебе ❤️',
+      text: 'Подарунок у застосунку «Сільпо» за те, що «Сільпо» любить тебе ❤️',
       maxWidthMob: 213,
       maxWidthDesk: 243,
     },
@@ -61,7 +61,7 @@ const prizes: Prizes = [
       position: { xMob: -29, xDesk: -36, yMob: -31, yDesk: -19 },
     },
     conditions: {
-      text: 'Отримай за першу купівлю на суму від 99 грн з карткою Mastercard',
+      text: 'Отримай за першу купівлю на суму від 99 грн з карткою Mastercard.',
       maxWidthMob: 181,
       maxWidthDesk: 243,
     },
@@ -79,14 +79,14 @@ const prizes: Prizes = [
       position: { xMob: -16, xDesk: -20, yMob: -21, yDesk: -30 },
     },
     conditions: {
-      text: 'Отримай за купівлю 3 товарів партнерів. Більше товарів партнерів - більше скринь',
+      text: 'Отримай за купівлю 3<br/>товарів партнерів. Більше товарів партнерів – більше скринь.',
       maxWidthMob: 228,
       maxWidthDesk: 255,
     },
   },
   {
     name: 'Епічна скриня',
-    desc: 'х2 нагорода. Епічні або легендарні сфери у кожні скрині',
+    desc: 'Х2 нагорода. Епічні або легендарні сфери у кожні скрині',
     partner: masterCardData,
     prize: {
       img: epicChest,
@@ -97,7 +97,7 @@ const prizes: Prizes = [
       position: { xMob: -22, xDesk: -20, yMob: -31, yDesk: -29 },
     },
     conditions: {
-      text: 'Скарби від Mastercard. Сплати три покупки від 99 грн карткою Mastercard',
+      text: 'Оплати від Mastercard. Сплати три покупки від 99 грн карткою Mastercard.',
       maxWidthMob: 207,
       maxWidthDesk: 243,
     },

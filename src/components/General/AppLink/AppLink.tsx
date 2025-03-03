@@ -11,7 +11,7 @@ const AppLink: FC = () => {
         <Title>
           Завантажуй
           <br />
-          <Accent>Застосунок Сільпо</Accent>
+          <Accent>застосунок «Сільпо»</Accent>
         </Title>
       </Container>
     </Link>

@@ -31,21 +31,25 @@ const AboutSectionTargetArtifactDetails: FC<IProps> = ({
         </NameWrap>
       </DescWrap>
       {artifacts.map(
-        ({
-          name: targetName,
-          img: {
-            img,
-            heightDesk,
-            heightMob,
-            widthDesk,
-            widthMob,
-            leftDesk,
-            leftMob,
-            topDesk,
-            topMob,
+        (
+          {
+            name: targetName,
+            img: {
+              img,
+              heightDesk,
+              heightMob,
+              widthDesk,
+              widthMob,
+              leftDesk,
+              leftMob,
+              topDesk,
+              topMob,
+            },
           },
-        }) => (
+          index
+        ) => (
           <Image
+            key={index}
             src={img}
             alt={name}
             heightDesk={heightDesk}

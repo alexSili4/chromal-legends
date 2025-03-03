@@ -1,4 +1,4 @@
-import { IGetPrizeFormData } from '@/types/getPrize.types';
+import { IErrorMessage, IGetPrizeFormData } from '@/types/getPrize.types';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '@MainPageComponents/Button';
@@ -13,6 +13,7 @@ import Input from '@MainPageComponents/Input';
 import { regExp, Symbols } from '@/constants';
 import appService from '@/services/app.service';
 import { IProps } from './GetPrizeForm.types';
+import { AxiosError } from 'axios';
 
 const GetPrizeForm: FC<IProps> = ({ updateIsSuccess, updateError, error }) => {
   const { register, handleSubmit } = useForm<IGetPrizeFormData>();
@@ -20,17 +21,19 @@ const GetPrizeForm: FC<IProps> = ({ updateIsSuccess, updateError, error }) => {
   const handleFormSubmit: SubmitHandler<IGetPrizeFormData> = async (data) => {
     try {
       const response = await appService.signUpWinner(data);
-      console.log(response);
+      console.log('response: ', response);
 
-      if (response.status === 422) {
-        const error = response.data
-          .map(({ message }) => message)
+      updateIsSuccess(true);
+    } catch (error) {
+      console.log('error: ', error);
+
+      if (error instanceof AxiosError && error.status === 422) {
+        const errorMessage = error.response?.data
+          .map(({ message }: IErrorMessage) => message)
           .join(Symbols.newLine);
-        updateError(error);
-      } else {
-        updateIsSuccess(true);
+        updateError(errorMessage);
       }
-    } catch (error) {}
+    }
   };
 
   return (
@@ -45,7 +48,7 @@ const GetPrizeForm: FC<IProps> = ({ updateIsSuccess, updateError, error }) => {
                   required: true,
                 }),
               }}
-              desc='*Шукай у застосунку Сhroma Legends, якщо твій клан увійшов у ТОП3 за результатам Турніру'
+              desc='* Шукай у застосунку Chroma Legends, якщо твій клан увійшов до ТОП-3 кланів за результатами турніру.'
             />
             <Input
               title='ПІБ'

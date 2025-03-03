@@ -53,7 +53,7 @@ const PrizesSectionPrizeDetails: FC<IProps> = ({
         />
         <TextWrap>
           <Name>{name}</Name>
-          <Desc>{desc}</Desc>
+          <Desc dangerouslySetInnerHTML={{ __html: desc }}></Desc>
         </TextWrap>
         <AwardImg
           src={prizeImg}

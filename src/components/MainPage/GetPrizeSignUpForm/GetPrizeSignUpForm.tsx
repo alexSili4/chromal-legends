@@ -18,11 +18,11 @@ const GetPrizeSignUpForm: FC<IProps> = ({
       <Title>
         Вітаємо!
         <br />
-        Якщо твій клан увійшов у ТОП3 кращих кланів Суперліги - отримуй свій
-        супер-подарунок!
+        Якщо твій клан увійшов до трійки лідерів суперліги – отримай свій
+        суперподарунок!
       </Title>
       <Content>
-        <Subtitle>Для отримання подарунку заповніть цю форму</Subtitle>
+        <Subtitle>Для отримання подарунка заповни цю форму</Subtitle>
         <GetPrizeForm
           error={error}
           updateError={updateError}

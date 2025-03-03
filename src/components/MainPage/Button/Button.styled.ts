@@ -19,7 +19,8 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: 16px;
   background-color: #ffc90b;
-  padding: ${({ theme: { spacing } }) => `${spacing(5)}px ${spacing(13)}px`};
+  padding-top: ${({ theme }) => theme.spacing(5)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(5)}px;
 
   & > svg {
     position: absolute;
@@ -30,8 +31,7 @@ export const StyledButton = styled.button`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    padding-top: ${({ theme }) => theme.spacing(7)}px;
-    padding-bottom: ${({ theme }) => theme.spacing(7)}px;
+    padding: ${({ theme: { spacing } }) => `${spacing(5)}px ${spacing(13)}px`};
   }
 `;
 

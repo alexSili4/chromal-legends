@@ -9,7 +9,7 @@ const FAQSection: FC = () => {
   return (
     <Section>
       <Container>
-        <SectionTitle text='Питання та відповіді' isDark />
+        <SectionTitle text='Запитання та відповіді' isDark />
         <GeneralContainer>
           <FAQList faq={faq} maxItems={5} />
         </GeneralContainer>

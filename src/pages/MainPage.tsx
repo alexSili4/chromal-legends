@@ -14,9 +14,7 @@ const MainPage: FC = () => {
         const response = await appService.getPartnersGoods();
 
         setPartnersGoods(response.items);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
 
     getPartnersGoods();

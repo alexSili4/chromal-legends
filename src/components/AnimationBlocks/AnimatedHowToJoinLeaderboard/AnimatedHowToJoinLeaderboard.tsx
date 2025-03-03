@@ -107,7 +107,7 @@ Chroma Legends'
           imgHeightMob={110}
           imgWidthDesk={200}
           imgHeightDesk={142}
-          title='Збирай картки за покупки у Сільпо та виконуй завдання у грі'
+          title='Збирай картки за купівлю у «Сільпо» та виконуй завдання у грі'
           number='2'
           titleMaxWidthMob={211}
           titleMaxWidthDesk={367}
@@ -144,7 +144,7 @@ Chroma Legends'
           imgHeightMob={103}
           imgWidthDesk={108}
           imgHeightDesk={148}
-          title='Долучайся до існуючого клану або створи власний '
+          title='Долучайся до наявного клану або створи власний'
           number='3'
           titleMaxWidthMob={202}
           titleMaxWidthDesk={305}

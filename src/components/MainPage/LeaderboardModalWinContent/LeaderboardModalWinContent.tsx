@@ -13,7 +13,7 @@ const LeaderboardModalWinContent: FC = () => {
     <Container>
       <Title>Рейтинг кланів</Title>
       <Content>
-        <Subtitle>Турнір “Крижаних Легенд”</Subtitle>
+        <Subtitle>Турнір «Приборкувачі Тіней»</Subtitle>
         <LeaderboardSectionTeamsList teams={teams} />
       </Content>
     </Container>

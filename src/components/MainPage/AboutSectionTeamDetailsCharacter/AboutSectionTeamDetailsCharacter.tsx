@@ -31,21 +31,25 @@ const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
         </CrownWrap>
       </NameWrap>
       {characters.map(
-        ({
-          name: targetName,
-          img: {
-            img,
-            heightDesk,
-            heightMob,
-            leftDesk,
-            leftMob,
-            topDesk,
-            topMob,
-            widthDesk,
-            widthMob,
+        (
+          {
+            name: targetName,
+            img: {
+              img,
+              heightDesk,
+              heightMob,
+              leftDesk,
+              leftMob,
+              topDesk,
+              topMob,
+              widthDesk,
+              widthMob,
+            },
           },
-        }) => (
+          index
+        ) => (
           <Image
+            key={index}
             src={img}
             alt={name}
             heightDesk={heightDesk}
