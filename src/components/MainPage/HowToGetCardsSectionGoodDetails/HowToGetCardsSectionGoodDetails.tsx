@@ -17,7 +17,7 @@ const HowToGetCardsSectionGoodDetails: FC<IProps> = ({
   name,
 }) => {
   return (
-    <Link href={good} target='_blank' rel='noopener noreferrer nofollow'>
+    <Link href={good} target='_blank' rel='noopener noreferrer'>
       <Container>
         <ImgWrap>
           <Image src={img} alt={name} />

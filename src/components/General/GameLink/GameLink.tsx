@@ -14,7 +14,7 @@ import {
 
 const GameLink: FC = () => {
   return (
-    <Link href={Links.game} target='_blank' rel='noopener noreferrer nofollow'>
+    <Link href={Links.game} target='_blank' rel='noopener noreferrer'>
       <Container>
         <GameImg src={game} alt='Логотип гри' />
         <Content>

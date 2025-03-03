@@ -53,7 +53,7 @@ const HeaderMobileMenu: FC<IProps> = ({ navLinks }) => {
                 <NavLink
                   href={isRulesLink ? rules : path}
                   target={isRulesLink ? '_blank' : '_self'}
-                  rel='noopener noreferrer nofollow'
+                  rel='noopener noreferrer'
                   onClick={onNavLinkClick}
                 >
                   {title}

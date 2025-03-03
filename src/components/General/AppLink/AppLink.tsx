@@ -5,7 +5,7 @@ import { Accent, Container, Image, Link, Title } from './AppLink.styled';
 
 const AppLink: FC = () => {
   return (
-    <Link href={Links.app} target='_blank' rel='noopener noreferrer nofollow'>
+    <Link href={Links.app} target='_blank' rel='noopener noreferrer'>
       <Container>
         <Image src={app} alt='Логотип додатка' />
         <Title>

@@ -6,7 +6,7 @@ import { IProps } from './BuyOnlineLink.types';
 const BuyOnlineLink: FC<IProps> = ({ href }) => {
   return (
     <Container>
-      <Link href={href} target='_blank' rel='noopener noreferrer nofollow'>
+      <Link href={href} target='_blank' rel='noopener noreferrer'>
         <Content>
           <LinkTitle>Купуй онлайн</LinkTitle>
           <LinkHighlight />
