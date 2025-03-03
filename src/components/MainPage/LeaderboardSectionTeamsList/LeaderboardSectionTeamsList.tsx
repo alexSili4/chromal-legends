@@ -9,18 +9,18 @@ import {
 } from './LeaderboardSectionTeamsList.styled';
 import LeaderboardSectionTeamDetails from '@MainPageComponents/LeaderboardSectionTeamDetails';
 
-const LeaderboardSectionTeamsList: FC<IProps> = ({ teams }) => {
+const LeaderboardSectionTeamsList: FC<IProps> = ({ clans }) => {
   return (
     <Container>
       <Content>
         <ListContainer>
           <List>
-            {teams.map(({ name, rank, score }, index) => (
+            {clans.map(({ name, totalScore }, index) => (
               <ListItem key={index}>
                 <LeaderboardSectionTeamDetails
                   name={name}
-                  rank={rank}
-                  score={score}
+                  rank={index + 1}
+                  score={totalScore}
                 />
               </ListItem>
             ))}

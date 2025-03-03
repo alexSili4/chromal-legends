@@ -1,7 +1,10 @@
-export interface ITeam {
+export interface IClan {
   name: string;
-  rank: number;
-  score: string;
+  totalScore: string;
 }
 
-export type Teams = ITeam[];
+export type Clans = IClan[];
+
+export interface IClans {
+  clans: Clans;
+}

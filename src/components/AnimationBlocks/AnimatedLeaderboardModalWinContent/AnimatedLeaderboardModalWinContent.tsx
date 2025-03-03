@@ -12,6 +12,7 @@ import Close from '@/icons/general/close.svg?react';
 const AnimatedLeaderboardModalWinContent: FC<IProps> = ({
   hideModalWin,
   setModalWinState,
+  clans,
 }) => {
   return (
     <BackdropWrap
@@ -28,7 +29,7 @@ const AnimatedLeaderboardModalWinContent: FC<IProps> = ({
           <CloseBtn type='button' onClick={setModalWinState}>
             <Close />
           </CloseBtn>
-          <LeaderboardModalWinContent />
+          <LeaderboardModalWinContent clans={clans} />
         </Container>
       </Backdrop>
     </BackdropWrap>

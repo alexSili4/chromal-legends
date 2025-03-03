@@ -20,6 +20,7 @@ const LeaderboardModalWin: FC<IProps> = ({
         <AnimatedLeaderboardModalWinContent
           hideModalWin={hideModalWin}
           setModalWinState={setModalWinState}
+          clans={clans}
         />
       </ModalWin>
     </AnimatedModalWin>

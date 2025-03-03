@@ -1,4 +1,3 @@
-import { teams } from '@/constants';
 import { FC } from 'react';
 import {
   Container,
@@ -7,14 +6,15 @@ import {
   Title,
 } from './LeaderboardModalWinContent.styled';
 import LeaderboardSectionTeamsList from '@MainPageComponents/LeaderboardSectionTeamsList';
+import { IProps } from './LeaderboardModalWinContent.types';
 
-const LeaderboardModalWinContent: FC = () => {
+const LeaderboardModalWinContent: FC<IProps> = ({ clans }) => {
   return (
     <Container>
       <Title>Рейтинг кланів</Title>
       <Content>
         <Subtitle>Турнір «Приборкувачі Тіней»</Subtitle>
-        <LeaderboardSectionTeamsList teams={teams} />
+        <LeaderboardSectionTeamsList clans={clans} />
       </Content>
     </Container>
   );

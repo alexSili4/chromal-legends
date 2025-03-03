@@ -2,6 +2,7 @@ import { IPartnersGoods } from '@/types/partnersGoods.types';
 import HttpService from './http.service';
 import { ErrorMessages, IGetPrizeFormData } from '@/types/getPrize.types';
 import { AxiosResponse } from 'axios';
+import { IClans } from '@/types/teams.types';
 
 class AppService extends HttpService {
   constructor() {
@@ -31,6 +32,17 @@ class AppService extends HttpService {
     );
 
     return response;
+  }
+
+  async getRating(): Promise<IClans> {
+    const response = await this.get<IClans>(
+      {
+        url: 'https://chroma-prod.sunagency.space/api/index/leader-board',
+      },
+      false
+    );
+
+    return response.data;
   }
 }
 
