@@ -100,7 +100,7 @@ const AnimatedAboutChromaLegends: FC<IProps> = ({ images }) => {
           )}
           <TextWrap variants={elementVariants}>
             <Text>
-              Приєднуйся і ти, герою, – знайомся з командами Chroma Legends та
+              Приєднуйся і ти, герою, знайомся з командами Chroma Legends та
               ставай новою Легендою!
             </Text>
           </TextWrap>

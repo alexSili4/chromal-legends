@@ -17,10 +17,14 @@ import Button from '@MainPageComponents/Button';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import GetPrizeModalWin from '@MainPageComponents/GetPrizeModalWin';
+import { useLocation } from 'react-router-dom';
 
 const LeagueSection: FC = () => {
-  const [showGetPrizeModalWin, setShowGetPrizeModalWin] =
-    useState<boolean>(false);
+  const { hash } = useLocation();
+  const isSignUpLocation = hash === `#${SectionsIds.signUp}`;
+  const [showGetPrizeModalWin, setShowGetPrizeModalWin] = useState<boolean>(
+    () => isSignUpLocation
+  );
 
   const toggleShowGetPrizeModalWin = () => {
     setShowGetPrizeModalWin((prevState) => !prevState);
@@ -38,7 +42,7 @@ const LeagueSection: FC = () => {
         <GeneralContainer>
           <Container>
             <TitleWrap>
-              <SectionTitle text='Суперліга Сільпо' />
+              <SectionTitle text='Суперліга «Сільпо»' />
               <SectionSubtitle
                 text='Приймай участь у турнірі Chroma Legends та вигравай подарунки. Кожні два тижні — новий раунд турніру та нові подарунки'
                 maxWidth={821}

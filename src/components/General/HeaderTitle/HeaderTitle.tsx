@@ -6,7 +6,7 @@ const HeaderTitle: FC = () => {
   return (
     <GeneralContainer>
       <Container>
-        <Title>Ти - Легенда Суперліги</Title>
+        <Title>Ти – Легенда Суперліги</Title>
         <Subtitle>
           Колекціонуй картки, збирай клан
           <br />

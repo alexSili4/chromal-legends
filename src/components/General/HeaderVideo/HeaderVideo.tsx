@@ -29,7 +29,6 @@ const HeaderVideo: FC = () => {
           playing={playing}
           volume={1}
           muted={false}
-          controls
         />
       </VideoWrap>
       <PlayBtn type='button' onClick={onPlayBtnClick} playing={playing}>

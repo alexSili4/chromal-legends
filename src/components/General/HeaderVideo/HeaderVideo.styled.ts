@@ -18,7 +18,6 @@ export const Container = styled.div`
 
 export const VideoWrap = styled.div<IStyledVideoWrapProps>`
   opacity: ${({ playing }) => (playing ? 1 : 0)};
-
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 `;
 
@@ -56,5 +55,10 @@ export const PauseBtn = styled.button<IStyledPlayBtnProps>`
 
   & > svg {
     color: ${({ theme }) => theme.colors.lightGray};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    top: 50%;
+    transform: translateY(-50%);
   }
 `;
