@@ -53,7 +53,7 @@ const PrizesSectionPrizeDetails: FC<IProps> = ({
         />
         <TextWrap>
           <Name>{name}</Name>
-          <Desc dangerouslySetInnerHTML={{ __html: desc }}></Desc>
+          <Desc>{desc}</Desc>
         </TextWrap>
         <AwardImg
           src={prizeImg}
@@ -71,9 +71,8 @@ const PrizesSectionPrizeDetails: FC<IProps> = ({
       <Conditions
         maxWidthDesk={conditionsMaxWidthDesk}
         maxWidthMob={conditionsMaxWidthMob}
-      >
-        {conditions}
-      </Conditions>
+        dangerouslySetInnerHTML={{ __html: conditions }}
+      ></Conditions>
     </Container>
   );
 };

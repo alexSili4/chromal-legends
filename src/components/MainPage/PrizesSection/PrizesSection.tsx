@@ -14,17 +14,17 @@ import AnimatedPrizesList from '@AnimationBlocks/AnimatedPrizesList';
 const PrizesSection: FC = () => {
   return (
     <Section id={SectionsIds.prizes}>
-     <Background>
+      <Background>
         <GeneralContainer>
           <Container>
-            <SectionTitle text='Ексклюзивні нагороди для користувачів застосунку Сільпо' />
+            <SectionTitle text='Ексклюзивні нагороди для користувачів застосунку «Сільпо»' />
             <Content>
               <AnimatedPrizesList prizes={prizes} />
               <AppLink />
             </Content>
           </Container>
         </GeneralContainer>
-     </Background>
+      </Background>
     </Section>
   );
 };

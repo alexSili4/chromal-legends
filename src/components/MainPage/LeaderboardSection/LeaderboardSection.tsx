@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedHowToJoinLeaderboard from '@AnimationBlocks/AnimatedHowToJoinLeaderboard';
 import Button from '@MainPageComponents/Button';
@@ -13,14 +13,22 @@ import LeaderboardModalWin from '@MainPageComponents/LeaderboardModalWin';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import { SectionsIds } from '@/constants';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { IProps } from './LeaderboardSection.types';
 
 const LeaderboardSection: FC<IProps> = ({ clans }) => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
+  const navigate = useNavigate();
   const isRatingLocation = hash === `#${SectionsIds.rating}`;
   const [showLeaderboardModalWin, setShowLeaderboardModalWin] =
-    useState<boolean>(() => isRatingLocation);
+    useState<boolean>(false);
+
+  useEffect(() => {
+    if (isRatingLocation) {
+      setShowLeaderboardModalWin(isRatingLocation);
+      navigate(pathname);
+    }
+  }, [isRatingLocation, navigate, pathname]);
 
   const toggleShowLeaderboardModalWin = () => {
     setShowLeaderboardModalWin((prevState) => !prevState);

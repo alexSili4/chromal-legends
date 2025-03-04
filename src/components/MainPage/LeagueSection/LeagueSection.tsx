@@ -52,7 +52,7 @@ const LeagueSection: FC = () => {
               <ListWrap>
                 <AnimatedLeaguePrizes leaguePrizes={leaguePrizes} />
                 <Desc>
-                  *Шукай більше інформації в застосунку Сhroma Legends
+                  * Шукай більше інформації в застосунку Сhroma Legends.
                 </Desc>
               </ListWrap>
               <Button
