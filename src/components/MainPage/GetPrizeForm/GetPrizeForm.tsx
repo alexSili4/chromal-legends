@@ -14,13 +14,15 @@ import { regExp, Symbols } from '@/constants';
 import appService from '@/services/app.service';
 import { IProps } from './GetPrizeForm.types';
 import { AxiosError } from 'axios';
+import { getDomain } from '@/utils';
 
 const GetPrizeForm: FC<IProps> = ({ updateIsSuccess, updateError, error }) => {
   const { register, handleSubmit } = useForm<IGetPrizeFormData>();
+  const domain = getDomain();
 
   const handleFormSubmit: SubmitHandler<IGetPrizeFormData> = async (data) => {
     try {
-      const response = await appService.signUpWinner(data);
+      const response = await appService.signUpWinner({ data, domain });
       console.log('response: ', response);
 
       updateIsSuccess(true);

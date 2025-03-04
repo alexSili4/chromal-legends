@@ -2,6 +2,7 @@ import { TeamOrNull } from './aboutTeams.types';
 import { ArtifactOrNull } from './aboutArtifacts.types';
 import ISwiper from 'swiper';
 import { StringOrNull } from './types';
+import { IGetPrizeFormData } from './getPrize.types';
 
 export interface IGetFlexItemWidthProps {
   listLength: number;
@@ -62,3 +63,8 @@ export interface IMakeScrollProps {
 }
 
 export type OnSliderSwipeFunc = (swiper: ISwiper) => void;
+
+export interface ISignUpWinnerProps {
+  data: IGetPrizeFormData;
+  domain: string;
+}

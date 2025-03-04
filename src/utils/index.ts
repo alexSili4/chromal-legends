@@ -5,3 +5,4 @@ export { default as getActiveTeam } from './getActiveTeam';
 export { default as getCategory } from './getCategory';
 export { default as getActiveArtifact } from './getActiveArtifact';
 export { default as makeScroll } from './makeScroll';
+export { default as getDomain } from './getDomain';
