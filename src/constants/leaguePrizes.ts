@@ -1,11 +1,11 @@
 import { LeaguePrizes } from '@/types/leaguePrizes.types';
-import firstPlace from '@/images/league/first-place.png';
-import secondPlace from '@/images/league/second-place.png';
-import thirdPlace from '@/images/league/third-place.png';
-import otherPlace from '@/images/league/other-place.png';
-import otherPlacePrize from '@/images/league/other-place-prize.png';
-import firstPlacePrize from '@/images/league/first-place-prize.jpg';
-import secondPlacePrize from '@/images/league/second-place-prize.jpg';
+import firstPlace from '@/images/league/first-place-min.png';
+import secondPlace from '@/images/league/second-place-min.png';
+import thirdPlace from '@/images/league/third-place-min.png';
+import otherPlace from '@/images/league/other-place-min.png';
+import otherPlacePrize from '@/images/league/other-place-prize-min.png';
+import firstPlacePrize from '@/images/league/first-place-prize-min.jpg';
+import secondPlacePrize from '@/images/league/second-place-prize-min.jpg';
 
 const leaguePrizes: LeaguePrizes = [
   {

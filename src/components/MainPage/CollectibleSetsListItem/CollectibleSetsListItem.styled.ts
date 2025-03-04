@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import cardBgMob from '@/images/collectible-sets/card-bg-mob.png';
-import cardBgDesk from '@/images/collectible-sets/card-bg-desk.png';
+import cardBgMob from '@/images/collectible-sets/card-bg-mob-min.png';
+import cardBgDesk from '@/images/collectible-sets/card-bg-desk-min.png';
 
 export const Container = styled.div`
   position: relative;

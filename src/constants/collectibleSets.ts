@@ -1,6 +1,6 @@
 import { CollectibleSets } from '@/types/collectibleSets.types';
-import chromaLegendsXandra from '@/images/collectible-sets/chroma-legends-xandra.png';
-import chromaLegendsNeon from '@/images/collectible-sets/chroma-legends-neon.png';
+import chromaLegendsXandra from '@/images/collectible-sets/chroma-legends-xandra-min.png';
+import chromaLegendsNeon from '@/images/collectible-sets/chroma-legends-neon-min.png';
 
 const collectibleSets: CollectibleSets = [
   {

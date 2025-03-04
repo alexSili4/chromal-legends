@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import scoreBgMob from '@/images/leaderboard/score-bg-mob.png';
-import scoreBgDesk from '@/images/leaderboard/score-bg-desk.png';
+import scoreBgMob from '@/images/leaderboard/score-bg-mob-min.png';
+import scoreBgDesk from '@/images/leaderboard/score-bg-desk-min.png';
 
 export const Container = styled.div`
   display: flex;

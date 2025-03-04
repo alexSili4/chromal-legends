@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Links } from '@/constants';
-import app from '@/images/bonus-exchange/app.png';
+import app from '@/images/bonus-exchange/app-min.png';
 import { Accent, Container, Image, Link, Title } from './AppLink.styled';
 
 const AppLink: FC = () => {

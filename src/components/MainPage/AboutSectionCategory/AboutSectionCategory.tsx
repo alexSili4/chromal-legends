@@ -10,7 +10,7 @@ import {
   Image,
 } from './AboutSectionCategory.styled';
 import { IProps } from './AboutSectionCategory.types';
-import activeCategoryBg from '@/images/about/active-category-bg.png';
+import activeCategoryBg from '@/images/about/active-category-bg-min.png';
 
 const AboutSectionCategory: FC<IProps> = ({
   category,

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBottomBg from '@/images/collectible-sets/section-bottom-bg.png';
-import sectionTopBg from '@/images/collectible-sets/section-top-bg.png';
+import sectionBottomBg from '@/images/collectible-sets/section-bottom-bg-min.png';
+import sectionTopBg from '@/images/collectible-sets/section-top-bg-min.png';
 
 export const Section = styled.section`
   position: relative;

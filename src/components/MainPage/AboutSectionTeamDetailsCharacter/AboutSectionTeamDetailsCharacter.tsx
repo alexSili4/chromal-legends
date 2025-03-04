@@ -10,7 +10,7 @@ import {
   NameWrap,
   Crown,
 } from './AboutSectionTeamDetailsCharacter.styled';
-import crown from '@/images/about/crown.png';
+import crown from '@/images/about/crown-min.png';
 
 const AboutSectionTeamDetailsCharacter: FC<IProps> = ({
   name,

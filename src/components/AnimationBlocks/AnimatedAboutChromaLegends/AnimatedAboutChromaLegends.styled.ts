@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { IStyledImageProps } from './AnimatedAboutChromaLegends.types';
-import descBgMob from '@/images/about/desc-bg-mob.png';
-import descBgDesk from '@/images/about/desc-bg-desk.png';
-import textBgMob from '@/images/about/text-bg-mob.png';
-import textBgDesk from '@/images/about/text-bg-desk.png';
+import descBgMob from '@/images/about/desc-bg-mob-min.png';
+import descBgDesk from '@/images/about/desc-bg-desk-min.png';
+import textBgMob from '@/images/about/text-bg-mob-min.png';
+import textBgDesk from '@/images/about/text-bg-desk-min.png';
 
 export const Container = styled(motion.div)`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {

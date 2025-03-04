@@ -10,8 +10,9 @@ import {
 import HeaderTitle from '@GeneralComponents/HeaderTitle';
 import HeaderNavBar from '@GeneralComponents/HeaderNavBar';
 import HeaderPartners from '@GeneralComponents/HeaderPartners';
-import HeaderVideo from '@GeneralComponents/HeaderVideo';
+// import HeaderVideo from '@GeneralComponents/HeaderVideo';
 import HeaderDecorativeBgImg from '@GeneralComponents/HeaderDecorativeBgImg';
+import HeaderImg from '@GeneralComponents/HeaderImg';
 
 const Header: FC = () => {
   return (
@@ -26,7 +27,8 @@ const Header: FC = () => {
               <HeaderTitle />
             </GeneralInfo>
           </Info>
-          <HeaderVideo />
+          <HeaderImg />
+          {/* <HeaderVideo /> */}
         </Content>
         <HeaderNavBar />
       </Container>

@@ -17,10 +17,10 @@ import {
   HeroRightImg,
 } from './BonusExchangeSectionSteps.styled';
 import VlasnyiRakhunok from '@/icons/bonus-exchange/vlasnyi-rakhunok.svg?react';
-import gemPack from '@/images/bonus-exchange/gem-pack.png';
-import heroLeft from '@/images/bonus-exchange/hero-left.png';
-import heroCenter from '@/images/bonus-exchange/hero-center.png';
-import heroRight from '@/images/bonus-exchange/hero-right.png';
+import gemPack from '@/images/bonus-exchange/gem-pack-min.png';
+import heroLeft from '@/images/bonus-exchange/hero-left-min.png';
+import heroCenter from '@/images/bonus-exchange/hero-center-min.png';
+import heroRight from '@/images/bonus-exchange/hero-right-min.png';
 
 const BonusExchangeSectionSteps: FC = () => {
   return (

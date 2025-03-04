@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Background, Image,Container } from './HeaderDecorativeBgImg.styled';
-import heroes from '@/images/header/header-heroes.png';
+import { Background, Image, Container } from './HeaderDecorativeBgImg.styled';
+import heroes from '@/images/header/header-heroes-min.png';
 
 const HeaderDecorativeBgImg: FC = () => {
   return (

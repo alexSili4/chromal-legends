@@ -1,8 +1,12 @@
 import { FC } from 'react';
-import { Container,Text } from './GetPrizeSignUpSuccessMsg.styled';
+import { Container, Text } from './GetPrizeSignUpSuccessMsg.styled';
 
 const GetPrizeSignUpSuccessMsg: FC = () => {
-  return <Container><Text>запит на отримання твого супер-подарунка відправлено!</Text></Container>;
+  return (
+    <Container>
+      <Text>Ей, Легендо, твої дані полетіли в обробку!</Text>
+    </Container>
+  );
 };
 
 export default GetPrizeSignUpSuccessMsg;

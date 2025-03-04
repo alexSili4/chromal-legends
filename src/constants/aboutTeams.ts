@@ -1,37 +1,37 @@
 import { AboutTeams } from '@/types/aboutTeams.types';
 import Chromatek from '@/icons/about/chromatek.svg?react';
 import ColorMasters from '@/icons/about/color-masters.svg?react';
-import roxyPreview from '@/images/about/roxy-preview.png';
-import roxy from '@/images/about/roxy.png';
-import dozerPreview from '@/images/about/dozer-preview.png';
-import dozer from '@/images/about/dozer.png';
-import floppy from '@/images/about/floppy.png';
-import floppyPreview from '@/images/about/floppy-preview.png';
-import kenshi from '@/images/about/kenshi.png';
-import kenshiPreview from '@/images/about/kenshi-preview.png';
-import yukiPreview from '@/images/about/yuki-preview.png';
-import nobuPreview from '@/images/about/nobu-preview.png';
-import yuki from '@/images/about/yuki.png';
-import nobu from '@/images/about/nobu.png';
+import roxyPreview from '@/images/about/roxy-preview-min.png';
+import roxy from '@/images/about/roxy-min.png';
+import dozerPreview from '@/images/about/dozer-preview-min.png';
+import dozer from '@/images/about/dozer-min.png';
+import floppy from '@/images/about/floppy-min.png';
+import floppyPreview from '@/images/about/floppy-preview-min.png';
+import kenshi from '@/images/about/kenshi-min.png';
+import kenshiPreview from '@/images/about/kenshi-preview-min.png';
+import yukiPreview from '@/images/about/yuki-preview-min.png';
+import nobuPreview from '@/images/about/nobu-preview-min.png';
+import yuki from '@/images/about/yuki-min.png';
+import nobu from '@/images/about/nobu-min.png';
 import FaunasphereRebel from '@/icons/about/faunasphere-rebel.svg?react';
-import marcy from '@/images/about/marcy.png';
-import marcyPreview from '@/images/about/marcy-preview.png';
-import mun from '@/images/about/mun.png';
-import munPreview from '@/images/about/mun-preview.png';
-import ralph from '@/images/about/ralph.png';
-import ralphPreview from '@/images/about/ralph-preview.png';
+import marcy from '@/images/about/marcy-min.png';
+import marcyPreview from '@/images/about/marcy-preview-min.png';
+import mun from '@/images/about/mun-min.png';
+import munPreview from '@/images/about/mun-preview-min.png';
+import ralph from '@/images/about/ralph-min.png';
+import ralphPreview from '@/images/about/ralph-preview-min.png';
 import ChronographyInstitute from '@/icons/about/chronography-institute.svg?react';
-import atlasPreview from '@/images/about/atlas-preview.png';
-import novaPreview from '@/images/about/nova-preview.png';
-import bergPreview from '@/images/about/berg-preview.png';
-import atlas from '@/images/about/atlas.png';
-import nova from '@/images/about/nova.png';
-import berg from '@/images/about/berg.png';
+import atlasPreview from '@/images/about/atlas-preview-min.png';
+import novaPreview from '@/images/about/nova-preview-min.png';
+import bergPreview from '@/images/about/berg-preview-min.png';
+import atlas from '@/images/about/atlas-min.png';
+import nova from '@/images/about/nova-min.png';
+import berg from '@/images/about/berg-min.png';
 import Legendary from '@/icons/about/legendary.svg?react';
-import xandraPreview from '@/images/about/xandra-preview.png';
-import neonPreview from '@/images/about/neon-preview.png';
-import xandra from '@/images/about/xandra.png';
-import neon from '@/images/about/neon.png';
+import xandraPreview from '@/images/about/xandra-preview-min.png';
+import neonPreview from '@/images/about/neon-preview-min.png';
+import xandra from '@/images/about/xandra-min.png';
+import neon from '@/images/about/neon-min.png';
 
 const aboutTeams: AboutTeams = [
   {
@@ -139,7 +139,7 @@ const aboutTeams: AboutTeams = [
           topDesk: -317,
           leftDesk: 0,
         },
-        paddingBottomMob: 45,
+        paddingBottomMob: 65,
       },
       {
         name: 'Флоппі',
@@ -165,7 +165,7 @@ const aboutTeams: AboutTeams = [
   },
   {
     name: 'Клан Майстрів Кольору',
-    desc: 'Учні клану досліджували різні види єдиноборств і вивчали, як кольорові шматочки мозаїки можуть посилити їхні навички та наділити їхні предметні магічні здібності.',
+    desc: 'Учні клану досліджували різні стилі єдиноборств та вивчали, як кольорові фрагменти мозаїки можуть посилювати їхні навички й наділяти спорядження магічними властивостями.',
     logo: ColorMasters,
     preview: [
       {
@@ -361,7 +361,7 @@ const aboutTeams: AboutTeams = [
     characters: [
       {
         name: 'марсі',
-        desc: 'Не лише майстриня графітів, а й віртуозна музикантка. Вона завжди носить із собою велику музичну колонку, додатково обладнану розпилювачем фарби.',
+        desc: 'Не лише майстриня графіті, а й віртуозна музикантка. Вона завжди носить із собою велику музичну колонку, додатково обладнану розпилювачем фарби.',
         img: {
           img: marcy,
           widthMob: 147,
@@ -370,7 +370,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 376,
           topMob: 16,
           leftMob: 0,
-          topDesk: -335,
+          topDesk: -325,
           leftDesk: 0,
         },
         crownPosition: {
@@ -390,7 +390,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 435,
           topMob: 10,
           leftMob: 7,
-          topDesk: -348,
+          topDesk: -333,
           leftDesk: 0,
         },
         crownPosition: {
@@ -410,7 +410,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 373,
           topMob: 28,
           leftMob: 14,
-          topDesk: -340,
+          topDesk: -315,
           leftDesk: 20,
         },
         crownPosition: {
@@ -499,14 +499,14 @@ const aboutTeams: AboutTeams = [
           heightDesk: 364,
           topMob: 22,
           leftMob: 5,
-          topDesk: -325,
+          topDesk: -315,
           leftDesk: 0,
         },
         crownPosition: {
           leftMob: 16,
           leftDesk: 83,
         },
-        paddingBottomMob: 0,
+        paddingBottomMob: 50,
       },
       {
         name: 'берг',
@@ -539,7 +539,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 383,
           topMob: 30,
           leftMob: 4,
-          topDesk: -325,
+          topDesk: -310,
           leftDesk: 0,
         },
         crownPosition: {

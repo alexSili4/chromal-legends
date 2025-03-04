@@ -1,7 +1,7 @@
 import { Conditions } from '@/types/conditions.types';
-import purchaseBonus from '@/images/conditions/purchase-bonus.png';
-import productBonus from '@/images/conditions/product-bonus.png';
-import cardPaymentBonus from '@/images/conditions/card-payment-bonus.png';
+import purchaseBonus from '@/images/conditions/purchase-bonus-min.png';
+import productBonus from '@/images/conditions/product-bonus-min.png';
+import cardPaymentBonus from '@/images/conditions/card-payment-bonus-min.png';
 
 const conditions: Conditions = [
   {

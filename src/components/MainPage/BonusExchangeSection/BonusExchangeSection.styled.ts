@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import sectionBgMob from '@/images/bonus-exchange/section-bg-mob.png';
-import sectionBgDesk from '@/images/bonus-exchange/section-bg-desk.png';
+import sectionBgMob from '@/images/bonus-exchange/section-bg-mob-min.png';
+import sectionBgDesk from '@/images/bonus-exchange/section-bg-desk-min.png';
 import { IStyledSectionProps } from './BonusExchangeSection.types';
 
 export const Section = styled.section<IStyledSectionProps>`

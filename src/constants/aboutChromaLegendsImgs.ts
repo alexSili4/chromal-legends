@@ -1,7 +1,7 @@
 import { AboutChromaLegendsImgs } from '@/types/aboutChromaLegendsImgs.types';
-import phone from '@/images/about/phone.png';
-import ray from '@/images/about/ray.png';
-import hero from '@/images/about/hero.png';
+import phone from '@/images/about/phone-min.png';
+import ray from '@/images/about/ray-min.png';
+import hero from '@/images/about/hero-min.png';
 
 const aboutChromaLegendsImgs: AboutChromaLegendsImgs = [
   {

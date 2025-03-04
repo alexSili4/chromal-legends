@@ -7,9 +7,9 @@ import {
   MasterCardImg,
   SilpoImg,
 } from './HeaderPartners.styled';
-import masterCard from '@/images/header/master-card.png';
-import silpo from '@/images/header/silpo.png';
-import chromaLegends from '@/images/header/chroma-legends.png';
+import masterCard from '@/images/header/master-card-min.png';
+import silpo from '@/images/header/silpo-min.png';
+import chromaLegends from '@/images/header/chroma-legends-min.png';
 
 const HeaderPartners: FC = () => {
   return (

@@ -44,7 +44,6 @@ const AboutSectionArtifactsSlider: FC<IProps> = ({
       slidesPerView={1}
       speed={900}
       grabCursor
-      autoHeight
     >
       {artifacts.map(({ name, desc, artifacts, logo, preview }, index) => (
         <StyledSwiperSlide key={index}>

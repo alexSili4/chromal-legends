@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import decorativeBgImg from '@/images/header/header-decorative-bg.png';
+import decorativeBgImg from '@/images/header/header-decorative-bg-min.png';
 
 export const Container = styled.div`
   position: absolute;

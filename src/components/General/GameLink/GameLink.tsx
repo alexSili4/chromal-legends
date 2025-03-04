@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Links } from '@/constants';
-import game from '@/images/about/game.png';
-import qrCode from '@/images/about/qr-code.png';
+import game from '@/images/about/game-min.png';
+import qrCode from '@/images/about/qr-code-min.png';
 import {
   Accent,
   Container,

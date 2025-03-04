@@ -3,8 +3,8 @@ import {
   IStyledLinkWContainerProps,
   IStyledSliderContainerProps,
 } from './HowToGetCardsSectionGoods.types';
-import linkBgMob from '@/images/conditions/link-bg-mob.png';
-import linkBgDesk from '@/images/conditions/link-bg-desk.png';
+import linkBgMob from '@/images/conditions/link-bg-mob-min.png';
+import linkBgDesk from '@/images/conditions/link-bg-desk-min.png';
 
 export const Container = styled.div`
   background-color: #052d44;

@@ -10,11 +10,11 @@ import stepPath4Desk from '@/icons/leaderboard/step-path-4-desk.svg';
 import LeaderboardSectionStepDetails from '@MainPageComponents/LeaderboardSectionStepDetails';
 import { Container, Image, Item } from './AnimatedHowToJoinLeaderboard.styled';
 import { useInView } from 'framer-motion';
-import step1 from '@/images/leaderboard/step-1.png';
-import step2 from '@/images/leaderboard/step-2.png';
-import step3 from '@/images/leaderboard/step-3.png';
-import step4 from '@/images/leaderboard/step-4.png';
-import step5 from '@/images/leaderboard/step-5.png';
+import step1 from '@/images/leaderboard/step-1-min.png';
+import step2 from '@/images/leaderboard/step-2-min.png';
+import step3 from '@/images/leaderboard/step-3-min.png';
+import step4 from '@/images/leaderboard/step-4-min.png';
+import step5 from '@/images/leaderboard/step-5-min.png';
 
 const AnimatedHowToJoinLeaderboard: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);

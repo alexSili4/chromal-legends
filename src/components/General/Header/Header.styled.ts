@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import bgImg from '@/images/header/header-bg.jpg';
+import bgImg from '@/images/header/header-bg-min.jpg';
 
 export const StyledHeader = styled.header`
   position: relative;

@@ -3,29 +3,29 @@ import Legendary from '@/icons/about/legendary-artifacts.svg?react';
 import Speed from '@/icons/about/speed-artifacts.svg?react';
 import Health from '@/icons/about/health.svg?react';
 import Control from '@/icons/about/control.svg?react';
-import invisibilityCloakPreview from '@/images/about/invisibility-cloak-preview.png';
-import invisibilityCloak from '@/images/about/invisibility-cloak.png';
-import hawkTotemPreview from '@/images/about/hawk-totem-preview.png';
-import hawkTotem from '@/images/about/hawk-totem.png';
-import bastionAmuletPreview from '@/images/about/bastion-amulet-preview.png';
-import bastionAmulet from '@/images/about/bastion-amulet.png';
-import swiftBootsPreview from '@/images/about/swift-boots-review.png';
-import swiftBoots from '@/images/about/swift-boots.png';
-import lightningAmuletPreview from '@/images/about/lightning-amulet-preview.png';
-import lightningAmulet from '@/images/about/lightning-amulet.png';
+import invisibilityCloakPreview from '@/images/about/invisibility-cloak-preview-min.png';
+import invisibilityCloak from '@/images/about/invisibility-cloak-min.png';
+import hawkTotemPreview from '@/images/about/hawk-totem-preview-min.png';
+import hawkTotem from '@/images/about/hawk-totem-min.png';
+import bastionAmuletPreview from '@/images/about/bastion-amulet-preview-min.png';
+import bastionAmulet from '@/images/about/bastion-amulet-min.png';
+import swiftBootsPreview from '@/images/about/swift-boots-review-min.png';
+import swiftBoots from '@/images/about/swift-boots-min.png';
+import lightningAmuletPreview from '@/images/about/lightning-amulet-preview-min.png';
+import lightningAmulet from '@/images/about/lightning-amulet-min.png';
 import Symbols from './symbols';
-import inspirationUmbrellaPreview from '@/images/about/inspiration-umbrella-preview.png';
-import inspirationUmbrella from '@/images/about/inspiration-umbrella.png';
-import regenerationBeaconPreview from '@/images/about/regeneration-beacon-preview.png';
-import regenerationBeacon from '@/images/about/regeneration-beacon.png';
-import nightFangsPreview from '@/images/about/night-fangs-preview.png';
-import nightFangs from '@/images/about/night-fangs.png';
-import wizardsToyPreview from '@/images/about/wizards-toy-preview.png';
-import wizardsToy from '@/images/about/wizards-toy.png';
-import braveryShieldPreview from '@/images/about/bravery-shield-preview.png';
-import braveryShield from '@/images/about/bravery-shield.png';
-import commandersRingPreview from '@/images/about/commanders-ring-preview.png';
-import commandersRing from '@/images/about/commanders-ring.png';
+import inspirationUmbrellaPreview from '@/images/about/inspiration-umbrella-preview-min.png';
+import inspirationUmbrella from '@/images/about/inspiration-umbrella-min.png';
+import regenerationBeaconPreview from '@/images/about/regeneration-beacon-preview-min.png';
+import regenerationBeacon from '@/images/about/regeneration-beacon-min.png';
+import nightFangsPreview from '@/images/about/night-fangs-preview-min.png';
+import nightFangs from '@/images/about/night-fangs-min.png';
+import wizardsToyPreview from '@/images/about/wizards-toy-preview-min.png';
+import wizardsToy from '@/images/about/wizards-toy-min.png';
+import braveryShieldPreview from '@/images/about/bravery-shield-preview-min.png';
+import braveryShield from '@/images/about/bravery-shield-min.png';
+import commandersRingPreview from '@/images/about/commanders-ring-preview-min.png';
+import commandersRing from '@/images/about/commanders-ring-min.png';
 
 const aboutArtifacts: AboutArtifacts = [
   {
@@ -90,10 +90,10 @@ const aboutArtifacts: AboutArtifacts = [
           heightDesk: 345,
           topMob: 40,
           leftMob: 15,
-          topDesk: -159,
+          topDesk: -149,
           leftDesk: 26,
         },
-        paddingBottomMob: 0,
+        paddingBottomMob: 20,
       },
       {
         name: `Тотем${Symbols.newLine}Яструба`,

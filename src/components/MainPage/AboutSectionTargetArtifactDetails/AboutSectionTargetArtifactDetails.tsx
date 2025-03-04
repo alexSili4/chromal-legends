@@ -10,7 +10,7 @@ import {
   NameWrap,
   Crown,
 } from './AboutSectionTargetArtifactDetails.styled';
-import crown from '@/images/about/crown.png';
+import crown from '@/images/about/crown-min.png';
 
 const AboutSectionTargetArtifactDetails: FC<IProps> = ({
   name,
