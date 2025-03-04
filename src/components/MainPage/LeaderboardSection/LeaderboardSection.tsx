@@ -14,8 +14,9 @@ import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
 import { SectionsIds } from '@/constants';
 import { useLocation } from 'react-router-dom';
+import { IProps } from './LeaderboardSection.types';
 
-const LeaderboardSection: FC = () => {
+const LeaderboardSection: FC<IProps> = ({ clans }) => {
   const { hash } = useLocation();
   const isRatingLocation = hash === `#${SectionsIds.rating}`;
   const [showLeaderboardModalWin, setShowLeaderboardModalWin] =
@@ -52,6 +53,7 @@ const LeaderboardSection: FC = () => {
       <LeaderboardModalWin
         setModalWinState={toggleShowLeaderboardModalWin}
         showModalWin={showLeaderboardModalWin}
+        clans={clans}
       />
     </>
   );
