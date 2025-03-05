@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import sectionBottomBgDesk from '@/images/prizes/section-bottom-bg-desk.png';
-import sectionTopBgDesk from '@/images/prizes/section-top-bg-desk.png';
-import sectionBottomBgMob from '@/images/prizes/section-bottom-bg-mob.png';
-import sectionTopBgMob from '@/images/prizes/section-top-bg-mob.png';
+import sectionBottomBgDesk from '@/images/prizes/section-bottom-bg-desk-min.png';
+import sectionTopBgDesk from '@/images/prizes/section-top-bg-desk-min.png';
+import sectionBottomBgMob from '@/images/prizes/section-bottom-bg-mob-min.png';
+import sectionTopBgMob from '@/images/prizes/section-top-bg-mob-min.png';
 
 export const Section = styled.section`
   position: relative;

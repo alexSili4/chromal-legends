@@ -261,7 +261,7 @@ const aboutTeams: AboutTeams = [
           heightDesk: 448,
           topMob: 13,
           leftMob: 3,
-          topDesk: -365,
+          topDesk: -355,
           leftDesk: 43,
         },
         crownPosition: {
@@ -490,7 +490,7 @@ const aboutTeams: AboutTeams = [
     characters: [
       {
         name: 'нова',
-        desc: 'Капітан експедиції, вона координує всі операції по пошуку нових світів. У дослідженнях активно використовує унікальну ехо-турель.',
+        desc: 'Капітан експедиції, вона координує всі операції з пошуку нових світів. У дослідженнях активно використовує унікальну ехотурель.',
         img: {
           img: nova,
           widthMob: 114,

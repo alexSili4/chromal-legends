@@ -1,10 +1,10 @@
 import { Prizes, IPartner } from '@/types/prizes.types';
-import silpo from '@/images/prizes/silpo.png';
-import masterCard from '@/images/prizes/master-card.png';
-import metalMoon from '@/images/prizes/metal-moon.png';
-import masterRoxy from '@/images/prizes/master-roxy.png';
-import mysticChest from '@/images/prizes/mystic-chest.png';
-import epicChest from '@/images/prizes/epic-chest.png';
+import silpo from '@/images/prizes/silpo-min.png';
+import masterCard from '@/images/prizes/master-card-min.png';
+import metalMoon from '@/images/prizes/metal-moon-min.png';
+import masterRoxy from '@/images/prizes/master-roxy-min.png';
+import mysticChest from '@/images/prizes/mystic-chest-min.png';
+import epicChest from '@/images/prizes/epic-chest-min.png';
 
 const silpoData: IPartner = {
   img: silpo,
@@ -79,7 +79,7 @@ const prizes: Prizes = [
       position: { xMob: -16, xDesk: -20, yMob: -21, yDesk: -30 },
     },
     conditions: {
-      text: 'Отримай за купівлю 3<br/>товарів партнерів. Більше товарів партнерів – більше скринь.',
+      text: 'Отримай за купівлю<br/>3 товарів партнерів. Більше товарів партнерів – більше скринь.',
       maxWidthMob: 228,
       maxWidthDesk: 255,
     },
