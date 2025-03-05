@@ -3,16 +3,14 @@ import bgImg from '@/images/header/header-bg-min.jpg';
 
 export const StyledHeader = styled.header`
   position: relative;
-  background-image: url(${bgImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  /* background-image: url(${bgImg}); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* overflow: hidden; */
 `;
 
 export const Container = styled.div`
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-  }
 `;
 
 export const Info = styled.div``;

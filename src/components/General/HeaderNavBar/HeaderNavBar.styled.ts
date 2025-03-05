@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+export const BackGround = styled.div`
+  background-color: #052d44;
+`;
+
 export const Container = styled.nav`
   width: calc(100% + 16px + 16px);
   border-left: 16px solid #052d44;
