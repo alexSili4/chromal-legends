@@ -7,11 +7,10 @@ export const StyledHeader = styled.header`
   /* background-size: cover; */
   /* background-position: center; */
   /* background-repeat: no-repeat; */
-  /* overflow: hidden; */
+  overflow: hidden;
 `;
 
-export const Container = styled.div`
-`;
+export const Container = styled.div``;
 
 export const Info = styled.div``;
 

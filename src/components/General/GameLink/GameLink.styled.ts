@@ -49,9 +49,14 @@ export const Accent = styled.strong`
   font-weight: 700;
 `;
 
-export const QRCode = styled.img`
+export const IconWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
     display: none;

@@ -8,6 +8,7 @@ const useScrollToAnchor = () => {
 
   useEffect(() => {
     if (hash && isFirstRender.current) {
+      console.log(hash);
       makeScroll({ id: hash, behavior: 'instant' });
 
       isFirstRender.current = false;

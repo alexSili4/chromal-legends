@@ -68,7 +68,7 @@ const prizes: Prizes = [
   },
   {
     name: 'МІСТИЧНА СКРИНЯ',
-    desc: 'Костюми, сфери та картки настрою',
+    desc: 'Костюми, дроїди та картки настрою',
     partner: silpoData,
     prize: {
       img: mysticChest,
@@ -86,7 +86,7 @@ const prizes: Prizes = [
   },
   {
     name: 'Епічна скриня',
-    desc: 'Х2 нагорода. Епічні або легендарні сфери у кожні скрині',
+    desc: 'Х2 нагорода. Епічні або легендарні дроїди у кожній скрині',
     partner: masterCardData,
     prize: {
       img: epicChest,

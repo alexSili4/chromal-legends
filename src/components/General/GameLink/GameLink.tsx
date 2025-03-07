@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import { Links } from '@/constants';
 import game from '@/images/about/game-min.png';
-import qrCode from '@/images/about/qr-code-min.png';
 import {
   Accent,
   Container,
   Content,
-  GameImg,
   Link,
   Title,
-  QRCode,
+  IconWrap,
+  GameImg,
 } from './GameLink.styled';
+import QrCode from '@/icons/about/game-qr-code.svg?react';
 
 const GameLink: FC = () => {
   return (
@@ -23,7 +23,9 @@ const GameLink: FC = () => {
             <br />
             <Accent>Сhroma Legends</Accent>
           </Title>
-          <QRCode src={qrCode} alt='QR-код' />
+          <IconWrap>
+            <QrCode />
+          </IconWrap>
         </Content>
       </Container>
     </Link>
