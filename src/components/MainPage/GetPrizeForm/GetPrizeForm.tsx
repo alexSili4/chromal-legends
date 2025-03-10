@@ -22,13 +22,10 @@ const GetPrizeForm: FC<IProps> = ({ updateIsSuccess, updateError, error }) => {
 
   const handleFormSubmit: SubmitHandler<IGetPrizeFormData> = async (data) => {
     try {
-      const response = await appService.signUpWinner({ data, domain });
-      console.log('response: ', response);
+      await appService.signUpWinner({ data, domain });
 
       updateIsSuccess(true);
     } catch (error) {
-      console.log('error: ', error);
-
       if (error instanceof AxiosError && error.status === 422) {
         const errorMessage = error.response?.data
           .map(({ message }: IErrorMessage) => message)

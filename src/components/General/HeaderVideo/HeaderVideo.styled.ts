@@ -11,6 +11,10 @@ export const Container = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    display: none;
+  }
 `;
 
 export const VideoWrap = styled.div<IStyledVideoWrapProps>`

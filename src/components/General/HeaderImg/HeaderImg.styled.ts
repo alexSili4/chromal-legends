@@ -9,6 +9,7 @@ export const Image = styled.img`
   transform: translateX(-50%);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    display: none;
     top: 150px;
     width: 660px;
     height: 440px;

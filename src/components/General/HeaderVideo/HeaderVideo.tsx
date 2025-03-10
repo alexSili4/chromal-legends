@@ -36,10 +36,6 @@ const HeaderVideo: FC<IProps> = ({ video }) => {
     }
   }, [isReady]);
 
-  useEffect(() => {
-    console.log(playing);
-  });
-
   const onPlayBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
@@ -72,6 +68,7 @@ const HeaderVideo: FC<IProps> = ({ video }) => {
           onEnded={onEnded}
           width='100%'
           height='100%'
+          playsinline
         />
       </VideoWrap>
       <PlayBtn type='button' onClick={onPlayBtnClick} playing={playing}>
