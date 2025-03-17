@@ -19,6 +19,7 @@ interface ITheme {
     proximaNova: string;
     luckiestGuy: string;
     luckiestGuyRUSBELUKR: string;
+    raleway: string;
   };
   zIndex: {
     sliderBtn: number;
@@ -38,6 +39,7 @@ const theme: ITheme = {
   fontFamily: {
     proximaNova: 'Proxima Nova',
     luckiestGuy: 'Luckiest Guy',
+    raleway: 'Raleway',
     luckiestGuyRUSBELUKR: 'Luckiest Guy RUS-BEL-UKR',
   },
   // fontFamily: {  },

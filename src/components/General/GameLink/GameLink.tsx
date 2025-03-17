@@ -2,15 +2,14 @@ import { FC } from 'react';
 import { Links } from '@/constants';
 import game from '@/images/about/game-min.png';
 import {
-  Accent,
   Container,
   Content,
   Link,
-  Title,
-  IconWrap,
   GameImg,
+  QrCodeImg,
 } from './GameLink.styled';
-import QrCode from '@/icons/about/game-qr-code.svg?react';
+import qrCode from '@/images/about/game-qr-code.png';
+import GameLinkServices from '@GeneralComponents/GameLinkServices';
 
 const GameLink: FC = () => {
   return (
@@ -18,14 +17,8 @@ const GameLink: FC = () => {
       <Container>
         <GameImg src={game} alt='Логотип гри' />
         <Content>
-          <Title>
-            Завантажуй гру
-            <br />
-            <Accent>Сhroma Legends</Accent>
-          </Title>
-          <IconWrap>
-            <QrCode />
-          </IconWrap>
+          <GameLinkServices />
+          <QrCodeImg src={qrCode} alt='QR-код для завантаження гри' />
         </Content>
       </Container>
     </Link>

@@ -11,6 +11,7 @@ import {
   proximaNovaRegular,
   proximaNovaSemiBold,
   luckiestGuyRegular,
+  ralewayRegular,
 } from '@/fonts';
 
 const GlobalStyles: FC = () => (
@@ -55,6 +56,13 @@ const GlobalStyles: FC = () => (
         font-family: ${theme.fontFamily.luckiestGuy};
         src: local(${theme.fontFamily.luckiestGuy}),
           url(${luckiestGuyRegular}) format('truetype');
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.raleway};
+        src: local(${theme.fontFamily.raleway}),
+          url(${ralewayRegular}) format('truetype');
         font-weight: 400;
       }
 

@@ -1,6 +1,6 @@
 const enum Links {
   app = 'https://silpo.ua/app.html',
-  game = 'https://tigralivecloud.com/store.php?android=com.LoyaltyGames.ChromaLegends&ios=id6737267841',
+  game = 'https://silpo.ua/c-gate-app.html',
   buyOnlineGoods = 'https://silpo.ua/sets/chroma-cards',
   buyOnlineSets = 'https://silpo.ua/sets/chroma-superleague',
 }

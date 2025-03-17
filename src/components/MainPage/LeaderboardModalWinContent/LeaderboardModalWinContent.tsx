@@ -13,7 +13,7 @@ const LeaderboardModalWinContent: FC<IProps> = ({ clans }) => {
     <Container>
       <Title>Рейтинг кланів</Title>
       <Content>
-        <Subtitle>Турнір «Приборкувачі Тіней»</Subtitle>
+        <Subtitle>Турнір «Крижані Легенди»</Subtitle>
         <LeaderboardSectionTeamsList clans={clans} />
       </Content>
     </Container>
