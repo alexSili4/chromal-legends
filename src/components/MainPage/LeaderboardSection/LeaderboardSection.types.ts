@@ -1,5 +1,5 @@
-import { Clans } from '@/types/teams.types';
+import { Tournaments } from '@/types/tournaments.types';
 
 export interface IProps {
-  clans: Clans;
+  tournaments: Tournaments;
 }

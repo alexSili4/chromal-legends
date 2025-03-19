@@ -1,20 +1,14 @@
 import { FC } from 'react';
-import {
-  Container,
-  Content,
-  Subtitle,
-  Title,
-} from './LeaderboardModalWinContent.styled';
-import LeaderboardSectionTeamsList from '@MainPageComponents/LeaderboardSectionTeamsList';
+import { Container, Content, Title } from './LeaderboardModalWinContent.styled';
 import { IProps } from './LeaderboardModalWinContent.types';
+import LeaderboardSectionTournamentsSlider from '@MainPageComponents/LeaderboardSectionTournamentsSlider';
 
-const LeaderboardModalWinContent: FC<IProps> = ({ clans }) => {
+const LeaderboardModalWinContent: FC<IProps> = ({ tournaments }) => {
   return (
     <Container>
       <Title>Рейтинг кланів</Title>
       <Content>
-        <Subtitle>Турнір «Крижані Легенди»</Subtitle>
-        <LeaderboardSectionTeamsList clans={clans} />
+        <LeaderboardSectionTournamentsSlider tournaments={tournaments} />
       </Content>
     </Container>
   );

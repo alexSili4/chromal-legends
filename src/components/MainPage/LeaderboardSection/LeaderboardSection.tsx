@@ -16,7 +16,7 @@ import { SectionsIds } from '@/constants';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { IProps } from './LeaderboardSection.types';
 
-const LeaderboardSection: FC<IProps> = ({ clans }) => {
+const LeaderboardSection: FC<IProps> = ({ tournaments }) => {
   const { hash, pathname } = useLocation();
   const navigate = useNavigate();
   const isRatingLocation = hash === `#${SectionsIds.rating}`;
@@ -61,7 +61,7 @@ const LeaderboardSection: FC<IProps> = ({ clans }) => {
       <LeaderboardModalWin
         setModalWinState={toggleShowLeaderboardModalWin}
         showModalWin={showLeaderboardModalWin}
-        clans={clans}
+        tournaments={tournaments}
       />
     </>
   );

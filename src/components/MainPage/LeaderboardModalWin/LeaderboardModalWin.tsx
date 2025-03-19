@@ -8,7 +8,7 @@ import AnimatedLeaderboardModalWinContent from '@AnimationBlocks/AnimatedLeaderb
 const LeaderboardModalWin: FC<IProps> = ({
   setModalWinState,
   showModalWin,
-  clans,
+  tournaments,
 }) => {
   const { hideModalWin, modalRoot } = useModalWin({
     setModalWinState,
@@ -21,7 +21,7 @@ const LeaderboardModalWin: FC<IProps> = ({
         <AnimatedLeaderboardModalWinContent
           hideModalWin={hideModalWin}
           setModalWinState={setModalWinState}
-          clans={clans}
+          tournaments={tournaments}
         />
       </ModalWin>
     </AnimatedModalWin>

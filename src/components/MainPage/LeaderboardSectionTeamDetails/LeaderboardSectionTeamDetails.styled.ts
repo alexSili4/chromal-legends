@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing(6)}px;
   padding-left: ${({ theme }) => theme.spacing(6)}px;
-  padding-right: ${({ theme }) => theme.spacing(3)}px;
 
   *:first-of-type > & {
     padding-top: ${({ theme }) => theme.spacing(6)}px;
@@ -18,8 +18,8 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(11)}px;
     padding-left: ${({ theme }) => theme.spacing(9)}px;
-    padding-right: ${({ theme }) => theme.spacing(10)}px;
 
     *:last-of-type > & {
       padding-bottom: ${({ theme }) => theme.spacing(10)}px;
@@ -28,7 +28,7 @@ export const Container = styled.div`
 `;
 
 export const RankWrap = styled.div`
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   position: relative;
 
   & > svg {
@@ -63,11 +63,11 @@ export const Rank = styled.p`
 `;
 
 export const Info = styled.div`
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(3)}px;
-  width: 54.67vw;
   padding: ${({ theme }) => theme.spacing(3)}px;
   padding-bottom: ${({ theme }) => theme.spacing(2)}px;
   background-color: ${({ theme }) => theme.colors.white};
@@ -79,7 +79,6 @@ export const Info = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 0;
-    width: 52.92vw;
     padding: 0;
     border-radius: 16px;
   }

@@ -63,9 +63,11 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(3)}px;
+  padding-right: ${({ theme }) => theme.spacing(3)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     gap: ${({ theme }) => theme.spacing(4)}px;
+    padding-right: ${({ theme }) => theme.spacing(10)}px;
   }
 `;
 

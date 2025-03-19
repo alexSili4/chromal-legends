@@ -1,13 +1,14 @@
 import { useScrollToAnchor } from '@/hooks';
 import appService from '@/services/app.service';
 import { PartnersGoods } from '@/types/partnersGoods.types';
-import { Clans } from '@/types/teams.types';
+import { Tournaments } from '@/types/tournaments.types';
 import Main from '@MainPageComponents/Main';
 import { FC, useEffect, useState } from 'react';
+import { tournamentsData } from '@/constants';
 
 const MainPage: FC = () => {
   const [partnersGoods, setPartnersGoods] = useState<PartnersGoods>([]);
-  const [clans, setClans] = useState<Clans>([]);
+  const [tournaments, setTournaments] = useState<Tournaments>([]);
   useScrollToAnchor();
 
   useEffect(() => {
@@ -27,14 +28,17 @@ const MainPage: FC = () => {
       try {
         const response = await appService.getRating();
 
-        setClans(response.clans);
+        setTournaments([
+          { title: tournamentsData.current, clans: response.clans },
+          ...tournamentsData.tournaments,
+        ]);
       } catch (error) {}
     };
 
     getClans();
   }, []);
 
-  return <Main partnersGoods={partnersGoods} clans={clans} />;
+  return <Main partnersGoods={partnersGoods} tournaments={tournaments} />;
 };
 
 export default MainPage;

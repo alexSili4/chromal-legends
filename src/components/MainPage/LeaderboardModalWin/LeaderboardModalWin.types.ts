@@ -1,8 +1,8 @@
 import { Func } from '@/types/types';
-import { Clans } from '@/types/teams.types';
+import { Tournaments } from '@/types/tournaments.types';
 
 export interface IProps {
   showModalWin: boolean;
   setModalWinState: Func;
-  clans: Clans;
+  tournaments: Tournaments;
 }

@@ -1,7 +1,7 @@
 import { PartnersGoods } from '@/types/partnersGoods.types';
-import { Clans } from '@/types/teams.types';
+import { Tournaments } from '@/types/tournaments.types';
 
 export interface IProps {
   partnersGoods: PartnersGoods;
-  clans: Clans;
+  tournaments: Tournaments;
 }

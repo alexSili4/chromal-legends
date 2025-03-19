@@ -14,3 +14,4 @@ export { default as aboutArtifacts } from './aboutArtifacts';
 export { default as Symbols } from './symbols';
 export { default as aboutChromaLegendsImgs } from './aboutChromaLegendsImgs';
 export { default as regExp } from './regExp';
+export { default as tournamentsData } from './tournamentsData';

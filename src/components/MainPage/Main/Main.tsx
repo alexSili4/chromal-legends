@@ -10,14 +10,14 @@ import AboutSection from '@MainPageComponents/AboutSection';
 import { Container } from './Main.styled';
 import { IProps } from './Main.types';
 
-const Main: FC<IProps> = ({ partnersGoods, clans }) => {
+const Main: FC<IProps> = ({ partnersGoods, tournaments }) => {
   return (
     <>
       <Container>
         <AboutSection />
         <LeagueSection />
       </Container>
-      <LeaderboardSection clans={clans} />
+      <LeaderboardSection tournaments={tournaments} />
       <Container>
         <HowToGetCardsSection partnersGoods={partnersGoods} />
         <CollectibleSetsSection />

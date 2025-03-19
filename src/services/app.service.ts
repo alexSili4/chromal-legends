@@ -2,7 +2,7 @@ import { IPartnersGoods } from '@/types/partnersGoods.types';
 import HttpService from './http.service';
 import { ErrorMessages, IGetPrizeFormData } from '@/types/getPrize.types';
 import { AxiosResponse } from 'axios';
-import { IClans } from '@/types/teams.types';
+import { IClans } from '@/types/tournaments.types';
 import { ISignUpWinnerProps } from '@/types/functions.types';
 
 class AppService extends HttpService {
