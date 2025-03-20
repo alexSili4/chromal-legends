@@ -42,7 +42,10 @@ const LeagueSection: FC = () => {
         <GeneralContainer>
           <Container>
             <TitleWrap>
-              <SectionTitle text='Суперліга «Сільпо»' />
+              <SectionTitle
+                text='Суперліга «Сільпо» Chroma Legends'
+                isPrimary
+              />
               <SectionSubtitle
                 text='Бери участь у турнірі Chroma Legends та вигравай подарунки. Що два тижні — новий раунд турніру та нові подарунки.'
                 maxWidth={821}

@@ -10,7 +10,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   color: rgb(255, 255, 255);
   font-family: ${({ theme }) => theme.fontFamily.luckiestGuyRUSBELUKR};
   font-size: 50px;
