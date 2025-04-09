@@ -4,7 +4,7 @@ import secondPlace from '@/images/league/second-place-min.png';
 import thirdPlace from '@/images/league/third-place-min.png';
 import otherPlace from '@/images/league/other-place-min.png';
 import otherPlacePrize from '@/images/league/other-place-prize-min.png';
-import firstPlacePrize from '@/images/league/first-place-prize-min.png';
+import firstPlacePrize from '@/images/league/first-place-prize-min.jpg';
 import secondPlacePrize from '@/images/league/second-place-prize-min.png';
 
 const leaguePrizes: LeaguePrizes = [
