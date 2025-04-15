@@ -2,6 +2,51 @@ import { ITournamentsData, Tournaments } from '@/types/tournaments.types';
 
 const tournaments: Tournaments = [
   {
+    title: 'Герої Аркад',
+    clans: [
+      {
+        name: 'Прудкі Чемпіони',
+        totalScore: '13090',
+      },
+      {
+        name: 'Бойові Ніндзя',
+        totalScore: '13075',
+      },
+      {
+        name: 'Броньовані Бійці',
+        totalScore: '5420',
+      },
+      {
+        name: 'Незабутні Гуманоїди',
+        totalScore: '4945',
+      },
+      {
+        name: 'Вогняні Примари',
+        totalScore: '1505',
+      },
+      {
+        name: 'Міфічні Воїни',
+        totalScore: '1290',
+      },
+      {
+        name: 'Зоряні Перці',
+        totalScore: '1210',
+      },
+      {
+        name: 'Мідні Динозаври',
+        totalScore: '875',
+      },
+      {
+        name: 'Легендарні Картузи',
+        totalScore: '855',
+      },
+      {
+        name: 'Гострі Сокири',
+        totalScore: '775',
+      },
+    ],
+  },
+  {
     title: 'Крижані Легенди',
     clans: [
       {
@@ -57,7 +102,7 @@ const tournaments: Tournaments = [
 ];
 
 const tournamentsData: ITournamentsData = {
-  current: 'Герої Аркад',
+  current: 'Чемпіони МяуТрону',
   tournaments,
 };
 
