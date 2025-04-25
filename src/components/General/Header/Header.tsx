@@ -13,7 +13,7 @@ import HeaderNavBar from '@GeneralComponents/HeaderNavBar';
 // import HeaderVideo from '@GeneralComponents/HeaderVideo';
 // import HeaderDecorativeBgImg from '@GeneralComponents/HeaderDecorativeBgImg';
 // import HeaderImg from '@GeneralComponents/HeaderImg';
-import mobBanner from '@/images/header/mob-banner.jpg';
+import mobBanner from '@/images/header/mob-banner.png';
 import deskBanner from '@/images/header/desk-banner.jpg';
 import Banner from '@GeneralComponents/Banner';
 // import previewMob from '@/video/preview-mob.mp4';
