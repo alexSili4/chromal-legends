@@ -2,6 +2,51 @@ import { ITournamentsData, Tournaments } from '@/types/tournaments.types';
 
 const tournaments: Tournaments = [
   {
+    title: 'Чемпіони МяуТрону',
+    clans: [
+      {
+        name: 'Прудкі Чемпіони',
+        totalScore: '8300',
+      },
+      {
+        name: 'Бойові Ніндзя',
+        totalScore: '4425',
+      },
+      {
+        name: 'Бойові Легенди',
+        totalScore: '3350',
+      },
+      {
+        name: 'Люті Малюки',
+        totalScore: '1860',
+      },
+      {
+        name: 'Шалені Шамани',
+        totalScore: '1785',
+      },
+      {
+        name: 'Відважні Легенди',
+        totalScore: '1560',
+      },
+      {
+        name: 'Люті Картузи',
+        totalScore: '1475',
+      },
+      {
+        name: 'Вогняні Примари',
+        totalScore: '1245',
+      },
+      {
+        name: 'Незабутні Гуманоїди',
+        totalScore: '1015',
+      },
+      {
+        name: 'Міфічні Воїни',
+        totalScore: '995',
+      },
+    ],
+  },
+  {
     title: 'Герої Аркад',
     clans: [
       {
