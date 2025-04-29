@@ -14,7 +14,7 @@ import HeaderNavBar from '@GeneralComponents/HeaderNavBar';
 // import HeaderDecorativeBgImg from '@GeneralComponents/HeaderDecorativeBgImg';
 // import HeaderImg from '@GeneralComponents/HeaderImg';
 import mobBanner from '@/images/header/mob-banner.png';
-import deskBanner from '@/images/header/desk-banner.jpg';
+import deskBanner from '@/images/header/desk-banner.png';
 import Banner from '@GeneralComponents/Banner';
 // import previewMob from '@/video/preview-mob.mp4';
 // import previewDesk from '@/video/preview-desk.mp4';

@@ -6,43 +6,43 @@ const tournaments: Tournaments = [
     clans: [
       {
         name: 'Прудкі Чемпіони',
-        totalScore: '8300',
+        totalScore: '8320',
       },
       {
         name: 'Бойові Ніндзя',
-        totalScore: '4425',
+        totalScore: '4730',
       },
       {
         name: 'Бойові Легенди',
-        totalScore: '3350',
-      },
-      {
-        name: 'Люті Малюки',
-        totalScore: '1860',
+        totalScore: '3360',
       },
       {
         name: 'Шалені Шамани',
-        totalScore: '1785',
+        totalScore: '1955',
+      },
+      {
+        name: 'Люті Малюки',
+        totalScore: '1880',
       },
       {
         name: 'Відважні Легенди',
-        totalScore: '1560',
+        totalScore: '1590',
       },
       {
         name: 'Люті Картузи',
-        totalScore: '1475',
+        totalScore: '1540',
       },
       {
         name: 'Вогняні Примари',
-        totalScore: '1245',
+        totalScore: '1310',
+      },
+      {
+        name: 'Жваві Захисники',
+        totalScore: '1080',
       },
       {
         name: 'Незабутні Гуманоїди',
-        totalScore: '1015',
-      },
-      {
-        name: 'Міфічні Воїни',
-        totalScore: '995',
+        totalScore: '1025',
       },
     ],
   },
