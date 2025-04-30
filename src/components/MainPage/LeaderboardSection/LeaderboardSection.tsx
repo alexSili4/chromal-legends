@@ -47,7 +47,7 @@ const LeaderboardSection: FC<IProps> = ({ tournaments }) => {
           <GeneralContainer>
             <Container>
               <Content>
-                <SectionTitle text='Як долучитись до турніру?' />
+                <SectionTitle text='Як отримати більше віртуальних призів?' />
                 <AnimatedHowToJoinLeaderboard />
               </Content>
               <Button
